@@ -16,7 +16,7 @@ theme:
         name: Cambiar a modo claro
 
     - scheme: default
-      primary: white
+      primary: teal
       accent: pink
       toggle:
         icon: material/weather-night
