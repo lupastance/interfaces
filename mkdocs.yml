@@ -1,4 +1,4 @@
-site_name: Diseño de Interfaces Web
+site_name: Diseño de Interfaces
 site_url: https://lupastance.github.io/interfaces
 
 theme:
@@ -24,6 +24,7 @@ theme:
 
   plugins:
     - offline
+    - open-in-new-tab
     - search:
       enabled: true
       lang: es
@@ -38,13 +39,19 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+    - toc.integrate
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
 
 extra:
   home: https://lupastance.github.io/interfaces/
   generator: false
   social:
     - icon: fontawesome/brands/discord 
-      link: about:blank
+      link: https://discord.gg/C8yxabVTsS
       name: Únete al canal de Discord
 
 copyright: Copyright &copy; Luis Alemañ 2024
