@@ -16,7 +16,7 @@ El diseño de interfaces web va más allá de la simple creación de páginas es
 
 La comunicación visual es el proceso mediante el cual se transmite información e ideas a través de elementos visuales. En el contexto del diseño de interfaces web, los elementos visuales no solo decoran la página, sino que juegan un rol esencial en guiar al usuario, influir en su percepción y mejorar su experiencia. A continuación, se detallan los elementos clave de la comunicación visual y su aplicación en el diseño web.
 
-### 1.1.1 Iconografía
+### ✨ 1.1.1 Iconografía
 
 ![intro](assets/1-1-iconos.png){align="right"}
 
@@ -91,8 +91,77 @@ Sin embargo, el uso de iconografía también debe ir acompañado de una consider
 
 Existen varias herramientas que permiten diseñar y aplicar iconografía en el diseño web de forma eficiente:
 
-Iconos prediseñados: Herramientas como Font Awesome, Material Icons o Iconmonstr proporcionan bibliotecas de iconos prediseñados que pueden ser fácilmente integrados en proyectos web mediante código HTML y CSS.
+- `Iconos prediseñados` <br>
+Herramientas como **Font Awesome**, **Material Icons** o **Iconmonstr** proporcionan bibliotecas de iconos prediseñados que pueden ser fácilmente integrados en proyectos web mediante código HTML y CSS.
 
-Diseño personalizado: Para un enfoque más personalizado, herramientas como Adobe Illustrator, Sketch o Figma permiten crear iconos vectoriales únicos que pueden alinearse perfectamente con la identidad de la marca.
+- `Diseño personalizado` <br>
+Para un enfoque más personalizado, herramientas como **Adobe Illustrator**, **Sketch** o **Figma** permiten crear iconos vectoriales únicos que pueden alinearse perfectamente con la identidad de la marca.
 
-Iconos en formato SVG: El formato SVG es ideal para usar en la web, ya que estos archivos son ligeros y escalables, lo que garantiza una apariencia nítida en cualquier tamaño de pantalla. Además, los iconos SVG pueden ser estilizados directamente con CSS, lo que permite cambiar colores o tamaños según sea necesario.
+- `Iconos en formato SVG` <br>
+El formato **SVG** es ideal para usar en la web, ya que estos archivos son ligeros y escalables, lo que garantiza una apariencia nítida en cualquier tamaño de pantalla. Además, los iconos SVG pueden ser estilizados directamente con CSS, lo que permite cambiar colores o tamaños según sea necesario.
+
+!!! warning "Área de recursos"
+    [Font Awesome |](https://fontawesome.com)
+    [Material Icons |](https://fonts.google.com/icons)
+    [Iconmonstr |](https://iconmonstr.com)
+    [Sketch |](https://www.sketch.com)
+    [Figma](https://www.figma.com)
+
+### 🌈 1.1.2 Los Colores
+
+![Los colores](assets/1-2-colores.png){align="right"}
+
+El color es uno de los elementos más poderosos en el diseño de interfaces web, ya que tiene la capacidad de influir en la percepción, las emociones y el comportamiento de los usuarios.
+
+Una paleta de colores bien seleccionada no solo mejora la estética de la página, sino que también facilita la navegación, refuerza la identidad de marca y establece una jerarquía visual clara.
+
+Además, el uso adecuado del color puede mejorar la accesibilidad y la usabilidad de la interfaz, permitiendo que la información sea más comprensible y fácil de seguir. En este apartado, exploraremos la importancia de los colores en el diseño web, cómo seleccionarlos de manera efectiva y cómo aplicarlos para mejorar la experiencia del usuario.
+
+El uso del color en el diseño de interfaces web va mucho más allá de un simple elemento decorativo. El color es una herramienta clave para transmitir sensaciones, guiar la navegación del usuario, crear contrastes que mejoren la legibilidad y, en última instancia, generar una experiencia más atractiva y funcional. La selección adecuada de una paleta de colores no solo afecta la estética de una web, sino también la forma en la que los usuarios interactúan con ella, perciben el contenido y toman decisiones.
+
+En el diseño web, el color se emplea de diversas formas: para dar vida a los elementos visuales, generar coherencia en la identidad de marca, y destacar o agrupar información. Además, la correcta elección de colores puede impactar directamente en la accesibilidad del sitio, haciendo que este sea más inclusivo para personas con discapacidades visuales o daltonismo.
+
+#### 1.1.2.1 Psicología del Color
+
+Uno de los aspectos más importantes del uso del color en el diseño web es su capacidad para evocar emociones y transmitir mensajes de manera implícita. La psicología del color estudia cómo los colores afectan las emociones y comportamientos humanos, algo que los diseñadores web deben tener en cuenta al seleccionar la paleta de una interfaz.
+
+Cada color puede generar diferentes respuestas emocionales, y su elección debe alinearse con los objetivos del sitio web y la marca.
+
+- ⭕ `Rojo`<br>
+Un color asociado con la pasión, la energía y la urgencia. Suele utilizarse para crear sensación de urgencia (como en ofertas o promociones) o para llamar la atención sobre elementos importantes, aunque en exceso puede generar sensación de agresividad.
+
+- 🔷 `Azul`<br>
+Se asocia con la calma, la confianza y la profesionalidad. Es un color muy utilizado en sitios web corporativos o de servicios financieros, ya que transmite estabilidad y seguridad.
+
+- 💚 `Verde`<br>
+Evoca asociaciones con la naturaleza, el crecimiento y la salud. Suele emplearse en sitios relacionados con el bienestar, el medio ambiente o la sostenibilidad. También está relacionado con conceptos positivos como el éxito o la aprobación.
+
+- 💛 `Amarillo`<br>
+El amarillo es un color brillante y optimista que atrae la atención, aunque en exceso puede resultar abrumador. Se utiliza para generar sensaciones de alegría o para resaltar avisos o advertencias.
+
+- ⚫ `Negro`<br>
+Representa elegancia, sofisticación y modernidad. Es común en marcas de lujo o sitios que buscan proyectar una imagen profesional y seria.
+
+!!! danger "Diferentes casos de uso"
+    Es importante considerar que la psicología del color puede variar culturalmente. Por ejemplo, en algunos países, el blanco está asociado con la pureza y la paz, mientras que en otros puede tener connotaciones de luto o tristeza. Por lo tanto, los diseñadores deben investigar las interpretaciones culturales del color en su público objetivo.
+
+#### 1.1.2.2 2 Teoría del Color y Paletas de Colores
+
+La teoría del color es un conjunto de reglas que describe cómo los colores interactúan entre sí. Esta teoría ayuda a los diseñadores a seleccionar combinaciones que sean visualmente armónicas y que transmitan el mensaje adecuado.
+
+Existen varios esquemas cromáticos utilizados comúnmente en el diseño de interfaces web
+
+- `Colores complementarios`<br>
+Son colores opuestos en el círculo cromático (como el azul y el naranja, o el rojo y el verde). Estas combinaciones generan un alto contraste, lo que puede ser útil para destacar elementos clave, como botones de llamada a la acción (CTA), aunque deben utilizarse con moderación para no abrumar al usuario.
+
+- `Colores análogos`<br>
+Son aquellos que están próximos en el círculo cromático (como el azul, el verde y el cian). Estas combinaciones tienden a ser armoniosas y relajantes, lo que las hace adecuadas para interfaces que buscan una apariencia suave y equilibrada.
+
+- `Colores triádicos`<br>
+Son tres colores equidistantes en el círculo cromático (por ejemplo, rojo, amarillo y azul). Este esquema ofrece contraste y balance, aunque es más complicado de implementar sin generar caos visual, por lo que debe usarse con cuidado.
+
+- `Monocromático`<br>
+Utiliza distintas tonalidades, saturaciones y valores de un solo color. Este esquema es elegante y sobrio, y es común en sitios web minimalistas o que buscan una estética moderna y uniforme.
+
+!!! tip "Consejo"
+    La selección de una paleta de colores debe considerar no solo la estética, sino también la legibilidad y el contraste. Los colores deben usarse para guiar al usuario por la página, ayudándolo a distinguir entre diferentes tipos de contenido, botones de acción y secciones. El uso del color para jerarquizar la información también contribuye a una experiencia de usuario más fluida.
