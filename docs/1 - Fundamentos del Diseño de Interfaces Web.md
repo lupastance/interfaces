@@ -29,7 +29,7 @@ Los iconos actúan como atajos visuales, mejorando la experiencia de usuario al 
 #### 1.1.1.1 Funciones esenciales en el diseño web:
 
 - !!! tip "Simplificación de la información"
-Un ícono bien diseñado puede comunicar una idea o acción en cuestión de milisegundos, lo que reduce la necesidad de textos explicativos. Esto es especialmente útil en interfaces móviles o en sitios con contenido limitado por espacio.
+Un icono bien diseñado puede comunicar una idea o acción en cuestión de milisegundos, lo que reduce la necesidad de textos explicativos. Esto es especialmente útil en interfaces móviles o en sitios con contenido limitado por espacio.
 
 - !!! info "Mejora de la navegación"
 Al representar acciones o funciones de manera visual, los iconos facilitan que los usuarios identifiquen rápidamente los elementos interactivos de la página, como menús, botones de acciones y enlaces.
@@ -53,7 +53,7 @@ Existen diferentes tipos de iconos en el diseño de interfaces web, cada uno con
 Estos iconos permiten al usuario moverse por la interfaz. Ejemplos comunes son el menú hamburguesa (tres líneas horizontales para desplegar un menú), la flecha de regreso, o la casa que lleva a la página principal.
 
 🏃‍♀️‍➡️ `Iconos de acción` <br>
-Estos iconos indican al usuario que puede realizar una acción. Por ejemplo, el ícono de lupa que permite buscar información, el carrito de compras que añade productos, o el ícono de descarga.
+Estos iconos indican al usuario que puede realizar una acción. Por ejemplo, el icono de lupa que permite buscar información, el carrito de compras que añade productos, o el icono de descarga.
 
 ✅ `Iconos de estado`<br>
 Informan sobre el estado actual de un proceso. Por ejemplo, un check puede señalar que una tarea está completada, mientras que un reloj indica que algo está en progreso o pendiente.
@@ -65,11 +65,11 @@ Los iconos que representan plataformas como Facebook, Twitter o Instagram son el
 
 Para que los iconos en una interfaz web sean efectivos, es necesario tener en cuenta varias buenas prácticas en su diseño y aplicación
 
-- Claridad y simplicidad: Los iconos deben ser fáciles de interpretar, incluso en tamaños pequeños. Un ícono demasiado detallado puede resultar confuso. La simplicidad es clave para que el usuario comprenda rápidamente su función.
+- Claridad y simplicidad: Los iconos deben ser fáciles de interpretar, incluso en tamaños pequeños. Un icono demasiado detallado puede resultar confuso. La simplicidad es clave para que el usuario comprenda rápidamente su función.
 
 - Consistencia visual: Todos los iconos de una interfaz deben compartir un estilo coherente, en términos de líneas, grosor, tamaño y color. Esta consistencia asegura que el diseño se vea uniforme y profesional.
 
-- Compatibilidad cultural: Algunos iconos tienen significados diferentes en distintos contextos culturales. Por ejemplo, un ícono que simboliza "OK" en una cultura puede tener un significado negativo en otra. Es importante considerar las variaciones culturales si la web está dirigida a un público global.
+- Compatibilidad cultural: Algunos iconos tienen significados diferentes en distintos contextos culturales. Por ejemplo, un icono que simboliza "OK" en una cultura puede tener un significado negativo en otra. Es importante considerar las variaciones culturales si la web está dirigida a un público global.
 
 - Compatibilidad técnica: Los iconos deben renderizarse correctamente en todos los navegadores y dispositivos. Esto incluye tanto las versiones de escritorio como las móviles. Los iconos en formato SVG (Scalable Vector Graphics) son una opción popular ya que son escalables sin perder calidad.
 
@@ -79,8 +79,20 @@ Para que los iconos en una interfaz web sean efectivos, es necesario tener en cu
 #### 1.1.1.4 Psicología y Simbología en la Iconografía
 ![intro](assets/1-4-psico.png){align="right"}
 
-Los íconos, al igual que otros elementos visuales, están profundamente conectados con la psicología del usuario. La interpretación de un símbolo no solo depende de su apariencia, sino también de las asociaciones que las personas tienen con él. A lo largo del tiempo, algunos íconos se han convertido en universales y sus significados son prácticamente automáticos. Por ejemplo, una papelera es reconocida a nivel global como un símbolo para eliminar o descartar contenido, mientras que una flecha hacia abajo a menudo se interpreta como una opción para descargar archivos o desplegar menús.
+Los iconos, al igual que otros elementos visuales, están profundamente conectados con la psicología del usuario. La interpretación de un símbolo no solo depende de su apariencia, sino también de las asociaciones que las personas tienen con él. A lo largo del tiempo, algunos iconos se han convertido en universales y sus significados son prácticamente automáticos. Por ejemplo, una papelera es reconocida a nivel global como un símbolo para eliminar o descartar contenido, mientras que una flecha hacia abajo a menudo se interpreta como una opción para descargar archivos o desplegar menús.
 
-El uso de estos símbolos conocidos en el diseño web tiene múltiples beneficios. En primer lugar, reduce la curva de aprendizaje para los usuarios, ya que no necesitan interpretar nuevos signos o leer explicaciones detalladas para entender una acción. Este conocimiento previo hace que la interacción con la interfaz sea más intuitiva y eficiente. Además, los símbolos universales como estos fomentan la usabilidad, ya que el usuario puede anticipar la función del ícono sin esfuerzo, mejorando así su experiencia en la página.
+El uso de estos símbolos conocidos en el diseño web tiene múltiples beneficios. En primer lugar, reduce la curva de aprendizaje para los usuarios, ya que no necesitan interpretar nuevos signos o leer explicaciones detalladas para entender una acción. Este conocimiento previo hace que la interacción con la interfaz sea más intuitiva y eficiente. Además, los símbolos universales como estos fomentan la usabilidad, ya que el usuario puede anticipar la función del icono sin esfuerzo, mejorando así su experiencia en la página.
 
-Sin embargo, el uso de iconografía también debe ir acompañado de una consideración cultural y del contexto en el que se va a aplicar. En algunos casos, un ícono que es evidente para un grupo de usuarios puede no tener el mismo significado para otro grupo. Por lo tanto, es recomendable realizar pruebas de usuario para asegurarse de que los íconos sean interpretados correctamente en el público objetivo.
+Sin embargo, el uso de iconografía también debe ir acompañado de una consideración cultural y del contexto en el que se va a aplicar. En algunos casos, un icono que es evidente para un grupo de usuarios puede no tener el mismo significado para otro grupo. Por lo tanto, es recomendable realizar pruebas de usuario para asegurarse de que los iconos sean interpretados correctamente en el público objetivo.
+
+#### 1.1.1.5 Herramientas y Tecnologías para la Creación de Iconos
+
+![intro](assets/1-5-tools.png){align="right"}
+
+Existen varias herramientas que permiten diseñar y aplicar iconografía en el diseño web de forma eficiente:
+
+Iconos prediseñados: Herramientas como Font Awesome, Material Icons o Iconmonstr proporcionan bibliotecas de iconos prediseñados que pueden ser fácilmente integrados en proyectos web mediante código HTML y CSS.
+
+Diseño personalizado: Para un enfoque más personalizado, herramientas como Adobe Illustrator, Sketch o Figma permiten crear iconos vectoriales únicos que pueden alinearse perfectamente con la identidad de la marca.
+
+Iconos en formato SVG: El formato SVG es ideal para usar en la web, ya que estos archivos son ligeros y escalables, lo que garantiza una apariencia nítida en cualquier tamaño de pantalla. Además, los iconos SVG pueden ser estilizados directamente con CSS, lo que permite cambiar colores o tamaños según sea necesario.
