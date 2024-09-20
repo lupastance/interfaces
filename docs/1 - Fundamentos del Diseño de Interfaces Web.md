@@ -26,7 +26,7 @@ En el diseño de interfaces web, los iconos son herramientas poderosas que permi
 
 Los iconos actúan como atajos visuales, mejorando la experiencia de usuario al hacer que la navegación sea más intuitiva y comprensible.
 
-#### 1.1.1.1 Funciones esenciales en el diseño web:
+#### 🎉 1.1.1.1 Funciones esenciales en el diseño web:
 
 - !!! tip "Simplificación de la información"
 Un icono bien diseñado puede comunicar una idea o acción en cuestión de milisegundos, lo que reduce la necesidad de textos explicativos. Esto es especialmente útil en interfaces móviles o en sitios con contenido limitado por espacio.
@@ -45,7 +45,7 @@ Los iconos que representan funciones comunes (como el carrito de compras, la lup
 
     En EEUU los semáforos no usaban iconos o símbolos para decirle al peatón cuándo podía cruzar la calle, simplemente mostraban el texto "DONT WALK" en rojo para que los peatones no cruzaban la calle o "WALK" para que la cruzaran.
 
-#### 1.1.1.2 Tipos de iconos y usos comunes
+#### 💢 1.1.1.2 Tipos de iconos y usos comunes
 
 Existen diferentes tipos de iconos en el diseño de interfaces web, cada uno con funciones y aplicaciones específicas:
 
@@ -61,7 +61,7 @@ Informan sobre el estado actual de un proceso. Por ejemplo, un check puede seña
 🛜 `Iconos de redes sociales` <br>
 Los iconos que representan plataformas como Facebook, Twitter o Instagram son elementos recurrentes en muchas webs y facilitan la vinculación de contenido con perfiles o cuentas en redes.
 
-#### 1.1.1.3 Buenas Prácticas en el Uso de iconos
+#### 📓 1.1.1.3 Buenas Prácticas en el Uso de iconos
 
 Para que los iconos en una interfaz web sean efectivos, es necesario tener en cuenta varias buenas prácticas en su diseño y aplicación
 
@@ -76,7 +76,7 @@ Para que los iconos en una interfaz web sean efectivos, es necesario tener en cu
 - Accesibilidad: Es fundamental acompañar los iconos con texto alternativo (atributo alt) o etiquetas ARIA para asegurar que los usuarios con discapacidades visuales, que utilicen lectores de pantalla, puedan entender su función.
 
 
-#### 1.1.1.4 Psicología y Simbología en la Iconografía
+#### 🤯 1.1.1.4 Psicología y Simbología en la Iconografía
 ![intro](assets/1-4-psico.png){align="right"}
 
 Los iconos, al igual que otros elementos visuales, están profundamente conectados con la psicología del usuario. La interpretación de un símbolo no solo depende de su apariencia, sino también de las asociaciones que las personas tienen con él. A lo largo del tiempo, algunos iconos se han convertido en universales y sus significados son prácticamente automáticos. Por ejemplo, una papelera es reconocida a nivel global como un símbolo para eliminar o descartar contenido, mientras que una flecha hacia abajo a menudo se interpreta como una opción para descargar archivos o desplegar menús.
@@ -85,7 +85,7 @@ El uso de estos símbolos conocidos en el diseño web tiene múltiples beneficio
 
 Sin embargo, el uso de iconografía también debe ir acompañado de una consideración cultural y del contexto en el que se va a aplicar. En algunos casos, un icono que es evidente para un grupo de usuarios puede no tener el mismo significado para otro grupo. Por lo tanto, es recomendable realizar pruebas de usuario para asegurarse de que los iconos sean interpretados correctamente en el público objetivo.
 
-#### 1.1.1.5 Herramientas y Tecnologías para la Creación de Iconos
+#### 🧰 1.1.1.5 Herramientas y Tecnologías para la Creación de Iconos
 
 ![intro](assets/1-5-tools.png){align="right"}
 
@@ -121,7 +121,7 @@ El uso del color en el diseño de interfaces web va mucho más allá de un simpl
 
 En el diseño web, el color se emplea de diversas formas: para dar vida a los elementos visuales, generar coherencia en la identidad de marca, y destacar o agrupar información. Además, la correcta elección de colores puede impactar directamente en la accesibilidad del sitio, haciendo que este sea más inclusivo para personas con discapacidades visuales o daltonismo.
 
-#### 1.1.2.1 Psicología del Color
+#### 🗣️ 1.1.2.1 Psicología del Color
 
 Uno de los aspectos más importantes del uso del color en el diseño web es su capacidad para evocar emociones y transmitir mensajes de manera implícita. La psicología del color estudia cómo los colores afectan las emociones y comportamientos humanos, algo que los diseñadores web deben tener en cuenta al seleccionar la paleta de una interfaz.
 
@@ -145,7 +145,9 @@ Representa elegancia, sofisticación y modernidad. Es común en marcas de lujo o
 !!! danger "Diferentes casos de uso"
     Es importante considerar que la psicología del color puede variar culturalmente. Por ejemplo, en algunos países, el blanco está asociado con la pureza y la paz, mientras que en otros puede tener connotaciones de luto o tristeza. Por lo tanto, los diseñadores deben investigar las interpretaciones culturales del color en su público objetivo.
 
-#### 1.1.2.2 2 Teoría del Color y Paletas de Colores
+#### 🖊️ 1.1.2.2 Teoría del Color y Paletas de Colores
+
+![intro](assets/1-1-2-paleta.png){align="right"}
 
 La teoría del color es un conjunto de reglas que describe cómo los colores interactúan entre sí. Esta teoría ayuda a los diseñadores a seleccionar combinaciones que sean visualmente armónicas y que transmitan el mensaje adecuado.
 
@@ -165,3 +167,57 @@ Utiliza distintas tonalidades, saturaciones y valores de un solo color. Este esq
 
 !!! tip "Consejo"
     La selección de una paleta de colores debe considerar no solo la estética, sino también la legibilidad y el contraste. Los colores deben usarse para guiar al usuario por la página, ayudándolo a distinguir entre diferentes tipos de contenido, botones de acción y secciones. El uso del color para jerarquizar la información también contribuye a una experiencia de usuario más fluida.
+
+#### 🌄 1.1.2.3 Contraste y Legibilidad
+
+![intro](assets/1-1-2-contraste.png){align="right"}
+
+El contraste entre el fondo y el texto o los elementos interactivos es crucial para la legibilidad de una web. Un buen contraste facilita que los usuarios lean el contenido sin esfuerzo y que distingan fácilmente los elementos de la interfaz. 
+
+Un ejemplo común es el texto negro sobre fondo blanco, que proporciona el mayor nivel de contraste posible. Cuando los colores utilizados no generan suficiente contraste, puede volverse difícil para el usuario leer el texto o identificar las acciones que puede realizar.
+
+Además, una mala elección de contraste puede afectar gravemente la accesibilidad para personas con problemas visuales, como aquellos con baja visión o daltonismo.
+
+Para asegurarse de que los niveles de contraste sean adecuados, existen herramientas como [WCAG Contrast Checker](https://accessibleweb.com/color-contrast-checker/), que permite verificar si los colores cumplen con las pautas de accesibilidad establecidas por la Web Content Accessibility Guidelines (WCAG).
+
+!!! info "Ideas para elegir una buena paleta de colores"
+    En la red social *Pinterest* podéis encontrar muy buenos ejemplos de elección de colores para una página web. Podéis probar a buscar con el término [Web Palette Colors](https://es.pinterest.com/search/pins/?rs=ac&len=2&q=web%20palette%20colors&eq=web%20pal&etslf=11831). Otra web bastante interesante para el tema de los colores en una web es [💖 Colour Lovers](https://www.colourlovers.com/)
+
+
+#### 🍭 1.1.2.4 Uso del Color para la Navegación y Jerarquía Visual
+
+El color también desempeña un papel crucial en la organización y presentación de la información. A través del color, los diseñadores pueden establecer una jerarquía visual clara, lo que ayuda al usuario a identificar la importancia de diferentes elementos de la página. Esto se puede lograr mediante varios enfoques:
+
+🪇 `Resaltar botones de acción` <br>
+Utilizar colores contrastantes y llamativos para botones de acciones clave, como el registro, la compra o el envío de formularios. Los colores cálidos como el rojo, naranja o amarillo son comunes para este tipo de elementos, ya que destacan frente al resto de la paleta.
+
+📚 `Agrupación de información` <br>
+Los colores pueden usarse para agrupar visualmente elementos relacionados, lo que ayuda a los usuarios a entender de forma rápida las conexiones entre diferentes secciones o contenidos. Por ejemplo, en un formulario largo, diferentes colores pueden separar visualmente cada sección, facilitando la comprensión.
+
+🔦 `Indicadores visuales` <br>
+Los colores también pueden utilizarse para señalar estados o acciones específicas, como el uso de verde para indicar que una acción se ha completado con éxito, o rojo para mostrar errores o advertencias.
+
+🎯 `Foco en la atención` <br>
+Un buen uso del color puede dirigir la atención del usuario hacia áreas clave de la página. Por ejemplo, en una landing page, el color principal se puede usar para dirigir al usuario hacia el botón de compra o registro, mientras que colores secundarios se utilizan para otros elementos menos importantes.
+
+#### 🛗 1.1.2.5 Colores y Accesibilidad
+![Accesibilidad](assets/accesibilidad.png){align="right"}
+
+El uso del color también tiene un impacto significativo en la accesibilidad de una página web. No todos los usuarios perciben los colores de la misma manera, lo que significa que los diseñadores deben ser conscientes de condiciones como el daltonismo (incapacidad para distinguir ciertos colores) o la baja visión.
+
+Para garantizar la accesibilidad, es fundamental que los colores no sean el único medio para transmitir información. Por ejemplo, si un formulario usa únicamente el color rojo para señalar errores, los usuarios con dificultades para distinguir ese color podrían no notar el mensaje de error. En lugar de depender únicamente del color, se pueden agregar otros indicadores, como íconos o mensajes de texto que proporcionen la misma información de manera visual y accesible.
+
+Existen herramientas, como [Color Oracle](https://colororacle.org/), que permiten simular cómo un sitio web se ve para usuarios con distintas discapacidades visuales, facilitando así el ajuste de la paleta de colores para que sea accesible para todos.
+
+#### 🧭 1.1.2.6 Tendencias Actuales en el Uso del Color en Web
+<center>
+![Tendencias](assets/1-1-5-trend.png)
+</center>
+
+Las tendencias en el uso del color en el diseño web evolucionan constantemente, influenciadas por cambios en la tecnología, el diseño de dispositivos y las preferencias del usuario. Algunas de las tendencias actuales incluyen:
+
+Modos oscuro y claro: Muchas interfaces web ahora ofrecen a los usuarios la opción de cambiar entre modo oscuro y claro, lo que requiere la adaptación de la paleta de colores para ambas configuraciones. El modo oscuro reduce la fatiga visual en condiciones de poca luz, mientras que el modo claro es más adecuado para entornos con buena iluminación.
+
+Colores vivos y saturados: En contraste con los diseños más sobrios y minimalistas del pasado, muchos sitios web ahora utilizan colores intensos y saturados para captar la atención y generar un impacto visual fuerte.
+
+Gradientes de color: Los gradientes han vuelto a ser populares, proporcionando profundidad y dinamismo a los fondos o elementos visuales. Este tipo de aplicación de color puede ser sutil o audaz, dependiendo del diseño.
