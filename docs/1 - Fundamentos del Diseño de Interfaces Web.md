@@ -216,8 +216,11 @@ Existen herramientas, como [Color Oracle](https://colororacle.org/), que permite
 
 Las tendencias en el uso del color en el diseño web evolucionan constantemente, influenciadas por cambios en la tecnología, el diseño de dispositivos y las preferencias del usuario. Algunas de las tendencias actuales incluyen:
 
-Modos oscuro y claro: Muchas interfaces web ahora ofrecen a los usuarios la opción de cambiar entre modo oscuro y claro, lo que requiere la adaptación de la paleta de colores para ambas configuraciones. El modo oscuro reduce la fatiga visual en condiciones de poca luz, mientras que el modo claro es más adecuado para entornos con buena iluminación.
+`Modos oscuro y claro` <br>
+Muchas interfaces web ahora ofrecen a los usuarios la opción de cambiar entre modo oscuro y claro, lo que requiere la adaptación de la paleta de colores para ambas configuraciones. El modo oscuro reduce la fatiga visual en condiciones de poca luz, mientras que el modo claro es más adecuado para entornos con buena iluminación.
 
-Colores vivos y saturados: En contraste con los diseños más sobrios y minimalistas del pasado, muchos sitios web ahora utilizan colores intensos y saturados para captar la atención y generar un impacto visual fuerte.
+`Colores vivos y saturados` <br>
+En contraste con los diseños más sobrios y minimalistas del pasado, muchos sitios web ahora utilizan colores intensos y saturados para captar la atención y generar un impacto visual fuerte.
 
-Gradientes de color: Los gradientes han vuelto a ser populares, proporcionando profundidad y dinamismo a los fondos o elementos visuales. Este tipo de aplicación de color puede ser sutil o audaz, dependiendo del diseño.
+`Gradientes de color` <br>
+Los gradientes han vuelto a ser populares, proporcionando profundidad y dinamismo a los fondos o elementos visuales. Este tipo de aplicación de color puede ser sutil o audaz, dependiendo del diseño.
