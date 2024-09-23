@@ -321,3 +321,187 @@ button:hover {
 }
 
 ```
+
+### 🎨 1.2.9 Colores en el Diseño *Responsive*
+
+![Web Design](assets/1-2-9-intro.png){align="right"}
+
+El diseño web moderno exige que las interfaces sean responsivas, lo que significa que deben adaptarse y verse bien en una variedad de dispositivos y tamaños de pantalla, desde teléfonos móviles hasta pantallas de escritorio. Esto incluye el uso inteligente del color para garantizar que los elementos sean legibles y visualmente atractivos sin importar el dispositivo que se esté utilizando.
+
+Uno de los desafíos en el diseño responsivo es que los colores pueden percibirse de manera diferente en pantallas pequeñas en comparación con pantallas más grandes. Por ejemplo, un color de fondo oscuro que se ve bien en un monitor de escritorio puede volverse demasiado opaco y dificultar la legibilidad en una pantalla de móvil. De igual manera, los colores brillantes o saturados pueden parecer abrumadores en pantallas más pequeñas. Por eso, es esencial que los diseñadores ajusten los colores, el contraste y los estilos de los elementos dependiendo del dispositivo.
+
+CSS ofrece herramientas como **media queries** que permiten cambiar el estilo de una página web según el tamaño de la pantalla. Esto incluye ajustar las paletas de colores, por ejemplo, aclarar el fondo o cambiar el color de los botones en pantallas pequeñas para mejorar la visibilidad y la usabilidad.
+
+También es posible ajustar otros factores relacionados con el color, como el grosor de las líneas de los íconos o las sombras, para hacer que los elementos visuales sean más claros en dispositivos móviles.
+
+### ✏ 1.2.10 Evaluación y Ajustes de Color en el Proceso de Diseño
+
+![Web Design](assets/1-2-10-intro.png){align="right"}
+
+Una vez que la paleta de colores ha sido implementada en el diseño, es importante realizar una evaluación continua y ajustarla según las necesidades del usuario y los objetivos del sitio.
+
+Esto se puede hacer a través de pruebas de usuario, análisis de accesibilidad y monitoreo del rendimiento del sitio.
+
+`Pruebas de usuario`<br>
+Las pruebas con usuarios reales son fundamentales para verificar que los colores elegidos cumplen con las expectativas y necesidades del público objetivo. Estas pruebas pueden revelar si ciertos colores están generando confusión, si hay suficiente contraste en las áreas clave, o si los usuarios están ignorando elementos importantes debido a su falta de prominencia.
+
+`Pruebas de accesibilidad`<br>
+Herramientas como *[WAVE](https://wave.webaim.org/)* o *ss* permiten verificar si el sitio web cumple con las pautas de accesibilidad en términos de contraste de color, uso adecuado de textos alternativos y elementos visuales. Esto es esencial para asegurar que el sitio sea inclusivo para todos los usuarios.
+
+`Monitoreo del rendimiento`<br>
+Además del rendimiento técnico del sitio (velocidad de carga, interactividad), el color también puede influir en las métricas de comportamiento del usuario, como el tiempo de permanencia en el sitio, las tasas de clic en botones de acción, y la conversión en formularios o páginas de venta. Un análisis de estos datos puede ofrecer información valiosa sobre si los colores están ayudando o perjudicando la experiencia del usuario.
+
+!!!info "Dinamismo en el diseño web"
+    El color en el diseño web no es una decisión estática. A medida que evoluciona el sitio, crece la audiencia o cambian las tendencias del diseño, los colores deben ser revisados y ajustados para seguir cumpliendo con los objetivos de la página.
+
+## 🔠 1.3 Tipografía
+
+La tipografía es un elemento fundamental en el diseño de interfaces web, ya que impacta directamente en la legibilidad, la percepción y la experiencia del usuario. Seleccionar y aplicar correctamente las tipografías en una página web no solo contribuye a la estética del sitio, sino que también mejora la accesibilidad, la jerarquización de la información y la usabilidad.
+
+En este apartado, abordaremos diversos aspectos clave de la tipografía en diseño web, incluyendo la selección de fuentes, el uso de sistemas tipográficos como Google Fonts, las propiedades CSS más importantes para manipular texto, y cómo implementar una jerarquía tipográfica que facilite la navegación y comprensión de los contenidos.
+
+### 1.3.1 La Importancia de la Tipografía en el Diseño Web
+
+![Tipografía](assets/1-3-intro.png){align="right"}
+
+La tipografía no es simplemente la elección de una fuente atractiva, sino una herramienta crucial que define cómo los usuarios perciben y procesan la información presentada en la web. En términos de experiencia de usuario (UX), una tipografía mal seleccionada o mal implementada puede generar confusión, dificultar la lectura y hacer que el usuario abandone el sitio.
+
+Una buena tipografía en la web debe cumplir con varios requisitos:
+
+`Legibilidad`<br>
+Las fuentes deben ser fáciles de leer en pantallas de diferentes tamaños y resoluciones. Es esencial seleccionar una tipografía que funcione bien tanto en dispositivos móviles como en pantallas grandes.
+
+`Jerarquía visual`<br>
+Una correcta aplicación de diferentes tamaños, pesos y estilos tipográficos permite establecer niveles de importancia entre los textos, como titulares, subtítulos, párrafos y enlaces.
+
+`Coherencia`<br>
+La tipografía debe alinearse con la identidad visual del sitio, es decir, debe ser coherente con los colores, el diseño general y los objetivos del sitio.
+
+`Accesibilidad`<br>
+La elección de la tipografía también debe tener en cuenta la accesibilidad para personas con discapacidades visuales, permitiendo que el texto sea lo más claro y legible posible.
+
+!!! asbtract "Dónde encontrar fuentes"
+    Existen muchas páginas de donde poder descargar fuentes para el uso web o incluso, vincular directamente el archivo de fuente sin necesidad de descargarlo previamente. Algunos ejemplos son [Google Fonts](https://fonts.google.com) | [Font Squirrel](https://www.fontsquirrel.com/) | [Awwwards](https://www.awwwards.com/awwwards/collections/free-fonts/) | [Font Space](https://www.fontspace.com/)
+
+### 1.3.2 Tipos de Fuentes en la Web
+
+![Tipos de funetes](assets/1-3-2-intro.png){align="right"}
+
+Las fuentes tipográficas se dividen tradicionalmente en tres grandes categorías, cada una con características específicas que influyen en su uso en el diseño web.
+
+`Fuentes Serif`<br>
+Se caracterizan por tener pequeñas líneas o remates al final de cada letra. Estas fuentes son ideales para textos largos, como artículos o posts, ya que facilitan la lectura al guiar el ojo de una letra a otra. Ejemplos comunes son Times New Roman, Georgia o Merriweather.
+
+`Fuentes Sans Serif`<br>
+Son fuentes sin remates, más simples y modernas, que se utilizan a menudo en interfaces digitales por su claridad y legibilidad en pantallas. Las fuentes Arial, Helvetica y Roboto son ejemplos comunes. Son ideales para títulos, botones y cualquier texto que deba ser rápidamente identificable.
+
+`Fuentes Display o Decorativas`<br>
+Estas fuentes suelen ser más artísticas o expresivas y se utilizan con moderación, principalmente en elementos destacados, como logotipos, títulos grandes o campañas promocionales. Ejemplos incluyen Lobster, Pacifico, entre otras.
+
+!!!warning "Eligiendo una fuente adecuada"
+    La elección entre estos tipos de fuentes depende del tono y el propósito del sitio web. Un blog formal o una página de noticias puede beneficiarse de una tipografía serif para los cuerpos de texto, mientras que una tienda en línea o una app moderna puede optar por una sans serif para lograr un diseño más limpio y directo.
+
+### 1.3.3 Uso de Sistemas de Fuentes Web (Google Fonts)
+
+![Google Fonts](assets/1-3-3-intro.png){align="right"}
+
+Una de las herramientas más útiles para los diseñadores web es la amplia gama de fuentes disponibles a través de sistemas como Google Fonts.
+
+Esta plataforma ofrece una vasta colección de fuentes gratuitas que son fáciles de implementar en cualquier página web, proporcionando control total sobre el diseño tipográfico sin depender de las fuentes instaladas localmente en los dispositivos de los usuarios.
+
+!!!info "Ventajas de usar Google Fonts"
+
+`Accesibilidad`<br>
+Las fuentes se cargan desde servidores de Google, asegurando que cualquier usuario pueda visualizarlas sin necesidad de tener la fuente instalada en su dispositivo.
+
+`Compatibilidad`<br>
+Google Fonts garantiza que las fuentes funcionen correctamente en todos los navegadores modernos y en diferentes dispositivos, asegurando una experiencia consistente.
+
+`Variedad`<br>
+La plataforma ofrece una amplia selección de tipografías tanto serif como sans serif, así como fuentes decorativas, con una gama de pesos y estilos.
+
+`Implementación en CSS`<br>
+Implementar Google Fonts en una página web es sencillo y sigue este formato básico:
+
+```html
+<!-- En nuestras cabeceras del archivo HTML a utilizar-->
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+```
+Haciendo uso de la fuente importada desde Google Fonts.
+
+```css
+/* En nuestro archivo css ➡ style.css */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+```
+
+!!!info "Explicación del código"
+    En este ejemplo, se ha implementado la fuente Roboto con dos pesos diferentes (400 y 700). También es posible especificar múltiples fuentes de respaldo en la propiedad font-family para garantizar que, si por alguna razón una fuente no se carga correctamente, el texto se muestre con una tipografía similar disponible en el sistema del usuario.
+
+### 1.3.4 Jerarquía Tipográfica
+![Web Design](assets/1-3-4.png){align="right"}
+
+La jerarquía tipográfica se refiere a la organización y diferenciación del texto en función de su importancia.
+
+ssEste concepto es clave en el diseño de interfaces web porque permite a los usuarios navegar visualmente por el contenido de manera intuitiva.
+
+Para crear una jerarquía efectiva, los diseñadores pueden jugar con varios aspectos de la tipografía:
+
+`Tamaño`<br>
+Los títulos (h1, h2, etc.) son más grandes que los subtítulos y estos, a su vez, son más grandes que los párrafos de texto.
+
+`Peso`<br>
+El uso de negritas o fuentes más gruesas para destacar partes importantes del contenido.
+
+`Color`<br>
+Usar colores diferentes para los títulos, enlaces o botones puede guiar la atención del usuario hacia elementos clave de la página.
+
+`Espaciado`<br>
+Un mayor espacio entre líneas o entre bloques de texto puede ayudar a separar visualmente las ideas y mejorar la legibilidad.
+
+Ejemplo de una jerarquía básica en CSS:
+
+```css
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.25em;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+```
+
+!!!danger "Explicación del código"
+    Este enfoque garantiza que el título principal (h1) sea el elemento más destacado, seguido por el subtítulo (h2), y que los párrafos sean legibles y tengan suficiente espacio entre líneas para mejorar la comprensión.
+
+### 1.3.5 Tipografía Responsiva
+
+En el diseño web actual, la tipografía debe adaptarse a diferentes tamaños de pantalla y resoluciones. Un texto que se ve bien en un monitor grande puede ser ilegible en un teléfono móvil si no se ajusta correctamente. Para lograr una tipografía responsiva, es posible utilizar media queries y unidades relativas.
+
+Por ejemplo, se puede ajustar el tamaño del texto en pantallas más pequeñas de esta manera:
+
+```css
+body {
+    font-size: 18px;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+}
+```
+
+!!!info "Unidades de medida en CSS"
+    También se pueden usar unidades como ***rem*** o ***em*** en lugar de píxeles, lo que permite que el texto sea más flexible y se ajuste de forma automática al tamaño de pantalla.
