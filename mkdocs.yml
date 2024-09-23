@@ -45,6 +45,8 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - codehilite
+  - pymdownx.superfences
 
 extra:
   home: https://lupastance.github.io/interfaces/

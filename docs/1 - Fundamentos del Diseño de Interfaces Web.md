@@ -26,7 +26,7 @@ En el diseño de interfaces web, los iconos son herramientas poderosas que permi
 
 Los iconos actúan como atajos visuales, mejorando la experiencia de usuario al hacer que la navegación sea más intuitiva y comprensible.
 
-#### 🎉 1.1.1.1 Funciones esenciales en el diseño web:
+### 🎉 1.1.2 Funciones esenciales en el diseño web:
 
 - !!! tip "Simplificación de la información"
 Un icono bien diseñado puede comunicar una idea o acción en cuestión de milisegundos, lo que reduce la necesidad de textos explicativos. Esto es especialmente útil en interfaces móviles o en sitios con contenido limitado por espacio.
@@ -45,7 +45,7 @@ Los iconos que representan funciones comunes (como el carrito de compras, la lup
 
     En EEUU los semáforos no usaban iconos o símbolos para decirle al peatón cuándo podía cruzar la calle, simplemente mostraban el texto "DONT WALK" en rojo para que los peatones no cruzaban la calle o "WALK" para que la cruzaran.
 
-#### 💢 1.1.1.2 Tipos de iconos y usos comunes
+### 💢 1.1.3 Tipos de iconos y usos comunes
 
 Existen diferentes tipos de iconos en el diseño de interfaces web, cada uno con funciones y aplicaciones específicas:
 
@@ -61,7 +61,7 @@ Informan sobre el estado actual de un proceso. Por ejemplo, un check puede seña
 🛜 `Iconos de redes sociales` <br>
 Los iconos que representan plataformas como Facebook, Twitter o Instagram son elementos recurrentes en muchas webs y facilitan la vinculación de contenido con perfiles o cuentas en redes.
 
-#### 📓 1.1.1.3 Buenas Prácticas en el Uso de iconos
+### 📓 1.1.4 Buenas Prácticas en el Uso de iconos
 
 Para que los iconos en una interfaz web sean efectivos, es necesario tener en cuenta varias buenas prácticas en su diseño y aplicación
 
@@ -76,7 +76,7 @@ Para que los iconos en una interfaz web sean efectivos, es necesario tener en cu
 - Accesibilidad: Es fundamental acompañar los iconos con texto alternativo (atributo alt) o etiquetas ARIA para asegurar que los usuarios con discapacidades visuales, que utilicen lectores de pantalla, puedan entender su función.
 
 
-#### 🤯 1.1.1.4 Psicología y Simbología en la Iconografía
+### 🤯 1.1.5 Psicología y Simbología en la Iconografía
 ![intro](assets/1-4-psico.png){align="right"}
 
 Los iconos, al igual que otros elementos visuales, están profundamente conectados con la psicología del usuario. La interpretación de un símbolo no solo depende de su apariencia, sino también de las asociaciones que las personas tienen con él. A lo largo del tiempo, algunos iconos se han convertido en universales y sus significados son prácticamente automáticos. Por ejemplo, una papelera es reconocida a nivel global como un símbolo para eliminar o descartar contenido, mientras que una flecha hacia abajo a menudo se interpreta como una opción para descargar archivos o desplegar menús.
@@ -85,7 +85,7 @@ El uso de estos símbolos conocidos en el diseño web tiene múltiples beneficio
 
 Sin embargo, el uso de iconografía también debe ir acompañado de una consideración cultural y del contexto en el que se va a aplicar. En algunos casos, un icono que es evidente para un grupo de usuarios puede no tener el mismo significado para otro grupo. Por lo tanto, es recomendable realizar pruebas de usuario para asegurarse de que los iconos sean interpretados correctamente en el público objetivo.
 
-#### 🧰 1.1.1.5 Herramientas y Tecnologías para la Creación de Iconos
+### 🧰 1.1.6 Herramientas y Tecnologías para la Creación de Iconos
 
 ![intro](assets/1-5-tools.png){align="right"}
 
@@ -107,7 +107,7 @@ El formato **SVG** es ideal para usar en la web, ya que estos archivos son liger
     [Sketch |](https://www.sketch.com)
     [Figma](https://www.figma.com)
 
-### 🌈 1.1.2 Los Colores
+## 🌈 1.2 Los Colores
 
 ![Los colores](assets/1-2-colores.png){align="right"}
 
@@ -121,7 +121,7 @@ El uso del color en el diseño de interfaces web va mucho más allá de un simpl
 
 En el diseño web, el color se emplea de diversas formas: para dar vida a los elementos visuales, generar coherencia en la identidad de marca, y destacar o agrupar información. Además, la correcta elección de colores puede impactar directamente en la accesibilidad del sitio, haciendo que este sea más inclusivo para personas con discapacidades visuales o daltonismo.
 
-#### 🗣️ 1.1.2.1 Psicología del Color
+### 🗣️ 1.2.1 Psicología del Color
 
 Uno de los aspectos más importantes del uso del color en el diseño web es su capacidad para evocar emociones y transmitir mensajes de manera implícita. La psicología del color estudia cómo los colores afectan las emociones y comportamientos humanos, algo que los diseñadores web deben tener en cuenta al seleccionar la paleta de una interfaz.
 
@@ -145,7 +145,7 @@ Representa elegancia, sofisticación y modernidad. Es común en marcas de lujo o
 !!! danger "Diferentes casos de uso"
     Es importante considerar que la psicología del color puede variar culturalmente. Por ejemplo, en algunos países, el blanco está asociado con la pureza y la paz, mientras que en otros puede tener connotaciones de luto o tristeza. Por lo tanto, los diseñadores deben investigar las interpretaciones culturales del color en su público objetivo.
 
-#### 🖊️ 1.1.2.2 Teoría del Color y Paletas de Colores
+### 🖊️ 1.2.2 Teoría del Color y Paletas de Colores
 
 ![intro](assets/1-1-2-paleta.png){align="right"}
 
@@ -168,7 +168,7 @@ Utiliza distintas tonalidades, saturaciones y valores de un solo color. Este esq
 !!! tip "Consejo"
     La selección de una paleta de colores debe considerar no solo la estética, sino también la legibilidad y el contraste. Los colores deben usarse para guiar al usuario por la página, ayudándolo a distinguir entre diferentes tipos de contenido, botones de acción y secciones. El uso del color para jerarquizar la información también contribuye a una experiencia de usuario más fluida.
 
-#### 🌄 1.1.2.3 Contraste y Legibilidad
+### 🌄 1.2.3 Contraste y Legibilidad
 
 ![intro](assets/1-1-2-contraste.png){align="right"}
 
@@ -184,7 +184,7 @@ Para asegurarse de que los niveles de contraste sean adecuados, existen herramie
     En la red social *Pinterest* podéis encontrar muy buenos ejemplos de elección de colores para una página web. Podéis probar a buscar con el término [Web Palette Colors](https://es.pinterest.com/search/pins/?rs=ac&len=2&q=web%20palette%20colors&eq=web%20pal&etslf=11831). Otra web bastante interesante para el tema de los colores en una web es [💖 Colour Lovers](https://www.colourlovers.com/)
 
 
-#### 🍭 1.1.2.4 Uso del Color para la Navegación y Jerarquía Visual
+### 🍭 1.2.4 Uso del Color para la Navegación y Jerarquía Visual
 
 El color también desempeña un papel crucial en la organización y presentación de la información. A través del color, los diseñadores pueden establecer una jerarquía visual clara, lo que ayuda al usuario a identificar la importancia de diferentes elementos de la página. Esto se puede lograr mediante varios enfoques:
 
@@ -200,7 +200,7 @@ Los colores también pueden utilizarse para señalar estados o acciones específ
 🎯 `Foco en la atención` <br>
 Un buen uso del color puede dirigir la atención del usuario hacia áreas clave de la página. Por ejemplo, en una landing page, el color principal se puede usar para dirigir al usuario hacia el botón de compra o registro, mientras que colores secundarios se utilizan para otros elementos menos importantes.
 
-#### 🛗 1.1.2.5 Colores y Accesibilidad
+### 🛗 1.2.5 Colores y Accesibilidad
 ![Accesibilidad](assets/accesibilidad.png){align="right"}
 
 El uso del color también tiene un impacto significativo en la accesibilidad de una página web. No todos los usuarios perciben los colores de la misma manera, lo que significa que los diseñadores deben ser conscientes de condiciones como el daltonismo (incapacidad para distinguir ciertos colores) o la baja visión.
@@ -209,7 +209,7 @@ Para garantizar la accesibilidad, es fundamental que los colores no sean el úni
 
 Existen herramientas, como [Color Oracle](https://colororacle.org/), que permiten simular cómo un sitio web se ve para usuarios con distintas discapacidades visuales, facilitando así el ajuste de la paleta de colores para que sea accesible para todos.
 
-#### 🧭 1.1.2.6 Tendencias Actuales en el Uso del Color en Web
+### 🧭 1.2.6 Tendencias Actuales en el Uso del Color en Web
 <center>
 ![Tendencias](assets/1-1-5-trend.png)
 </center>
@@ -224,3 +224,100 @@ En contraste con los diseños más sobrios y minimalistas del pasado, muchos sit
 
 `Gradientes de color` <br>
 Los gradientes han vuelto a ser populares, proporcionando profundidad y dinamismo a los fondos o elementos visuales. Este tipo de aplicación de color puede ser sutil o audaz, dependiendo del diseño.
+
+### 🛠️1.2.7 Herramientas para la Selección de Colores
+
+![Color picker](assets/1-2-7-intro.png){align="right"}
+
+Hoy en día, los diseñadores web cuentan con diversas herramientas que facilitan la elección de una paleta de colores adecuada para una interfaz. Estas herramientas permiten explorar combinaciones cromáticas, verificar el contraste y garantizar que los colores seleccionados se alineen con los objetivos de la página web. Algunas de las herramientas más populares son:
+
+[Adobe Color](https://color.adobe.com/es/create)<br>
+Esta plataforma es una de las más utilizadas para crear y explorar paletas de colores. Permite generar esquemas de color basados en reglas como colores complementarios, análogos, triádicos o monocromáticos, y también permite ajustar el brillo, la saturación y otros parámetros. Además, Adobe Color incluye una herramienta de accesibilidad que permite verificar si una paleta es apropiada para usuarios con dificultades visuales.
+
+[Coolors](https://coolors.co/)<br>
+Una herramienta sencilla que permite generar paletas de colores con solo presionar un botón. Coolors también ofrece funcionalidades para ajustar las paletas, verificar el contraste y exportar los colores en diferentes formatos (RGB, HEX, CMYK).
+
+[Material Design Color Tool](https://m2.material.io/design/color/the-color-system.html)<br>
+Esta herramienta, diseñada por Google, permite seleccionar colores basados en las directrices de diseño de Material Design. Es útil para aquellos que buscan crear una experiencia coherente y bien estructurada a partir de la filosofía de diseño de Google.
+
+[ColorZilla](https://www.colorzilla.com/es/)<br>
+Una extensión para navegadores que permite a los diseñadores extraer colores directamente desde sitios web existentes. Es útil para obtener inspiración de otras interfaces o para asegurarse de que los colores se mantengan consistentes en todo el sitio.
+
+[Contrast Ratio](https://accessibleweb.com/color-contrast-checker/)<br>
+Una herramienta centrada en verificar la accesibilidad de las combinaciones de colores. Proporciona la relación de contraste entre un color de fondo y un color de primer plano (texto, íconos, etc.), y asegura que cumplan con los estándares de accesibilidad establecidos por la WCAG (Web Content Accessibility Guidelines).
+
+### 🧑🏻‍💻 1.2.8 Implementación del Color en CSS
+
+![Color picker](assets/1-2-8-css.png){align="right"}
+
+Una vez seleccionada la paleta de colores para una interfaz, la implementación en código CSS es un paso crucial para garantizar que los colores se apliquen correctamente en la página web.
+
+El uso de colores en CSS es versátil, permitiendo definir colores tanto en valores HEX `#FF5733`, RGB `rgb(255, 87, 51)` como en HSL `hsl(9, 100%, 60%)`. Cada uno de estos formatos tiene ventajas en diferentes contextos.
+
+`HEX`<br>
+Es el formato más común para definir colores en CSS. Su simplicidad y universalidad lo convierten en la opción preferida para la mayoría de los desarrolladores.
+
+`RGB`<br>
+Es ideal cuando se necesita controlar los niveles de transparencia o cuando se quiere realizar cálculos de color dinámicos mediante CSS o JavaScript.
+
+`HSL`<br>
+Este formato permite definir colores mediante matiz, saturación y luminosidad, lo que facilita los ajustes de color, ya que refleja cómo los humanos percibimos los colores, en lugar de basarse solo en valores de rojo, verde y azul.
+
+El uso de variables de CSS (--primary-color, --secondary-color, etc.) facilita la reutilización de los colores a lo largo del código, permitiendo cambios más rápidos en toda la interfaz si es necesario ajustar la paleta. Esto es especialmente útil en proyectos grandes o al implementar temas oscuros y claros, ya que los colores pueden ser cambiados globalmente sin necesidad de modificar cada estilo individualmente.
+
+```css
+/* Definir las variables de color en el selector :root para que sean globales */
+:root {
+    --primary-color: #3498db; /* Azul claro */
+    --secondary-color: #2ecc71; /* Verde */
+    --text-color: #333333; /* Texto oscuro */
+    --background-color: #f4f4f4; /* Fondo claro */
+    --button-hover-color: #2980b9; /* Azul más oscuro para hover */
+    --border-color: #bdc3c7; /* Color del borde gris claro */
+}
+
+/* Aplicar las variables de color a diferentes elementos */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+}
+
+p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+}
+
+.container {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+```
