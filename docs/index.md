@@ -1,8 +1,8 @@
-# Bienvenid@s a Diseño de Interfaces Web
+# Bienvenid@s a Desarrollo de Interfaces
 
 ![logo](assets/intro.png){ align=right }
 
-Bienvenidos a la asignatura de "Diseño de Interfaces Web" del Ciclo Superior de Desarrollo de Aplicaciones Web. En esta materia, exploraremos los principios fundamentales y las mejores prácticas para la creación de interfaces de usuario (UI) efectivas, intuitivas y estéticamente agradables. Aprenderemos cómo el diseño de interfaces no solo se enfoca en la apariencia visual, sino también en la experiencia de usuario (UX), buscando garantizar que las aplicaciones web sean fáciles de usar, accesibles y atractivas para los usuarios finales.
+Bienvenidos a la asignatura de "Desarrollo de Interfaces" del Ciclo Superior de Desarrollo de Aplicaciones Web. En esta materia, exploraremos los principios fundamentales y las mejores prácticas para la creación de interfaces de usuario (UI) efectivas, intuitivas y estéticamente agradables. Aprenderemos cómo el diseño de interfaces no solo se enfoca en la apariencia visual, sino también en la experiencia de usuario (UX), buscando garantizar que las aplicaciones web sean fáciles de usar, accesibles y atractivas para los usuarios finales.
 
 A lo largo del curso, abordaremos temas clave como la teoría del color, la tipografía, la disposición de elementos en pantalla (layout), la usabilidad, y la accesibilidad. También exploraremos las tendencias actuales en diseño web, las herramientas y tecnologías más utilizadas en la industria, y cómo implementar interfaces responsivas que se adapten a diferentes dispositivos y resoluciones de pantalla.
 
