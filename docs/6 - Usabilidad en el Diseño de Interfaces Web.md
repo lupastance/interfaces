@@ -1,1 +1,0 @@
-# 6️⃣ Usabilidad en el Diseño de Interfaces Web 

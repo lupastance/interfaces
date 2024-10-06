@@ -1,4 +1,4 @@
-# 1️⃣ Fundamentos del Diseño de Interfaces Web
+# 0️⃣ Fundamentos del Diseño de Interfaces Web
 
 ![intro](assets/1-intro.png){align="right"}
 
@@ -8,7 +8,7 @@ Exploraremos cómo la elección adecuada de colores y tipografías puede influir
 
 Finalmente, nos familiarizaremos con la creación y utilización de plantillas de diseño, que nos permitirán estandarizar procesos y garantizar que las interfaces mantengan un aspecto y funcionamiento homogéneo a lo largo de todo el desarrollo. Este tema sentará las bases para el resto del curso, brindándonos los conocimientos esenciales para abordar los retos del diseño de interfaces con seguridad y creatividad.
 
-## 1.1. La Importancia de la Comunicación Visual en el Diseño Web
+## 0.1. La Importancia de la Comunicación Visual en el Diseño Web
 
 El diseño de interfaces web va más allá de la simple creación de páginas estéticamente agradables; se trata de establecer una comunicación efectiva entre el usuario y el sistema. La comunicación visual es el medio por el cual los usuarios interpretan y navegan una aplicación o sitio web. Un buen diseño visual guía al usuario, facilita la interacción y mejora la experiencia general.
 
@@ -16,7 +16,7 @@ El diseño de interfaces web va más allá de la simple creación de páginas es
 
 La comunicación visual es el proceso mediante el cual se transmite información e ideas a través de elementos visuales. En el contexto del diseño de interfaces web, los elementos visuales no solo decoran la página, sino que juegan un rol esencial en guiar al usuario, influir en su percepción y mejorar su experiencia. A continuación, se detallan los elementos clave de la comunicación visual y su aplicación en el diseño web.
 
-### ✨ 1.1.1 Iconografía
+### ✨ 0.1.1 Iconografía
 
 ![intro](assets/1-1-iconos.png){align="right"}
 
@@ -26,7 +26,7 @@ En el diseño de interfaces web, los iconos son herramientas poderosas que permi
 
 Los iconos actúan como atajos visuales, mejorando la experiencia de usuario al hacer que la navegación sea más intuitiva y comprensible.
 
-### 🎉 1.1.2 Funciones esenciales en el diseño web:
+### 🎉 0.1.2 Funciones esenciales en el diseño web:
 
 - !!! tip "Simplificación de la información"
 Un icono bien diseñado puede comunicar una idea o acción en cuestión de milisegundos, lo que reduce la necesidad de textos explicativos. Esto es especialmente útil en interfaces móviles o en sitios con contenido limitado por espacio.
@@ -45,7 +45,7 @@ Los iconos que representan funciones comunes (como el carrito de compras, la lup
 
     En EEUU los semáforos no usaban iconos o símbolos para decirle al peatón cuándo podía cruzar la calle, simplemente mostraban el texto "DONT WALK" en rojo para que los peatones no cruzaban la calle o "WALK" para que la cruzaran.
 
-### 💢 1.1.3 Tipos de iconos y usos comunes
+### 💢 0.1.3 Tipos de iconos y usos comunes
 
 Existen diferentes tipos de iconos en el diseño de interfaces web, cada uno con funciones y aplicaciones específicas:
 
@@ -61,7 +61,7 @@ Informan sobre el estado actual de un proceso. Por ejemplo, un check puede seña
 🛜 `Iconos de redes sociales` <br>
 Los iconos que representan plataformas como Facebook, Twitter o Instagram son elementos recurrentes en muchas webs y facilitan la vinculación de contenido con perfiles o cuentas en redes.
 
-### 📓 1.1.4 Buenas Prácticas en el Uso de iconos
+### 📓 0.1.4 Buenas Prácticas en el Uso de iconos
 
 Para que los iconos en una interfaz web sean efectivos, es necesario tener en cuenta varias buenas prácticas en su diseño y aplicación
 
@@ -76,7 +76,7 @@ Para que los iconos en una interfaz web sean efectivos, es necesario tener en cu
 - Accesibilidad: Es fundamental acompañar los iconos con texto alternativo (atributo alt) o etiquetas ARIA para asegurar que los usuarios con discapacidades visuales, que utilicen lectores de pantalla, puedan entender su función.
 
 
-### 🤯 1.1.5 Psicología y Simbología en la Iconografía
+### 🤯 0.1.5 Psicología y Simbología en la Iconografía
 ![intro](assets/1-4-psico.png){align="right"}
 
 Los iconos, al igual que otros elementos visuales, están profundamente conectados con la psicología del usuario. La interpretación de un símbolo no solo depende de su apariencia, sino también de las asociaciones que las personas tienen con él. A lo largo del tiempo, algunos iconos se han convertido en universales y sus significados son prácticamente automáticos. Por ejemplo, una papelera es reconocida a nivel global como un símbolo para eliminar o descartar contenido, mientras que una flecha hacia abajo a menudo se interpreta como una opción para descargar archivos o desplegar menús.
@@ -85,7 +85,7 @@ El uso de estos símbolos conocidos en el diseño web tiene múltiples beneficio
 
 Sin embargo, el uso de iconografía también debe ir acompañado de una consideración cultural y del contexto en el que se va a aplicar. En algunos casos, un icono que es evidente para un grupo de usuarios puede no tener el mismo significado para otro grupo. Por lo tanto, es recomendable realizar pruebas de usuario para asegurarse de que los iconos sean interpretados correctamente en el público objetivo.
 
-### 🧰 1.1.6 Herramientas y Tecnologías para la Creación de Iconos
+### 🧰 0.1.6 Herramientas y Tecnologías para la Creación de Iconos
 
 ![intro](assets/1-5-tools.png){align="right"}
 
@@ -107,7 +107,7 @@ El formato **SVG** es ideal para usar en la web, ya que estos archivos son liger
     [Sketch |](https://www.sketch.com)
     [Figma](https://www.figma.com)
 
-## 🌈 1.2 Los Colores
+## 🌈 0.2 Los Colores
 
 ![Los colores](assets/1-2-colores.png){align="right"}
 
@@ -121,7 +121,7 @@ El uso del color en el diseño de interfaces web va mucho más allá de un simpl
 
 En el diseño web, el color se emplea de diversas formas: para dar vida a los elementos visuales, generar coherencia en la identidad de marca, y destacar o agrupar información. Además, la correcta elección de colores puede impactar directamente en la accesibilidad del sitio, haciendo que este sea más inclusivo para personas con discapacidades visuales o daltonismo.
 
-### 🗣️ 1.2.1 Psicología del Color
+### 🗣️ 0.2.1 Psicología del Color
 
 Uno de los aspectos más importantes del uso del color en el diseño web es su capacidad para evocar emociones y transmitir mensajes de manera implícita. La psicología del color estudia cómo los colores afectan las emociones y comportamientos humanos, algo que los diseñadores web deben tener en cuenta al seleccionar la paleta de una interfaz.
 
@@ -145,7 +145,7 @@ Representa elegancia, sofisticación y modernidad. Es común en marcas de lujo o
 !!! danger "Diferentes casos de uso"
     Es importante considerar que la psicología del color puede variar culturalmente. Por ejemplo, en algunos países, el blanco está asociado con la pureza y la paz, mientras que en otros puede tener connotaciones de luto o tristeza. Por lo tanto, los diseñadores deben investigar las interpretaciones culturales del color en su público objetivo.
 
-### 🖊️ 1.2.2 Teoría del Color y Paletas de Colores
+### 🖊️ 0.2.2 Teoría del Color y Paletas de Colores
 
 ![intro](assets/1-1-2-paleta.png){align="right"}
 
@@ -168,7 +168,7 @@ Utiliza distintas tonalidades, saturaciones y valores de un solo color. Este esq
 !!! tip "Consejo"
     La selección de una paleta de colores debe considerar no solo la estética, sino también la legibilidad y el contraste. Los colores deben usarse para guiar al usuario por la página, ayudándolo a distinguir entre diferentes tipos de contenido, botones de acción y secciones. El uso del color para jerarquizar la información también contribuye a una experiencia de usuario más fluida.
 
-### 🌄 1.2.3 Contraste y Legibilidad
+### 🌄 0.2.3 Contraste y Legibilidad
 
 ![intro](assets/1-1-2-contraste.png){align="right"}
 
@@ -184,7 +184,7 @@ Para asegurarse de que los niveles de contraste sean adecuados, existen herramie
     En la red social *Pinterest* podéis encontrar muy buenos ejemplos de elección de colores para una página web. Podéis probar a buscar con el término [Web Palette Colors](https://es.pinterest.com/search/pins/?rs=ac&len=2&q=web%20palette%20colors&eq=web%20pal&etslf=11831). Otra web bastante interesante para el tema de los colores en una web es [💖 Colour Lovers](https://www.colourlovers.com/)
 
 
-### 🍭 1.2.4 Uso del Color para la Navegación y Jerarquía Visual
+### 🍭 0.2.4 Uso del Color para la Navegación y Jerarquía Visual
 
 El color también desempeña un papel crucial en la organización y presentación de la información. A través del color, los diseñadores pueden establecer una jerarquía visual clara, lo que ayuda al usuario a identificar la importancia de diferentes elementos de la página. Esto se puede lograr mediante varios enfoques:
 
@@ -200,7 +200,7 @@ Los colores también pueden utilizarse para señalar estados o acciones específ
 🎯 `Foco en la atención` <br>
 Un buen uso del color puede dirigir la atención del usuario hacia áreas clave de la página. Por ejemplo, en una landing page, el color principal se puede usar para dirigir al usuario hacia el botón de compra o registro, mientras que colores secundarios se utilizan para otros elementos menos importantes.
 
-### 🛗 1.2.5 Colores y Accesibilidad
+### 🛗 0.2.5 Colores y Accesibilidad
 ![Accesibilidad](assets/accesibilidad.png){align="right"}
 
 El uso del color también tiene un impacto significativo en la accesibilidad de una página web. No todos los usuarios perciben los colores de la misma manera, lo que significa que los diseñadores deben ser conscientes de condiciones como el daltonismo (incapacidad para distinguir ciertos colores) o la baja visión.
@@ -209,7 +209,7 @@ Para garantizar la accesibilidad, es fundamental que los colores no sean el úni
 
 Existen herramientas, como [Color Oracle](https://colororacle.org/), que permiten simular cómo un sitio web se ve para usuarios con distintas discapacidades visuales, facilitando así el ajuste de la paleta de colores para que sea accesible para todos.
 
-### 🧭 1.2.6 Tendencias Actuales en el Uso del Color en Web
+### 🧭 0.2.6 Tendencias Actuales en el Uso del Color en Web
 <center>
 ![Tendencias](assets/1-1-5-trend.png)
 </center>
@@ -246,7 +246,7 @@ Una extensión para navegadores que permite a los diseñadores extraer colores d
 [Contrast Ratio](https://accessibleweb.com/color-contrast-checker/)<br>
 Una herramienta centrada en verificar la accesibilidad de las combinaciones de colores. Proporciona la relación de contraste entre un color de fondo y un color de primer plano (texto, íconos, etc.), y asegura que cumplan con los estándares de accesibilidad establecidos por la WCAG (Web Content Accessibility Guidelines).
 
-### 🧑🏻‍💻 1.2.8 Implementación del Color en CSS
+### 🧑🏻‍💻 0.2.8 Implementación del Color en CSS
 
 ![Color picker](assets/1-2-8-css.png){align="right"}
 
@@ -292,7 +292,7 @@ h1 {
 
 p {
     color: var(--text-color);
-    line-height: 1.6;
+    line-height: 0.6;
 }
 
 button {
@@ -322,7 +322,7 @@ button:hover {
 
 ```
 
-### 🎨 1.2.9 Colores en el Diseño *Responsive*
+### 🎨 0.2.9 Colores en el Diseño *Responsive*
 
 ![Web Design](assets/1-2-9-intro.png){align="right"}
 
@@ -334,7 +334,7 @@ CSS ofrece herramientas como **media queries** que permiten cambiar el estilo de
 
 También es posible ajustar otros factores relacionados con el color, como el grosor de las líneas de los íconos o las sombras, para hacer que los elementos visuales sean más claros en dispositivos móviles.
 
-### ✏ 1.2.10 Evaluación y Ajustes de Color en el Proceso de Diseño
+### ✏ 0.2.10 Evaluación y Ajustes de Color en el Proceso de Diseño
 
 ![Web Design](assets/1-2-10-intro.png){align="right"}
 
@@ -354,13 +354,13 @@ Además del rendimiento técnico del sitio (velocidad de carga, interactividad),
 !!!info "Dinamismo en el diseño web"
     El color en el diseño web no es una decisión estática. A medida que evoluciona el sitio, crece la audiencia o cambian las tendencias del diseño, los colores deben ser revisados y ajustados para seguir cumpliendo con los objetivos de la página.
 
-## 🔠 1.3 Tipografía
+## 🔠 0.3 Tipografía
 
 La tipografía es un elemento fundamental en el diseño de interfaces web, ya que impacta directamente en la legibilidad, la percepción y la experiencia del usuario. Seleccionar y aplicar correctamente las tipografías en una página web no solo contribuye a la estética del sitio, sino que también mejora la accesibilidad, la jerarquización de la información y la usabilidad.
 
 En este apartado, abordaremos diversos aspectos clave de la tipografía en diseño web, incluyendo la selección de fuentes, el uso de sistemas tipográficos como Google Fonts, las propiedades CSS más importantes para manipular texto, y cómo implementar una jerarquía tipográfica que facilite la navegación y comprensión de los contenidos.
 
-### 1.3.1 La Importancia de la Tipografía en el Diseño Web
+### 0.3.1 La Importancia de la Tipografía en el Diseño Web
 
 ![Tipografía](assets/1-3-intro.png){align="right"}
 
@@ -383,7 +383,7 @@ La elección de la tipografía también debe tener en cuenta la accesibilidad pa
 !!! asbtract "Dónde encontrar fuentes"
     Existen muchas páginas de donde poder descargar fuentes para el uso web o incluso, vincular directamente el archivo de fuente sin necesidad de descargarlo previamente. Algunos ejemplos son [Google Fonts](https://fonts.google.com) | [Font Squirrel](https://www.fontsquirrel.com/) | [Awwwards](https://www.awwwards.com/awwwards/collections/free-fonts/) | [Font Space](https://www.fontspace.com/)
 
-### 1.3.2 Tipos de Fuentes en la Web
+### 0.3.2 Tipos de Fuentes en la Web
 
 ![Tipos de funetes](assets/1-3-2-intro.png){align="right"}
 
@@ -401,7 +401,7 @@ Estas fuentes suelen ser más artísticas o expresivas y se utilizan con moderac
 !!!warning "Eligiendo una fuente adecuada"
     La elección entre estos tipos de fuentes depende del tono y el propósito del sitio web. Un blog formal o una página de noticias puede beneficiarse de una tipografía serif para los cuerpos de texto, mientras que una tienda en línea o una app moderna puede optar por una sans serif para lograr un diseño más limpio y directo.
 
-### 1.3.3 Uso de Sistemas de Fuentes Web (Google Fonts)
+### 0.3.3 Uso de Sistemas de Fuentes Web (Google Fonts)
 
 ![Google Fonts](assets/1-3-3-intro.png){align="right"}
 
@@ -441,7 +441,7 @@ body {
 !!!info "Explicación del código"
     En este ejemplo, se ha implementado la fuente Roboto con dos pesos diferentes (400 y 700). También es posible especificar múltiples fuentes de respaldo en la propiedad font-family para garantizar que, si por alguna razón una fuente no se carga correctamente, el texto se muestre con una tipografía similar disponible en el sistema del usuario.
 
-### 1.3.4 Jerarquía Tipográfica
+### 0.3.4 Jerarquía Tipográfica
 ![Web Design](assets/1-3-4.png){align="right"}
 
 La jerarquía tipográfica se refiere a la organización y diferenciación del texto en función de su importancia.
@@ -478,14 +478,14 @@ h2 {
 
 p {
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 0.6;
 }
 ```
 
 !!!danger "Explicación del código"
     Este enfoque garantiza que el título principal (h1) sea el elemento más destacado, seguido por el subtítulo (h2), y que los párrafos sean legibles y tengan suficiente espacio entre líneas para mejorar la comprensión.
 
-### 1.3.5 Tipografía Responsiva
+### 0.3.5 Tipografía Responsiva
 
 En el diseño web actual, la tipografía debe adaptarse a diferentes tamaños de pantalla y resoluciones. Un texto que se ve bien en un monitor grande puede ser ilegible en un teléfono móvil si no se ajusta correctamente. Para lograr una tipografía responsiva, es posible utilizar media queries y unidades relativas.
 

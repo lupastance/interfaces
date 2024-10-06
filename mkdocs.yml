@@ -47,6 +47,8 @@ markdown_extensions:
   - md_in_html
   - codehilite
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra:
   home: https://lupastance.github.io/interfaces/
