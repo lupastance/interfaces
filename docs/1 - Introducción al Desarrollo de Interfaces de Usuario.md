@@ -1,34 +1,21 @@
 # **1️⃣ Introducción al desarrollo de interfaces de usuario con HTML5, CSS y JavaScript**
 
-<!-- #### **Duración:** 2 semanas (11 - 24 de septiembre)
-
-#### **Objetivos:**
-- Entender los conceptos básicos del desarrollo de interfaces gráficas de usuario (UI) utilizando tecnologías web: **HTML5, CSS y JavaScript**.
-- Comprender cómo estructurar una página web utilizando **HTML5** y cómo darle estilo con **CSS**.
-- Aprender a asociar eventos a los elementos de la interfaz mediante **JavaScript** y desarrollar una aplicación básica que integre interacción en tiempo real.
-  
-### **Contenidos del Tema 1:** -->
-
-## **1.1 Introducción al desarrollo de interfaces de usuario**
-
 Una interfaz gráfica de usuario (UI) es la capa de interacción entre el usuario y la aplicación. En este sentido, las UI web deben cumplir con los principios de usabilidad, accesibilidad y estética, ya que de ellas depende gran parte de la experiencia del usuario (UX). Este tema se centra en la construcción de UI utilizando tecnologías web que permiten a los usuarios interactuar de manera visual y dinámica con las aplicaciones.
 
-### **Conceptos básicos de una interfaz gráfica de usuario:**
+### ***Conceptos básicos de una interfaz gráfica de usuario:***
 
 - **UI (User Interface)**: Se refiere a los componentes visuales con los que interactúa un usuario en una página web o aplicación.
 - **UX (User Experience)**: Se refiere a la experiencia general que tiene un usuario al interactuar con una UI, considerando factores como facilidad de uso, satisfacción y accesibilidad.
   
-### **Características de una interfaz de usuario efectiva:**
+### ***Características de una interfaz de usuario efectiva:***
 
 1. **Usabilidad**: La interfaz debe ser fácil de usar y aprender, minimizando la curva de aprendizaje del usuario.
 2. **Accesibilidad**: La interfaz debe ser accesible para usuarios con discapacidades, respetando los estándares como WCAG (Web Content Accessibility Guidelines).
 3. **Estética**: La interfaz debe ser visualmente atractiva y coherente, utilizando colores, tipografías y distribuciones que sigan patrones de diseño reconocidos.
 
-## **1.2 HTML5 👉🏻 La estructura de las interfaces**
+## **1.1 HTML5 👉🏻 La estructura de las interfaces**
 
 `HTML5` es la tecnología base utilizada para estructurar las páginas web. Define el esqueleto de la UI mediante el uso de etiquetas y atributos semánticos que facilitan la organización del contenido y su accesibilidad.
-
-### **Estructura básica de una página HTML:**
 
 ```html
 <!DOCTYPE html>
@@ -68,7 +55,7 @@ Una interfaz gráfica de usuario (UI) es la capa de interacción entre el usuari
 </html>
 ```
 
-### **Componentes clave de HTML5 en interfaces gráficas:**
+### ***Componentes clave de HTML5 en interfaces gráficas:***
 
 1. **Etiquetas semánticas**:
       - `<header>`, `<footer>`, `<section>`, `<article>`: Estructuran el contenido de forma semántica, facilitando la comprensión del contenido tanto para usuarios como para motores de búsqueda.
@@ -90,16 +77,16 @@ Una interfaz gráfica de usuario (UI) es la capa de interacción entre el usuari
         </form>
       ```
 
-## **1.3 CSS3 👉🏻 Estilo y presentación de interfaces**
+## **1.2 CSS3 👉🏻 Estilo y presentación de interfaces**
 
 **CSS3** se utiliza para controlar la apariencia de los elementos HTML, definiendo aspectos como colores, tipografía, márgenes, alineación y comportamiento visual. CSS es fundamental para hacer las interfaces atractivas y funcionales en diferentes dispositivos.
 
-### **Reglas básicas de CSS:**
+### ***Reglas básicas de CSS***
 
 - **Selectores**: Seleccionan los elementos que se van a estilizar (por ejemplo, `p { color: blue; }`).
 - **Propiedades y valores**: Definen el estilo de los elementos (por ejemplo, `color`, `background-color`, `margin`, `padding`).
   
-### **Estilos comunes para interfaces:**
+### ***Estilos comunes para interfaces***
 
 ```css
 body {
@@ -134,7 +121,7 @@ button {
 }
 ```
 
-### **Diseño responsivo:**
+### ***Diseño responsivo***
 
 - **Media Queries**: Permiten ajustar los estilos según el tamaño de la pantalla.
   ```css
@@ -145,7 +132,7 @@ button {
   }
   ```
   
-### **Disposición de elementos con Flexbox y Grid**:
+### ***Disposición de elementos con Flexbox y Grid***
 
 - **Flexbox**: Se usa para organizar elementos en una fila o columna flexible.
   ```css
@@ -162,20 +149,20 @@ button {
   }
   ```
 
-## **1.4. JavaScript 👉🏻 Comportamiento y eventos en la interfaz**
+## **1.3. JavaScript 👉🏻 Comportamiento y eventos en la interfaz**
 
 ![JS](assets/1-js-logo.png){align="right"}
 
 **JavaScript** añade interactividad a las interfaces, permitiendo que los elementos respondan a acciones del usuario, como clics, envío de formularios o cambios en los campos de texto.
 
-### **Introducción al DOM (Document Object Model):**
+### ***Introducción al DOM (Document Object Model)***
 - El **DOM** representa la estructura del documento HTML como un árbol de objetos manipulables por JavaScript.
 - **Selección de elementos**: Se utilizan métodos como `document.getElementById()` o `document.querySelector()`.
   ```javascript
   const form = document.getElementById('contactForm');
   ```
 
-### **Manejo de eventos en JavaScript**:
+### ***Manejo de eventos en JavaScript***
 - Los eventos permiten asociar acciones a interacciones del usuario, como `click`, `input`, `submit`.
   ```javascript
   document.querySelector('button').addEventListener('click', function() {
@@ -183,7 +170,7 @@ button {
   });
   ```
 
-### **Validación y manipulación de formularios:**
+### ***Validación y manipulación de formularios***
 - Validar datos de formulario antes de su envío:
   ```javascript
   form.addEventListener('submit', function(event) {
@@ -195,7 +182,7 @@ button {
   });
   ```
 
-## **5. Desarrollo de una aplicación web básica**
+## **1.4 Desarrollo de una aplicación web básica**
 
 1. Crear un formulario de contacto que incluya los campos de nombre, correo electrónico y mensaje.
 2. Validar los campos con JavaScript para asegurarse de que el usuario completa correctamente el formulario.
@@ -325,7 +312,7 @@ button {
     ```
 
 
-### **Descripción del código de la aplicación:**
+### ***Descripción del código de la aplicación***
 
 1. **HTML5**:
    - El formulario contiene tres campos: un campo de texto para el nombre (`<input type="text">`), un campo de correo electrónico (`<input type="email">`), y un área de texto para el mensaje (`<textarea>`).
@@ -339,7 +326,7 @@ button {
    - El código de JavaScript maneja la lógica de la validación del formulario, asegurándose de que los campos no estén vacíos antes de permitir el envío.
    - El método `addEventListener()` escucha el evento de "submit" en el formulario y previene que se envíe si la validación falla. En un contexto real, después de la validación, los datos se enviarían a un servidor o procesarían en el frontend.
   
-### **6. Modificación del código y manipulación del DOM**
+### ***1.5 Modificación del código y manipulación del DOM***
 
 Una parte importante del desarrollo de interfaces con **HTML5, CSS y JavaScript** es aprender cómo modificar la estructura de la página y su comportamiento dinámicamente.
 

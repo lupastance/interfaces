@@ -47,6 +47,7 @@ markdown_extensions:
   - md_in_html
   - codehilite
   - pymdownx.superfences
+  - pymdownx.inlinehilite
   - pymdownx.tabbed:
       alternate_style: true
 
@@ -57,5 +58,8 @@ extra:
     - icon: fontawesome/brands/discord 
       link: https://discord.gg/C8yxabVTsS
       name: Únete al canal de Discord
+
+extra_css:
+  - assets/css/extra.css
 
 copyright: Copyright &copy; Luis Alemañ 2024
