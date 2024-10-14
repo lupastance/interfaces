@@ -14,7 +14,7 @@
         <link rel="prev" href="../0%20-%20Fundamentos%20del%20Dise%C3%B1o%20de%20Interfaces%20Web/">
       
       
-        <link rel="next" href="../2%20-%20Creaci%C3%B3n%20de%20Interfaces%20con%20SVG/">
+        <link rel="next" href="../2%20-%20Manejo%20de%20datos/">
       
       
       <link rel="icon" href="../assets/logo.png">
@@ -477,10 +477,121 @@
   
 </li>
         
-          <li class="md-nav__item">
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#15-modificacion-del-codigo-y-manipulacion-del-dom" class="md-nav__link">
     <span class="md-ellipsis">
       1.5 Modificación del código y manipulación del DOM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 Modificación del código y manipulación del DOM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#herramientas-para-manipular-el-dom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herramientas para manipular el DOM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      innerHTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#innertext" class="md-nav__link">
+    <span class="md-ellipsis">
+      innerText
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#append" class="md-nav__link">
+    <span class="md-ellipsis">
+      append
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#appendchild" class="md-nav__link">
+    <span class="md-ellipsis">
+      appendChild
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-manipulando-el-css" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Manipulando el CSS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Manipulando el CSS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#addclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      addClass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removeclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      removeClass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toggleclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      toggleClass
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#style" class="md-nav__link">
+    <span class="md-ellipsis">
+      style
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
     </span>
   </a>
   
@@ -506,11 +617,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../2%20-%20Creaci%C3%B3n%20de%20Interfaces%20con%20SVG/" class="md-nav__link">
+      <a href="../2%20-%20Manejo%20de%20datos/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2️⃣ Creación de Interfaces con SVG
+    2️⃣ Manejo de datos
   </span>
   
 
@@ -862,7 +973,7 @@
 <li>El código de JavaScript maneja la lógica de la validación del formulario, asegurándose de que los campos no estén vacíos antes de permitir el envío.</li>
 <li>El método <code>addEventListener()</code> escucha el evento de "submit" en el formulario y previene que se envíe si la validación falla. En un contexto real, después de la validación, los datos se enviarían a un servidor o procesarían en el frontend.</li>
 </ol>
-<h3 id="15-modificacion-del-codigo-y-manipulacion-del-dom"><strong><em>1.5 Modificación del código y manipulación del DOM</em></strong></h3>
+<h2 id="15-modificacion-del-codigo-y-manipulacion-del-dom"><strong><em>1.5 Modificación del código y manipulación del DOM</em></strong></h2>
 <p>Una parte importante del desarrollo de interfaces con <strong>HTML5, CSS y JavaScript</strong> es aprender cómo modificar la estructura de la página y su comportamiento dinámicamente.</p>
 <ul>
 <li><strong>Modificación dinámica de elementos</strong>: Con <strong>JavaScript</strong>, podemos modificar los elementos HTML y sus propiedades. Esto incluye cambiar textos, estilos o agregar nuevos elementos al DOM.</li>
@@ -876,10 +987,543 @@
 <ul>
 <li><strong>Interacción basada en eventos</strong>: Los eventos en <strong>JavaScript</strong> permiten que los elementos reaccionen a las acciones del usuario. El uso de eventos como <code>click</code>, <code>focus</code>, <code>input</code>, y <code>submit</code> es esencial para crear interfaces interactivas.</li>
 </ul>
-<div class="admonition tip">
-<p class="admonition-title">Conclusiones del Tema 1</p>
-<p>En este primer tema, se ha introducido el desarrollo de interfaces de usuario utilizando tecnologías web. Los estudiantes han aprendido cómo estructurar páginas web con <strong>HTML5</strong>, cómo aplicar estilos y diseño utilizando <strong>CSS</strong>, y cómo añadir interactividad y manejo de eventos con <strong>JavaScript</strong>. Además, hemos trabajado con la creación de un formulario básico y la validación de datos.</p>
-<p>Este conocimiento básico servirá de base para los siguientes temas, donde se trabajará con herramientas más avanzadas y se construirán interfaces de usuario más complejas.</p>
+<h3 id="herramientas-para-manipular-el-dom"><strong>Herramientas para manipular el DOM</strong></h3>
+<p>En JavaScript, al manipular el DOM (Document Object Model), es común interactuar con el contenido de los elementos HTML. Existen varias formas de hacerlo, y entre las más usadas están las propiedades <code>innerHTML</code>, <code>innerText</code>, y el método <code>append</code>. Cada una tiene características únicas y es importante entender cómo y cuándo usarlas de manera efectiva.</p>
+<p>A continuación, exploraremos cada una de estas propiedades y métodos, explicando su uso con ejemplos claros y detallados.</p>
+<h3 id="innerhtml"><strong><code>innerHTML</code></strong></h3>
+<p><code>innerHTML</code> es una propiedad que permite acceder o modificar el <strong>contenido HTML</strong> de un elemento. Esto incluye tanto el texto como las etiquetas HTML. Al utilizar <code>innerHTML</code>, puedes reemplazar todo el contenido interno del elemento por otro, incluyendo etiquetas HTML, lo que hace que sea una herramienta muy poderosa para insertar o cambiar estructuras HTML completas.</p>
+<p><strong>Uso de <code>innerHTML</code></strong></p>
+<ul>
+<li><strong>Lectura del contenido HTML:</strong> Puedes acceder al contenido HTML de un elemento.</li>
+<li><strong>Escritura de contenido HTML:</strong> Puedes reemplazar o cambiar el contenido HTML de un elemento.</li>
+</ul>
+<p><strong>Ejemplo básico:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de innerHTML<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miDiv&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>parrafo<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> dentro de un div.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;cambiarContenido()&quot;</span><span class="p">&gt;</span>Cambiar Contenido<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">cambiarContenido</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miDiv&#39;</span><span class="p">).</span><span class="nx">innerHTML</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;&lt;h1&gt;Contenido cambiado&lt;/h1&gt;&lt;p&gt;Este es el nuevo contenido con etiquetas HTML&lt;/p&gt;&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>: En este ejemplo, el contenido original del <code>div</code> es un párrafo. Al hacer clic en el botón, se cambia el contenido usando <code>innerHTML</code>, lo que inserta un nuevo <code>h1</code> y un nuevo párrafo con HTML embebido.</li>
+</ul>
+<p><strong>Consideraciones de seguridad con <code>innerHTML</code></strong></p>
+<p>Uno de los riesgos de <code>innerHTML</code> es que puede ser una fuente de vulnerabilidades de <strong>XSS (Cross-Site Scripting)</strong> si no se controla el contenido que se inserta. Si los datos que introduces provienen de usuarios, debes asegurarte de que estén adecuadamente filtrados o escapados.</p>
+<h3 id="innertext"><strong><code>innerText</code></strong></h3>
+<p><code>innerText</code> es una propiedad que permite acceder o modificar el <strong>texto visible</strong> de un elemento, <strong>sin incluir etiquetas HTML</strong>. A diferencia de <code>innerHTML</code>, <code>innerText</code> se enfoca solo en el texto, ignorando cualquier estructura HTML interna que pueda tener el elemento.</p>
+<p><strong>Uso de <code>innerText</code></strong></p>
+<ul>
+<li><strong>Lectura del texto visible</strong>: Puedes obtener el texto que es visible para el usuario (sin las etiquetas HTML).</li>
+<li><strong>Escritura de texto</strong>: Puedes reemplazar el texto visible de un elemento. Cualquier HTML que insertes será tratado como texto plano.</li>
+</ul>
+<p><strong>Ejemplo básico:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de innerText<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miTexto&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es un <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>texto en negrita<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span> que contiene etiquetas HTML.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;cambiarTexto()&quot;</span><span class="p">&gt;</span>Cambiar Texto<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">cambiarTexto</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miTexto&#39;</span><span class="p">).</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Este es un texto simple, sin HTML.&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>: El contenido original del <code>div</code> incluye un párrafo con una etiqueta <code>&lt;strong&gt;</code>. Sin embargo, al hacer clic en el botón, se reemplaza con texto plano que no incluye ninguna etiqueta HTML. Cualquier intento de insertar HTML será tratado como texto normal.</li>
+</ul>
+<h3 id="append"><strong><code>append</code></strong></h3>
+<p><code>append</code> es un método que permite <strong>agregar nodos o texto</strong> al final del contenido de un elemento. A diferencia de <code>innerHTML</code> o <code>innerText</code>, <code>append</code> no reemplaza el contenido existente, sino que lo añade al final. Además, <code>append</code> permite insertar tanto texto como nodos DOM (elementos HTML).</p>
+<p><strong>Uso de <code>append</code></strong></p>
+<ul>
+<li><strong>Agregar nodos o texto</strong> al final del contenido de un elemento.</li>
+<li>No reemplaza el contenido existente, solo añade nuevos elementos.</li>
+</ul>
+<p><strong>Ejemplo básico:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de append<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;contenedor&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Primer párrafo en el contenedor.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;agregarElemento()&quot;</span><span class="p">&gt;</span>Agregar Elemento<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">agregarElemento</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">nuevoParrafo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">nuevoParrafo</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Este es un nuevo párrafo añadido al final.&#39;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;contenedor&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">nuevoParrafo</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><strong>Explicación</strong>: El contenido inicial del <code>div</code> es un párrafo. Al hacer clic en el botón, se crea un nuevo párrafo mediante <code>createElement</code> y luego se añade al final del contenedor usando <code>append</code>. Como resultado, se añade contenido nuevo sin borrar el existente.</li>
+</ul>
+<p><strong>Agregar texto directamente con <code>append</code></strong></p>
+<p>También puedes añadir texto directamente sin necesidad de crear un nuevo nodo:</p>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;contenedor&#39;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;Texto adicional&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>Esto agregaría el texto "Texto adicional" al final del contenedor.</p>
+<p><strong>Comparación entre <code>innerHTML</code>, <code>innerText</code> y <code>append</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>Característica</th>
+<th><code>innerHTML</code></th>
+<th><code>innerText</code></th>
+<th><code>append</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Inserta etiquetas HTML</strong></td>
+<td>Sí</td>
+<td>No</td>
+<td>Sí (si se utiliza <code>createElement</code>)</td>
+</tr>
+<tr>
+<td><strong>Manipulación del DOM</strong></td>
+<td>Reemplaza todo el contenido del elemento</td>
+<td>Reemplaza solo el texto visible</td>
+<td>Añade nuevos nodos o texto</td>
+</tr>
+<tr>
+<td><strong>Seguridad (XSS)</strong></td>
+<td>Vulnerable si se usa con datos no seguros</td>
+<td>No permite insertar HTML, más seguro</td>
+<td>Seguro si se usan nodos creados manualmente</td>
+</tr>
+<tr>
+<td><strong>Aplicaciones comunes</strong></td>
+<td>Insertar HTML dinámicamente</td>
+<td>Reemplazar o leer texto plano</td>
+<td>Añadir más contenido sin borrar el actual</td>
+</tr>
+</tbody>
+</table>
+<h3 id="appendchild"><strong><code>appendChild</code></strong></h3>
+<p><code>appendChild</code> es un método en JavaScript utilizado para agregar un <strong>nodo hijo</strong> al final de la lista de hijos de un nodo padre. A diferencia de <code>append</code>, que puede agregar tanto nodos como texto, <code>appendChild</code> <strong>solo</strong> puede añadir nodos del DOM, como elementos HTML (tags), fragmentos de documentos, o incluso otros nodos de texto. Este método es muy útil cuando quieres construir o modificar dinámicamente la estructura de una página web agregando nuevos elementos.</p>
+<p><strong>Sintaxis básica</strong></p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">contenedor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;#mi-contenedor&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">elementoHijo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span>
+
+<span class="nx">elementoHijo</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Este es el elemento hijo&#39;</span><span class="p">;</span>
+
+<span class="nx">contenedor</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">elementoHijo</span><span class="p">);</span>
+</code></pre></div>
+<ul>
+<li><strong>contenedor</strong>: El nodo padre donde se va a insertar el nuevo nodo.</li>
+<li><strong>childNode</strong>: El nodo hijo que se va a agregar al nodo padre.</li>
+</ul>
+<p>El nodo hijo será agregado <strong>al final</strong> de los nodos hijos ya existentes dentro del nodo padre.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Antes de ejecutar JavaScript</label><label for="__tabbed_2_2">Después de ejecutar JavaScript</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mi-contenedor&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;mi-contenedor&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Este es el elemento hijo<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejemplo básico: Agregar un nuevo elemento al final</strong></p>
+<p>Vamos a crear un nuevo elemento <code>&lt;li&gt;</code> y agregarlo a una lista <code>&lt;ul&gt;</code> ya existente en la página:</p>
+<p><strong>HTML inicial:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de appendChild<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miLista&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;agregarElemento()&quot;</span><span class="p">&gt;</span>Agregar Elemento<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">agregarElemento</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// 1. Crear un nuevo elemento li</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">nuevoElemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">);</span>
+
+<span class="w">      </span><span class="c1">// 2. Agregar texto al nuevo elemento</span>
+<span class="w">      </span><span class="nx">nuevoElemento</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Elemento 3&#39;</span><span class="p">;</span>
+
+<span class="w">      </span><span class="c1">// 3. Añadir el nuevo elemento como hijo de la lista</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miLista&#39;</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">nuevoElemento</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación del código:</strong></p>
+<ol>
+<li><strong>Crear un nuevo elemento</strong>: Usamos <code>document.createElement('li')</code> para crear un nuevo nodo de lista <code>&lt;li&gt;</code>.</li>
+<li><strong>Añadir contenido al nuevo elemento</strong>: Utilizamos <code>innerText</code> para insertar el texto "Elemento 3" dentro del nuevo nodo <code>&lt;li&gt;</code>.</li>
+<li><strong>Agregar el nuevo elemento al DOM</strong>: El método <code>appendChild</code> agrega el nuevo elemento <code>&lt;li&gt;</code> al final de la lista no ordenada <code>&lt;ul&gt;</code>.</li>
+</ol>
+<p>Cuando el usuario haga clic en el botón, se agregará el nuevo elemento al final de la lista.</p>
+<p><strong>Agregar múltiples nodos</strong></p>
+<p><code>appendChild</code> solo puede agregar un nodo a la vez. Si deseas agregar varios nodos, deberás llamarlo varias veces o usar un <strong>fragmento de documento</strong> para mejorar la eficiencia:</p>
+<p><strong>Ejemplo: Agregar varios nodos con un <code>DocumentFragment</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de appendChild con Fragmento<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miLista&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 1<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Elemento 2<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;agregarVariosElementos()&quot;</span><span class="p">&gt;</span>Agregar Varios Elementos<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">agregarVariosElementos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// Crear un fragmento de documento para contener los nuevos elementos</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">fragmento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createDocumentFragment</span><span class="p">();</span>
+
+<span class="w">      </span><span class="c1">// Crear 3 nuevos elementos li</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">nuevoElemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;li&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">nuevoElemento</span><span class="p">.</span><span class="nx">innerText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Elemento &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">i</span><span class="p">;</span>
+<span class="w">        </span><span class="nx">fragmento</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">nuevoElemento</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span><span class="c1">// Añadir el fragmento al DOM</span>
+<span class="w">      </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miLista&#39;</span><span class="p">).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">fragmento</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación:</strong></p>
+<ol>
+<li>Se crea un <strong>fragmento de documento</strong> (<code>DocumentFragment</code>), que es un contenedor temporal en memoria.</li>
+<li>Se añaden varios elementos <code>&lt;li&gt;</code> al fragmento.</li>
+<li>Finalmente, se inserta el fragmento completo en el DOM con un solo <code>appendChild</code>. Esto es más eficiente que llamar <code>appendChild</code> varias veces porque las modificaciones del DOM se hacen una sola vez.</li>
+</ol>
+<hr />
+<p><strong>Mover un nodo con <code>appendChild</code></strong></p>
+<p>Una característica interesante de <code>appendChild</code> es que <strong>si el nodo ya existe en el DOM</strong>, no lo duplicará, sino que lo <strong>moverá</strong> a la nueva posición.</p>
+<p><strong>Ejemplo: Mover un nodo existente</strong></p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;es&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Ejemplo de mover un nodo con appendChild<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;contenedor1&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miParrafo&quot;</span><span class="p">&gt;</span>Este párrafo será movido.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;contenedor2&quot;</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Contenedor vacío --&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onclick</span><span class="o">=</span><span class="s">&quot;moverParrafo()&quot;</span><span class="p">&gt;</span>Mover Párrafo<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+  <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="kd">function</span><span class="w"> </span><span class="nx">moverParrafo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">parrafo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miParrafo&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">nuevoContenedor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;contenedor2&#39;</span><span class="p">);</span>
+<span class="w">      </span><span class="nx">nuevoContenedor</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">parrafo</span><span class="p">);</span><span class="w"> </span><span class="c1">// Moverá el párrafo al nuevo contenedor</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación:</strong></p>
+<p>Cuando el botón es presionado, el párrafo <code>#miParrafo</code> se quita del <code>#contenedor1</code> y movido al <code>#contenedor2</code> usando <code>appendChild</code>. No se duplica, simplemente se cambia de lugar.</p>
+<p><strong>Diferencias entre <code>append</code> y <code>appendChild</code></strong></p>
+<ul>
+<li><strong>Compatibilidad de tipos</strong>: <code>append</code> permite insertar tanto nodos como cadenas de texto directamente, mientras que <code>appendChild</code> solo permite nodos.</li>
+</ul>
+<p>Ejemplo de <code>append</code> (inserta nodos y texto):</p>
+<div class="highlight"><pre><span></span><code><span class="nx">parentNode</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">&#39;Texto&#39;</span><span class="p">,</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">));</span>
+</code></pre></div>
+<ul>
+<li>
+<p><strong>Retorno</strong>: <code>appendChild</code> retorna el nodo insertado, mientras que <code>append</code> no retorna nada (<code>undefined</code>).</p>
+</li>
+<li>
+<p><strong>Compatibilidad de navegadores</strong>: <code>append</code> es más moderno, mientras que <code>appendChild</code> está disponible en navegadores más antiguos.</p>
+</li>
+</ul>
+<h2 id="16-manipulando-el-css"><strong>1.6 Manipulando el CSS</strong></h2>
+<p>En JavaScript, la manipulación de clases de elementos HTML es una parte esencial del desarrollo web, ya que te permite cambiar la apariencia y el comportamiento de los elementos dinámicamente. Para facilitar esta tarea, se pueden usar los métodos <strong><code>addClass</code></strong>, <strong><code>removeClass</code></strong>, <strong><code>toggleClass</code></strong> y <strong><code>style</code></strong></p>
+<h3 id="addclass"><strong><code>addClass</code></strong></h3>
+<p>El método <code>addClass</code> se utiliza para <strong>agregar una clase</strong> a un elemento, añadiendo una nueva clase al atributo <code>class</code> sin eliminar las clases ya existentes.</p>
+<p><strong>Método equivalente en JavaScript nativo:</strong>
+<div class="highlight"><pre><span></span><code><span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;className&#39;</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Ejemplo de uso:</strong>
+Imagina que tienes un botón y deseas cambiar su estilo al hacer clic, agregando la clase <code>active</code> que le aplica un nuevo estilo.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:3"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">🟢 HTML</label><label for="__tabbed_3_2">🟡 JavaScript</label><label for="__tabbed_3_3">🔵 CSS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miBoton&quot;</span><span class="p">&gt;</span>Haz clic en mí<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miBoton&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">.</span><span class="nc">active</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">green</span><span class="p">;</span>
+<span class="w">        </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Cuando el botón es clicado, se le añadirá la clase <code>active</code>, cambiando el color de fondo y el color del texto.</p>
+<h3 id="removeclass"><strong><code>removeClass</code></strong></h3>
+<p>El método <code>removeClass</code> se usa para <strong>eliminar una clase</strong> de un elemento. Si el elemento no tiene la clase especificada, no ocurre nada.</p>
+<p><strong>Método equivalente en JavaScript nativo:</strong>
+<div class="highlight"><pre><span></span><code><span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;className&#39;</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Ejemplo de uso:</strong>
+Supongamos que, tras hacer clic en un botón, queremos eliminar la clase <code>active</code> de ese elemento.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miBoton&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<h3 id="toggleclass"><strong><code>toggleClass</code></strong></h3>
+<p>El método <code>toggleClass</code> permite <strong>alternar</strong> una clase en un elemento. Si el elemento ya tiene la clase, la elimina; si no la tiene, la agrega. Este método es muy útil cuando quieres cambiar el estado de un elemento al hacer clic, como en el caso de botones que activan o desactivan un estado.</p>
+<p><strong>Método equivalente en JavaScript nativo:</strong>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">element</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;className&#39;</span><span class="p">);</span>
+</code></pre></div></p>
+<p><strong>Ejemplo de uso:</strong>
+Vamos a crear un botón que pueda activar y desactivar la clase <code>active</code> cada vez que se hace clic sobre él.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miBoton&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div>
+<p>Al hacer clic en el botón:
+- Si la clase <code>active</code> está presente, será eliminada.
+- Si la clase <code>active</code> no está presente, será añadida.</p>
+<p>Esto se puede usar para efectos como mostrar y ocultar un menú, cambiar el estado de un botón, entre otros.</p>
+<p><strong>Ejemplo completo: <code>addClass</code>, <code>removeClass</code> y <code>toggleClass</code></strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:3"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><input id="__tabbed_4_3" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">🟢 HTML</label><label for="__tabbed_4_2">🟡 JavaScript</label><label for="__tabbed_4_3">🔵 CSS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;addClassBtn&quot;</span><span class="p">&gt;</span>Agregar Clase<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;removeClassBtn&quot;</span><span class="p">&gt;</span>Remover Clase<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;toggleClassBtn&quot;</span><span class="p">&gt;</span>Alternar Clase<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miElemento&quot;</span><span class="p">&gt;</span>Elemento de prueba<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="c1">// Referencia al elemento</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">miElemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miElemento&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// Agregar la clase &quot;active&quot;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;addClassBtn&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Eliminar la clase &quot;active&quot;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;removeClassBtn&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+
+<span class="w">    </span><span class="c1">// Alternar la clase &quot;active&quot;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;toggleClassBtn&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;active&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">.</span><span class="nc">active</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">lightblue</span><span class="p">;</span>
+<span class="w">        </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">        </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Explicación:</strong>
+- El botón "Agregar Clase" agrega la clase <code>active</code> al elemento.
+- El botón "Remover Clase" elimina la clase <code>active</code> si está presente.
+- El botón "Alternar Clase" agrega o elimina la clase dependiendo de si ya está aplicada.</p>
+<h3 id="style"><strong><code>style</code></strong></h3>
+<p>El uso de la propiedad <strong><code>style</code></strong> en JavaScript permite modificar directamente los estilos CSS de un elemento HTML desde el código. La propiedad <code>style</code> proporciona acceso a los atributos de estilo "en línea" (inline styles), lo que significa que modifica el atributo <code>style</code> del elemento en el DOM, aplicando estilos de manera directa y dinámica.</p>
+<p><strong>Modificar Estilos con la Propiedad <code>style</code></strong>
+La propiedad <code>style</code> es un objeto que contiene todas las propiedades CSS disponibles para un elemento. Las propiedades CSS que normalmente tienen guiones (como <code>background-color</code>) se transforman en <strong>camelCase</strong> (por ejemplo, <code>backgroundColor</code>) para ser utilizadas en JavaScript.</p>
+<p><strong>Sintaxis básica:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">element</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;value&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Por ejemplo, si quieres cambiar el color de fondo de un elemento:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;miElemento&quot;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Ejemplo básico:</strong>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miDiv&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 100px; height: 100px; background-color: lightblue;&quot;</span><span class="p">&gt;</span>Div de prueba<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;boton&quot;</span><span class="p">&gt;</span>Cambiar color<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;boton&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miDiv&#39;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;red&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>En este caso, al hacer clic en el botón, el fondo del <code>div</code> cambiará de azul claro a rojo.</p>
+<p><strong>Propiedades CSS en JavaScript</strong></p>
+<p>A diferencia de CSS, donde se utilizan guiones para separar palabras, en JavaScript las propiedades CSS siguen una convención de camelCase. Aquí tienes algunos ejemplos de cómo se traducen las propiedades CSS a JavaScript:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Propiedad CSS</strong></th>
+<th><strong>Propiedad en JavaScript</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>background-color</code></td>
+<td><code>backgroundColor</code></td>
+</tr>
+<tr>
+<td><code>font-size</code></td>
+<td><code>fontSize</code></td>
+</tr>
+<tr>
+<td><code>margin-top</code></td>
+<td><code>marginTop</code></td>
+</tr>
+<tr>
+<td><code>border-radius</code></td>
+<td><code>borderRadius</code></td>
+</tr>
+<tr>
+<td><code>text-align</code></td>
+<td><code>textAlign</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Acceder a múltiples estilos</strong>
+Puedes modificar varias propiedades de estilo usando el objeto <code>style</code>. Simplemente accedes a cada propiedad y le asignas un valor.</p>
+<p><strong>Ejemplo de múltiples cambios de estilo:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">miElemento</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miDiv&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;200px&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;200px&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">border</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;2px solid black&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;lightgreen&#39;</span><span class="p">;</span>
+</code></pre></div>
+<p><strong>Resetear estilos</strong>
+Cuando modificas los estilos de un elemento utilizando <code>style</code>, solo cambias los estilos en línea (inline). Los estilos definidos en hojas de estilo externas o internas no se tocan, lo cual es útil. Si deseas <strong>eliminar</strong> un estilo que fue añadido mediante JavaScript, puedes asignarle una cadena vacía (<code>""</code>):</p>
+<p><strong>Ejemplo:</strong>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// Elimina el estilo de fondo en línea</span>
+</code></pre></div></p>
+<p><strong>Alternativas al uso directo de <code>style</code></strong></p>
+<p>Aunque la propiedad <code>style</code> es útil, <strong>modificar estilos en línea</strong> puede ser problemático en aplicaciones grandes, ya que dificulta la separación entre la estructura del contenido (HTML) y la presentación (CSS). Como alternativa, generalmente es más recomendable cambiar clases de CSS, y dejar que las hojas de estilo se encarguen de los detalles del diseño.</p>
+<p>Por ejemplo, en lugar de modificar directamente un estilo en línea:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;yellow&quot;</span><span class="p">;</span>
+</code></pre></div>
+<p>Es preferible cambiar la clase:</p>
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="nx">miElemento</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s2">&quot;nuevoEstilo&quot;</span><span class="p">);</span>
+</code></pre></div>
+<p>Con un CSS como este:</p>
+<div class="highlight"><pre><span></span><code><span class="p">.</span><span class="nc">nuevoEstilo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">yellow</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Esto hace que el código sea más mantenible y fácil de gestionar, especialmente en proyectos más grandes.</p>
+<p><strong>Ejemplo completo: Cambiar estilos con <code>style</code> y <code>classList</code></strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">🟢 HTML</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;miDiv&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 150px; height: 150px; background-color: lightgray;&quot;</span><span class="p">&gt;</span>Cuadro<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;styleBtn&quot;</span><span class="p">&gt;</span>Cambiar Estilo (style)<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;classBtn&quot;</span><span class="p">&gt;</span>Cambiar Estilo (class)<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="p">.</span><span class="nc">nuevoEstilo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">    </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="c1">// Cambiar estilos en línea con &#39;style&#39;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;styleBtn&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miDiv&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;green&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;300px&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;300px&#39;</span><span class="p">;</span>
+<span class="w">    </span><span class="nx">div</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;white&#39;</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="c1">// Cambiar estilos con &#39;classList&#39;</span>
+<span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;classBtn&#39;</span><span class="p">).</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="w"> </span><span class="kd">function</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;miDiv&#39;</span><span class="p">).</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">&#39;nuevoEstilo&#39;</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Explicación:</strong></p>
+<ol>
+<li>El botón "Cambiar Estilo (style)" modifica directamente los estilos en línea (ancho, alto, color de fondo y color de texto) del <code>div</code> al hacer clic.</li>
+<li>El botón "Cambiar Estilo (class)" alterna la clase <code>nuevoEstilo</code>, que aplica un nuevo estilo CSS predefinido (fondo azul, bordes redondeados y texto blanco).</li>
+</ol>
+<h3 id="conclusion"><strong>Conclusión</strong></h3>
+<p>La propiedad <code>style</code> es una forma rápida y directa de modificar los estilos de los elementos HTML desde JavaScript, aunque para mantener una buena separación entre contenido y presentación, es más recomendable manipular clases con <code>classList</code>. El uso de <code>style</code> es muy útil para cambios de estilo dinámicos y específicos, mientras que <code>classList</code> es más flexible y escalable en proyectos más grandes.</p>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado con esto</p>
+<p>Que no se te olvide el orden de preferencia de los estilos CSS 👉🏻 las clases <code>.mi-clase</code> tienen menos peso que los identificadores <code>#mi-identificador</code> que a su vez, tienen menos relevancia que los estilos definidos en línea <code>style=""</code> y en primer lugar, está el <code>!important</code>.</p>
 </div>
 
 
@@ -933,13 +1577,13 @@
         
         
           
-          <a href="../2%20-%20Creaci%C3%B3n%20de%20Interfaces%20con%20SVG/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 2️⃣ Creación de Interfaces con SVG">
+          <a href="../2%20-%20Manejo%20de%20datos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: 2️⃣ Manejo de datos">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                2️⃣ Creación de Interfaces con SVG
+                2️⃣ Manejo de datos
               </div>
             </div>
             <div class="md-footer__button md-icon">
