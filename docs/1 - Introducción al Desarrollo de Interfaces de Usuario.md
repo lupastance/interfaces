@@ -932,8 +932,5 @@ Esto hace que el código sea más mantenible y fácil de gestionar, especialment
 1. El botón "Cambiar Estilo (style)" modifica directamente los estilos en línea (ancho, alto, color de fondo y color de texto) del `div` al hacer clic.
 2. El botón "Cambiar Estilo (class)" alterna la clase `nuevoEstilo`, que aplica un nuevo estilo CSS predefinido (fondo azul, bordes redondeados y texto blanco).
 
-### **Conclusión**
-La propiedad `style` es una forma rápida y directa de modificar los estilos de los elementos HTML desde JavaScript, aunque para mantener una buena separación entre contenido y presentación, es más recomendable manipular clases con `classList`. El uso de `style` es muy útil para cambios de estilo dinámicos y específicos, mientras que `classList` es más flexible y escalable en proyectos más grandes.
-
 !!!warning "Cuidado con esto"
     Que no se te olvide el orden de preferencia de los estilos CSS 👉🏻 las clases `.mi-clase` tienen menos peso que los identificadores `#mi-identificador` que a su vez, tienen menos relevancia que los estilos definidos en línea `style=""` y en primer lugar, está el `!important`.
