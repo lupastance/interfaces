@@ -1,0 +1,804 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lupastance.github.io/interfaces/3%20-%20Frameworks/">
+      
+      
+        <link rel="prev" href="../2%20-%20Manejo%20de%20datos/">
+      
+      
+      
+      <link rel="icon" href="../assets/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>3️⃣ Frameworks en JavaScript - Desarrollo de Interfaces</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="lime">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-frameworks-en-javascript" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href=".." title="Desarrollo de Interfaces" class="md-header__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Desarrollo de Interfaces
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3️⃣ Frameworks en JavaScript
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="lime"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="pink"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartir" aria-label="Compartir" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Desarrollo de Interfaces" class="md-nav__button md-logo" aria-label="Desarrollo de Interfaces" data-md-component="logo">
+      
+  <img src="../assets/logo.png" alt="logo">
+
+    </a>
+    Desarrollo de Interfaces
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bienvenid@s a Desarrollo de Interfaces
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../0%20-%20Fundamentos%20del%20Dise%C3%B1o%20de%20Interfaces%20Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0️⃣ Fundamentos del Diseño de Interfaces Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1%20-%20Introducci%C3%B3n%20al%20Desarrollo%20de%20Interfaces%20de%20Usuario/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1️⃣ Introducción al desarrollo de interfaces de usuario con HTML5, CSS y JavaScript
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2%20-%20Manejo%20de%20datos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2️⃣ Manejo de datos
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3️⃣ Frameworks en JavaScript
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3️⃣ Frameworks en JavaScript
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-son-los-frameworks-de-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué son los Frameworks de Frontend?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ventajas-de-los-frameworks-de-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ventajas de los Frameworks de Frontend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-el-entorno-instalando-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparando el entorno ➡ Instalando NodeJS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalando-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalando NodeJS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-al-gestor-de-paquetes-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción al gestor de paquetes NPM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción al gestor de paquetes NPM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#que-es-un-paquete-en-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Qué es un paquete en NPM?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-es-importante-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué es importante NPM?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-de-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes de NPM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comandos-basicos-de-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comandos Básicos de NPM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion-a-vuejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción a Vue.js
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introducción a Vue.js">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-principales-de-vuejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características principales de Vue.js
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-elegir-vuejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      ¿Por qué elegir Vue.js?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="3-frameworks-en-javascript">3️⃣ Frameworks en <em>JavaScript</em></h1>
+<p><img align="right" alt="intro" src="../assets/frameworks.png" /></p>
+<p>En el desarrollo moderno de aplicaciones web, los <code>frameworks</code> de <code>JavaScript</code> para el frontend han transformado la manera en que se crean interfaces de usuario. En sus inicios, <code>JavaScript</code> se utilizaba principalmente para añadir interactividad básica a las páginas web mediante scripts independientes. Sin embargo, con el tiempo y el crecimiento exponencial de las aplicaciones web, surgió la necesidad de herramientas más estructuradas y eficientes para manejar el código, especialmente cuando las aplicaciones se volvieron más complejas, dinámicas y dependientes de la interacción en tiempo real.</p>
+<h3 id="que-son-los-frameworks-de-frontend">¿Qué son los Frameworks de Frontend?</h3>
+<p>Un framework de frontend es un conjunto de herramientas, bibliotecas y convenciones que facilita la creación de aplicaciones web dinámicas.</p>
+<p>Estos <code>frameworks</code> proporcionan una estructura base y abstraen muchas de las tareas complejas asociadas con la manipulación del DOM, la gestión de datos, la actualización de la interfaz de usuario y el manejo de eventos.</p>
+<p><strong>En esencia</strong>, permiten que los desarrolladores se concentren más en la lógica de la aplicación y menos en los detalles técnicos subyacentes.  </p>
+<p>Los <code>frameworks</code> modernos de <code>JavaScript</code>, como <strong>Vue.js</strong>, <strong>React</strong> y <strong>Angular</strong>, están diseñados para manejar aplicaciones de una sola página (<em>Single Page Applications</em> o SPA), donde la mayor parte de la interacción ocurre en el navegador sin necesidad de recargar la página. Esto da lugar a experiencias más rápidas y fluidas para el usuario.</p>
+<div class="admonition danger">
+<p class="admonition-title">Cuidado...</p>
+<p>No siempre es buena idea hacer una SPA, de la misma manera que tiene ventajas también tiene inconvenientes. Dependerá de las necesidades de nuestro proyecto si hacer una SPA o no, o utilizar herramientas adicionales para convertir una SPA en una aplicación web más avanzada.</p>
+</div>
+<h3 id="ventajas-de-los-frameworks-de-frontend">Ventajas de los Frameworks de Frontend</h3>
+<ol>
+<li><strong>Modularidad:</strong> Los <code>frameworks</code> permiten dividir la aplicación en componentes reutilizables. Cada componente encapsula su lógica, estilo y funcionalidad, lo que facilita la escalabilidad y el mantenimiento del código.  </li>
+<li><strong>Gestión eficiente del DOM:</strong> La manipulación directa del DOM puede ser ineficiente y propensa a errores. Los <code>frameworks</code> utilizan un <em>Virtual DOM</em> o técnicas similares para actualizar la interfaz de manera óptima.  </li>
+<li><strong>Enlace de datos (<em>Data Binding</em>):</strong> Simplifican la sincronización entre los datos de la aplicación y su representación visual en la interfaz.  </li>
+<li><strong>Comunidad activa y ecosistema:</strong> Los <code>frameworks</code> tienen una comunidad amplia que desarrolla bibliotecas, herramientas y documentación. Esto acelera el desarrollo y resuelve problemas comunes.  </li>
+<li><strong>Compatibilidad con herramientas modernas:</strong> La mayoría de los <code>frameworks</code> están diseñados para integrarse con sistemas de construcción (<em>build systems</em>), pruebas automatizadas y otras herramientas de desarrollo modernas.</li>
+</ol>
+<h2 id="preparando-el-entorno-instalando-nodejs">Preparando el entorno ➡ Instalando NodeJS</h2>
+<p><img align="right" alt="VueJS" src="../assets/nodejs.png" /></p>
+<p><strong><code>NodeJS</code></strong> es un entorno de ejecución de JavaScript del lado del servidor que permite a los desarrolladores ejecutar código JavaScript fuera del navegador. Fue creado en 2009 por <strong>Ryan Dahl</strong> y se basa en el motor <strong>V8 de Google Chrome</strong>, el cual es conocido por su alto rendimiento y eficiencia.</p>
+<p>Antes de <code>NodeJS</code>, JavaScript estaba principalmente limitado a las aplicaciones del lado del cliente. Con <code>NodeJS</code>, se abrió la posibilidad de usar JavaScript para construir aplicaciones completas, desde el frontend hasta el backend, convirtiéndolo en una de las herramientas más populares en el desarrollo de software moderno.</p>
+<div class="admonition tip">
+<p class="admonition-title">¿Qué hace especial a <code>NodeJS</code>?</p>
+</div>
+<ol>
+<li>
+<p><strong>Modelo asíncrono y orientado a eventos</strong>:<br />
+<code>NodeJS</code> adopta un modelo no bloqueante (non-blocking), lo que significa que puede manejar múltiples solicitudes al mismo tiempo sin necesidad de bloquear el flujo de ejecución. Esto lo hace extremadamente eficiente en aplicaciones de red o en escenarios donde se manejan grandes cantidades de datos.</p>
+</li>
+<li>
+<p><strong>Plataforma multiplataforma</strong>:<br />
+<code>NodeJS</code> se puede ejecutar en diversos sistemas operativos, como Windows, macOS y Linux, lo que lo convierte en una herramienta versátil.</p>
+</li>
+<li>
+<p><strong>Único lenguaje para frontend y backend</strong>:<br />
+   Con <code>NodeJS</code>, los desarrolladores pueden escribir tanto la lógica del cliente como del servidor utilizando JavaScript, lo que reduce la curva de aprendizaje y fomenta la colaboración dentro de los equipos.</p>
+</li>
+<li>
+<p><strong>Gran ecosistema de paquetes</strong>:<br />
+<code>NodeJS</code> cuenta con <strong>npm (Node Package Manager)</strong>, un gestor de paquetes que alberga más de un millón de librerías. Estas librerías permiten a los desarrolladores integrar funcionalidades preconstruidas y acelerar el desarrollo de aplicaciones.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Casos de uso de <code>NodeJS</code></p>
+</div>
+<p><code>NodeJS</code> es ideal para ciertos tipos de aplicaciones, como:
+- <strong>Aplicaciones en tiempo real (Real-time Apps)</strong>: chats, sistemas de mensajería, colaboración en línea.
+- <strong>APIs y servicios web</strong>: construcción de RESTful APIs o GraphQL.
+- <strong>Aplicaciones de streaming</strong>: transmisión de video o música en plataformas como Netflix.
+- <strong>Automatización de tareas</strong>: scripts para compilación, pruebas o despliegue.</p>
+<p>Sin embargo, no es la mejor opción para aplicaciones intensivas en CPU, como procesamiento complejo de datos, debido a su modelo de un solo hilo.</p>
+<hr />
+<div class="admonition danger">
+<p class="admonition-title">Ventajas de <code>NodeJS</code></p>
+</div>
+<ol>
+<li>
+<p><strong>Eficiencia y rendimiento</strong>:<br />
+   Gracias al motor V8 y su arquitectura asíncrona, <code>NodeJS</code> puede manejar miles de conexiones simultáneas de manera eficiente.</p>
+</li>
+<li>
+<p><strong>Escalabilidad</strong>:<br />
+   Es fácil escalar aplicaciones <code>NodeJS</code> horizontalmente (añadiendo más servidores) o verticalmente (aumentando los recursos del servidor).</p>
+</li>
+<li>
+<p><strong>Comunidad activa</strong>:<br />
+   La comunidad de <code>NodeJS</code> es enorme y activa, lo que garantiza la disponibilidad de recursos, documentación y librerías.</p>
+</li>
+<li>
+<p><strong>Rapidez en el desarrollo</strong>:<br />
+   Con herramientas como npm y la capacidad de usar el mismo lenguaje en el cliente y el servidor, <code>NodeJS</code> facilita la creación rápida de aplicaciones.</p>
+</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">¿Por qué aprender <code>NodeJS</code>?</p>
+<p>Aprender <code>NodeJS</code> es una excelente decisión para cualquier desarrollador web moderno, ya que:
+- Es uno de los entornos más demandados en el desarrollo backend.
+- Su simplicidad y eficiencia hacen que sea fácil de aprender y usar.
+- Es el corazón de muchas tecnologías modernas, como frameworks (Express.js, Nest.js) y herramientas de desarrollo (Webpack, Babel).</p>
+</div>
+<h2 id="instalando-nodejs">Instalando NodeJS</h2>
+<p>Para poder Instalar <code>NodeJS</code> debemos dirigirnos a la web oficial y seleccionar el instalador correspondiente a nuestro sistema operativo.</p>
+<p>Desde <a href="https://nodejs.org/en/download/prebuilt-installer">este enlace a la web de NodeJS</a> podrás descargarte el paquete que necesitas.</p>
+<div class="admonition error">
+<p class="admonition-title">Cuidado con las versiones del instalador</p>
+<p>Si no sabes de qué se trata, intenta SIEMPRE descargarte el paquete que diga LTS</p>
+</div>
+<p><img alt="Instalando NodeJS" src="../assets/nodejsinstall.png" /></p>
+<h2 id="introduccion-al-gestor-de-paquetes-npm">Introducción al gestor de paquetes NPM</h2>
+<p><img align="right" alt="" src="../assets/npm.png" /></p>
+<p>Ahora que ya tenemos listo el <code>NodeJS</code> podemos hacer uso de los repositorios de NPM</p>
+<p><strong>NPM</strong> (Node Package Manager) es el gestor de paquetes predeterminado para Node.js, y es una de las herramientas más importantes en el ecosistema de JavaScript. Fue lanzado en 2010 junto con Node.js para facilitar la instalación, gestión y distribución de librerías y paquetes de código reutilizable. Hoy en día, NPM es el repositorio de software más grande del mundo, con millones de paquetes disponibles para desarrolladores de todo el mundo.</p>
+<h3 id="que-es-un-paquete-en-npm">¿Qué es un paquete en NPM?</h3>
+<p>Un <strong>paquete</strong> en NPM es un conjunto de archivos (normalmente JavaScript) que cumple una funcionalidad específica. Los paquetes pueden ser bibliotecas pequeñas que realizan tareas sencillas o frameworks completos para el desarrollo de aplicaciones. Por ejemplo:
+- <strong>Librerías</strong>: <code>lodash</code> (utilidades para manipular datos), <code>moment</code> (manejo de fechas).
+- <strong>Frameworks</strong>: <code>express</code> (framework backend), <code>react</code> (framework frontend).
+- <strong>Herramientas de desarrollo</strong>: <code>webpack</code> (empaquetador), <code>eslint</code> (herramienta de linting).</p>
+<h3 id="por-que-es-importante-npm">¿Por qué es importante NPM?</h3>
+<p>NPM es fundamental para los desarrolladores porque:
+1. <strong>Facilita el acceso a librerías</strong>: Permite instalar y utilizar fácilmente librerías creadas por otros desarrolladores.
+2. <strong>Gestiona dependencias</strong>: Maneja automáticamente las dependencias que necesitan los proyectos.
+3. <strong>Promueve la colaboración y la reutilización</strong>: Los desarrolladores pueden compartir sus propios paquetes con la comunidad.
+4. <strong>Optimiza el desarrollo</strong>: Evita reinventar la rueda al permitir que los desarrolladores utilicen soluciones existentes para problemas comunes.</p>
+<h3 id="componentes-de-npm">Componentes de NPM</h3>
+<ol>
+<li>
+<p><strong>El cliente de NPM (<code>npm</code>)</strong>:<br />
+   Es una herramienta de línea de comandos que viene preinstalada con Node.js. Permite instalar, actualizar, eliminar y gestionar paquetes.</p>
+</li>
+<li>
+<p><strong>El registro de NPM</strong>:<br />
+   Es el repositorio en línea que almacena todos los paquetes disponibles. Puedes explorar estos paquetes en <a href="https://www.npmjs.com">npmjs.com</a>.</p>
+</li>
+<li>
+<p><strong>El archivo <code>package.json</code></strong>:<br />
+   Es un archivo clave en cualquier proyecto de Node.js. Contiene información sobre el proyecto, como su nombre, versión, dependencias y scripts. Por ejemplo:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;mi-proyecto&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0.0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Un proyecto básico con Node.js y NPM&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;dependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;express&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^4.18.2&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;scripts&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;start&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node app.js&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Este archivo ayuda a que otros desarrolladores puedan instalar las dependencias de tu proyecto con un solo comando (<code>npm install</code>).</p>
+<hr />
+<h3 id="comandos-basicos-de-npm">Comandos Básicos de NPM</h3>
+<ol>
+<li><strong>Instalar un paquete</strong>:<br />
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>nombre-paquete
+</code></pre></div>
+   Este comando descarga e instala un paquete del registro de NPM en la carpeta <code>node_modules</code>.</li>
+</ol>
+<p>Ejemplo:
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>express
+</code></pre></div>
+   Esto instala el framework Express para construir servidores en Node.js.</p>
+<ol>
+<li>
+<p><strong>Instalar dependencias globales</strong>:<br />
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>nombre-paquete
+</code></pre></div>
+   Esto instala un paquete de forma global, permitiéndote usarlo en cualquier proyecto. Ejemplo: instalar el CLI de <code>nodemon</code>:
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>nodemon
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Crear un proyecto con <code>package.json</code></strong>:<br />
+   Para inicializar un proyecto con un archivo <code>package.json</code>, se usa:
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>init
+</code></pre></div>
+   Este comando interactivo te guía para configurar tu proyecto.</p>
+</li>
+<li>
+<p><strong>Actualizar un paquete</strong>:<br />
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>update<span class="w"> </span>nombre-paquete
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Eliminar un paquete</strong>:<br />
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>uninstall<span class="w"> </span>nombre-paquete
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Listar los paquetes instalados</strong>:<br />
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>list
+</code></pre></div>
+   O, para ver los paquetes instalados globalmente:
+   <div class="highlight"><pre><span></span><code>npm<span class="w"> </span>list<span class="w"> </span>-g
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="introduccion-a-vuejs">Introducción a Vue.js</h2>
+<p><img align="right" alt="VueJS" src="../assets/vuejs.png" /></p>
+<p>Vue.js es uno de los <code>frameworks</code> de <code>JavaScript</code> más populares, junto a React y Angular, en la actualidad, especialmente conocido por su facilidad de uso, flexibilidad y rendimiento.</p>
+<p>Fue creado por <code>Evan You</code> en 2014 con el objetivo de ofrecer una herramienta más ligera y accesible en comparación con <code>frameworks</code> como Angular, pero con características potentes que lo hacen adecuado para proyectos tanto pequeños como grandes.</p>
+<h3 id="caracteristicas-principales-de-vuejs">Características principales de Vue.js</h3>
+<ol>
+<li><strong>Progresividad:</strong> Vue está diseñado como un framework progresivo, lo que significa que puedes integrarlo gradualmente en un proyecto existente. Puedes empezar utilizando Vue simplemente para manejar una parte específica de tu aplicación y, si lo deseas, escalarlo para controlar toda la aplicación.  </li>
+<li><strong>Sintaxis intuitiva:</strong> La curva de aprendizaje de Vue es menos pronunciada que la de otros <code>frameworks</code>. Utiliza HTML y <code>JavaScript</code> extendidos con una sintaxis sencilla, lo que lo hace atractivo tanto para principiantes como para desarrolladores avanzados.  </li>
+<li><strong>Componentes reutilizables:</strong> Al igual que otros <code>frameworks</code> modernos, Vue permite estructurar la aplicación en componentes independientes que encapsulan su lógica, estilos y presentación.  </li>
+<li><strong>Enlace bidireccional (<em>Two-Way Data Binding</em>):</strong> Vue facilita la sincronización de los datos entre el modelo y la vista, lo que simplifica la actualización de la interfaz de usuario en tiempo real.  </li>
+<li><strong>Virtual DOM:</strong> Aunque Vue no fue el primero en introducir esta técnica, utiliza un DOM virtual para realizar actualizaciones rápidas y eficientes en la interfaz de usuario.  </li>
+<li><strong>Ecosistema rico:</strong> Con herramientas como Vue Router (para gestionar rutas) y Vuex (para la gestión del estado), Vue ofrece una solución integral para el desarrollo de aplicaciones modernas.</li>
+</ol>
+<h3 id="por-que-elegir-vuejs">¿Por qué elegir Vue.js?</h3>
+<ol>
+<li><strong>Ligereza:</strong> Vue es un framework ligero y rápido, lo que lo hace ideal para aplicaciones que priorizan el rendimiento.  </li>
+<li><strong>Comunidad activa:</strong> Aunque Vue no es tan masivo como React, su comunidad ha crecido considerablemente, proporcionando soporte, recursos y extensiones.  </li>
+<li><strong>Flexibilidad:</strong> Es adaptable tanto para proyectos pequeños como para aplicaciones web grandes y complejas.  </li>
+<li><strong>Documentación excelente:</strong> Vue es conocido por tener una de las documentaciones más claras y completas entre los <code>frameworks</code> de <code>JavaScript</code>.  </li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../2%20-%20Manejo%20de%20datos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2️⃣ Manejo de datos">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                2️⃣ Manejo de datos
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Luis Alemañ 2024
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="https://discord.gg/C8yxabVTsS" target="_blank" rel="noopener" title="Únete al canal de Discord" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M524.531 69.836a1.5 1.5 0 0 0-.764-.7A485 485 0 0 0 404.081 32.03a1.82 1.82 0 0 0-1.923.91 338 338 0 0 0-14.9 30.6 447.9 447.9 0 0 0-134.426 0 310 310 0 0 0-15.135-30.6 1.89 1.89 0 0 0-1.924-.91 483.7 483.7 0 0 0-119.688 37.107 1.7 1.7 0 0 0-.788.676C39.068 183.651 18.186 294.69 28.43 404.354a2.02 2.02 0 0 0 .765 1.375 487.7 487.7 0 0 0 146.825 74.189 1.9 1.9 0 0 0 2.063-.676A348 348 0 0 0 208.12 430.4a1.86 1.86 0 0 0-1.019-2.588 321 321 0 0 1-45.868-21.853 1.885 1.885 0 0 1-.185-3.126 251 251 0 0 0 9.109-7.137 1.82 1.82 0 0 1 1.9-.256c96.229 43.917 200.41 43.917 295.5 0a1.81 1.81 0 0 1 1.924.233 235 235 0 0 0 9.132 7.16 1.884 1.884 0 0 1-.162 3.126 301.4 301.4 0 0 1-45.89 21.83 1.875 1.875 0 0 0-1 2.611 391 391 0 0 0 30.014 48.815 1.86 1.86 0 0 0 2.063.7A486 486 0 0 0 610.7 405.729a1.88 1.88 0 0 0 .765-1.352c12.264-126.783-20.532-236.912-86.934-334.541M222.491 337.58c-28.972 0-52.844-26.587-52.844-59.239s23.409-59.241 52.844-59.241c29.665 0 53.306 26.82 52.843 59.239 0 32.654-23.41 59.241-52.843 59.241m195.38 0c-28.971 0-52.843-26.587-52.843-59.239s23.409-59.241 52.843-59.241c29.667 0 53.307 26.82 52.844 59.239 0 32.654-23.177 59.241-52.844 59.241"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
