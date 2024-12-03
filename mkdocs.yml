@@ -43,11 +43,13 @@ theme:
 
 markdown_extensions:
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - attr_list
   - md_in_html
-  - codehilite
-  - pymdownx.superfences
-  - pymdownx.inlinehilite
+  - codehilite:
+      guess_lang: false
+  - pymdownx.highlight
   - pymdownx.tabbed:
       alternate_style: true
 
