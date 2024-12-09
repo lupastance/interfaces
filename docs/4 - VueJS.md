@@ -150,6 +150,261 @@ export default {
 
 🔥🔥 Puedes mostrar cualquiera de estas variables en el HTML de la misma manera usando `{{ variable }}`.
 
+
+## 💭 Métodos o funciones
+
+En Vue.js, las funciones o métodos son una parte esencial del componente para manejar la lógica. Puedes definirlas dentro de la opción `methods` del componente. Estas funciones pueden realizar tareas como procesar eventos, manipular datos, o interactuar con la interfaz del usuario.
+
+---
+
+### **Definir y Usar Métodos**
+
+1. **Definición**  
+Los métodos se declaran dentro de la propiedad `methods` de un componente Vue.
+
+2. **Uso en la plantilla (template)**  
+Puedes llamarlos en la plantilla a través de directivas como `v-on`, o utilizarlos dentro de otras expresiones en el template.
+
+!!!note "**Ejemplo Básico**""
+
+```html
+<template>
+  <div>
+    <h1>Hola, {{ nombre }}</h1>
+    <button @click="saludar">Saludar</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      nombre: "Mundo",
+    };
+  },
+  methods: {
+    saludar() {
+      alert(`¡Hola, ${this.nombre}!`);
+    },
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación del código:**
+
+- La función `saludar` se define en `methods`.
+- Al hacer clic en el botón, se ejecuta gracias a la directiva `v-on:click` (abreviada como `@click`).
+
+### **Métodos con Argumentos**
+Los métodos pueden aceptar argumentos si los pasas desde la plantilla.
+
+```html
+<template>
+  <div>
+    <button @click="mostrarMensaje('¡Hola!')">Mostrar Mensaje</button>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    mostrarMensaje(mensaje) {
+      alert(mensaje);
+    },
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**  
+
+- El método `mostrarMensaje` toma un argumento `mensaje` y lo muestra en una alerta.
+
+### **Acceso a Datos y Otras Propiedades**
+Los métodos pueden acceder a las propiedades definidas en `data`, `computed`, o incluso invocar otros métodos, utilizando `this`.
+
+```html
+<template>
+  <div>
+    <p>Contador: {{ contador }}</p>
+    <button @click="incrementar">Incrementar</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      contador: 0,
+    };
+  },
+  methods: {
+    incrementar() {
+      this.contador++;
+    },
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**  
+
+- `this.contador` accede a la propiedad `contador` definida en `data` y la incrementa.
+
+### **Métodos en Expresiones del Template**
+
+Los métodos también se pueden usar directamente dentro de las expresiones en el template, pero esto no es una práctica recomendada porque puede afectar al rendimiento.
+
+```html
+<template>
+  <div>
+    <p>{{ obtenerMensaje() }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    obtenerMensaje() {
+      return "Hola desde un método";
+    },
+  },
+};
+</script>
+```
+
+### **Usar Métodos en Eventos de Formularios**
+
+Los métodos son útiles para manejar eventos como `submit` en formularios.
+
+```html
+<template>
+  <form @submit.prevent="procesarFormulario">
+    <input v-model="nombre" placeholder="Escribe tu nombre" />
+    <button type="submit">Enviar</button>
+  </form>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      nombre: "",
+    };
+  },
+  methods: {
+    procesarFormulario() {
+      alert(`Formulario enviado por: ${this.nombre}`);
+    },
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**  
+
+- `@submit.prevent` evita que el formulario recargue la página.
+- El método `procesarFormulario` muestra un mensaje con el valor de `nombre`.
+
+
+### **Llamar Métodos Desde Otros Métodos**
+Puedes llamar un método dentro de otro método, ideal para evitar repetir código.
+
+```html
+<template>
+  <div>
+    <button @click="manejarEvento">Haz clic</button>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    manejarEvento() {
+      this.saludar();
+    },
+    saludar() {
+      alert("Hola desde otro método");
+    },
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**  
+- `manejarEvento` llama al método `saludar` usando `this`.
+
+
+!!!warning "**Cuando Usar Métodos**"
+    1. **Para manejar eventos**: Responder a clics, entradas de texto, envíos de formularios, etc.
+    2. **Para procesar datos**: Realizar cálculos o manipulaciones antes de mostrarlos en la interfaz.
+    3. **Para organizar lógica**: Separar tareas en funciones más pequeñas para mayor claridad.
+
+!!!tip "**Buenas Prácticas**"
+    1. **Evita lógica compleja en el template:** Usa métodos para encapsular la lógica.
+    2. **Nombres descriptivos:** Dale nombres que expliquen lo que hacen, como `calcularTotal` o `validarFormulario`.
+    3. **Reutilización:** Divide las funciones en métodos reutilizables siempre que sea posible.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 🌀 Directivas
 
 En Vue.js, las **directivas** son atributos especiales que se agregan a los elementos HTML para manipular el DOM (Document Object Model) de manera reactiva. Estas directivas son precedidas por el prefijo `v-`, lo que las distingue de los atributos normales.
@@ -560,3 +815,439 @@ export default {
 
 - **`v-if`**: Es más costoso en términos de rendimiento si la condición cambia frecuentemente, ya que implica montar y desmontar el DOM cada vez que la condición cambia.
 - **`v-show`**: Si solo necesitas ocultar y mostrar un elemento sin eliminarlo del DOM, puedes usar `v-show`, que solo cambia la propiedad `display` en CSS en lugar de montar/desmontar el elemento, siendo más eficiente en esos casos.
+
+
+
+### ⚙ v-for
+
+La directiva `v-for` en Vue.js se utiliza para renderizar listas o elementos repetitivos basados en una colección de datos. Es una herramienta muy poderosa que permite iterar sobre arrays, objetos o rangos y renderizar dinámicamente elementos en la interfaz.
+
+```html
+<elemento v-for="(elemento, índice) in colección" :key="valorÚnico">
+  <!-- contenido -->
+</elemento>
+```
+
+1. **`elemento`**: Representa el valor actual de la iteración (el elemento del array, valor de la propiedad, etc.).
+2. **`índice`** (opcional): Representa la posición actual dentro de la colección.
+3. **`colección`**: Puede ser un array, un objeto o un rango de números.
+4. **`:key`**: Es un atributo especial para mejorar el rendimiento, ya que ayuda a Vue a rastrear los elementos únicos en la lista.
+
+---
+
+📚 **Ejemplo 1: Iterar sobre un Array**
+
+```html
+<ul>
+  <li v-for="(nombre, index) in nombres" :key="index">
+    {{ index + 1 }}. {{ nombre }}
+  </li>
+</ul>
+
+<script>
+export default {
+  data() {
+    return {
+      nombres: ["Juan", "María", "Carlos", "Ana"]
+    };
+  }
+};
+</script>
+```
+**Resultado Renderizado:**
+```
+1. Juan
+2. María
+3. Carlos
+4. Ana
+```
+
+---
+
+🗼 **Ejemplo 2: Iterar sobre un Objeto**
+
+Cuando iteras sobre un objeto, puedes acceder tanto a las claves como a los valores.
+
+```html
+<ul>
+  <li v-for="(valor, clave) in usuario" :key="clave">
+    {{ clave }}: {{ valor }}
+  </li>
+</ul>
+
+<script>
+export default {
+  data() {
+    return {
+      usuario: {
+        nombre: "Juan",
+        edad: 30,
+        ciudad: "Madrid"
+      }
+    };
+  }
+};
+</script>
+```
+
+**Resultado Renderizado:**
+```
+nombre: Juan  
+edad: 30  
+ciudad: Madrid
+```
+
+---
+
+🔢 **Ejemplo 3: Iterar sobre un Rango de Números**
+
+Puedes generar un rango de números directamente con la directiva `v-for`.
+
+```html
+<ul>
+  <li v-for="numero in 5" :key="numero">
+    Número {{ numero }}
+  </li>
+</ul>
+```
+
+**Resultado Renderizado:**
+```
+Número 1  
+Número 2  
+Número 3  
+Número 4  
+Número 5
+```
+
+---
+
+⛓️ **Ejemplo 4: Renderizado Anidado**
+
+La directiva `v-for` también se puede anidar para iterar sobre listas dentro de listas.
+
+```html
+<div v-for="(categoria, index) in categorias" :key="index">
+  <h3>{{ categoria.nombre }}</h3>
+  <ul>
+    <li v-for="(producto, i) in categoria.productos" :key="i">
+      {{ producto }}
+    </li>
+  </ul>
+</div>
+
+<script>
+export default {
+  data() {
+    return {
+      categorias: [
+        {
+          nombre: "Frutas",
+          productos: ["Manzana", "Pera", "Plátano"]
+        },
+        {
+          nombre: "Verduras",
+          productos: ["Lechuga", "Zanahoria", "Espinaca"]
+        }
+      ]
+    };
+  }
+};
+</script>
+```
+
+**Resultado Renderizado:**
+```
+Frutas
+- Manzana
+- Pera
+- Plátano
+
+Verduras
+- Lechuga
+- Zanahoria
+- Espinaca
+```
+
+
+!!!warning "Consejos Importantes"
+    1. **`key` es esencial para el rendimiento:**
+       Vue utiliza `:key` para identificar de manera única cada elemento en la lista. Si no se usa, puede haber problemas de rendimiento o errores al actualizar listas dinámicamente.
+
+    2. **Evitar iterar sin límite:**
+       Si tienes listas muy largas o iteraciones anidadas, puede afectar el rendimiento. Intenta usar paginación u otras técnicas para manejar grandes conjuntos de datos.
+
+    3. **Usar `v-for` con `v-if`:**
+       Si necesitas condicionar el renderizado dentro de un `v-for`, evita combinarlos en el mismo elemento. En lugar de eso, anida el `v-if` dentro del hijo:
+
+       ```html
+       <ul>
+         <li v-for="tarea in tareas" :key="tarea.id">
+           <p v-if="tarea.completada">{{ tarea.nombre }}</p>
+         </li>
+       </ul>
+       ```
+
+---
+
+### ⚙ v-show
+
+La directiva `v-show` se utiliza para mostrar u ocultar elementos HTML basándose en una condición booleana. A diferencia de `v-if`, `v-show` no elimina el elemento del DOM cuando la condición no se cumple; simplemente controla la propiedad CSS `display`.
+
+!!!error "Cómo funciona `v-show`"
+
+- Si la condición es `true`, el elemento será visible.
+- Si la condición es `false`, el elemento estará oculto (`display: none`).
+
+
+🔡 **Sintaxis**
+```html
+<elemento v-show="condición">
+  <!-- Contenido -->
+</elemento>
+```
+
+🔍 **Ejemplo 1: Mostrar/Ocultar un Mensaje**
+```html
+<template>
+  <div>
+    <button @click="mostrar = !mostrar">
+      {{ mostrar ? "Ocultar Mensaje" : "Mostrar Mensaje" }}
+    </button>
+    <p v-show="mostrar">¡Hola! Este es un mensaje visible.</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      mostrar: true,
+    };
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**
+
+- Al hacer clic en el botón, la variable `mostrar` cambia entre `true` y `false`.
+- Si `mostrar` es `true`, el párrafo será visible; si es `false`, estará oculto.
+
+❌ **Diferencia entre `v-show` y `v-if`**
+
+| **Característica**      | **v-show**                                          | **v-if**                                            |
+| ----------------------- | --------------------------------------------------- | --------------------------------------------------- |
+| **Renderizado inicial** | Siempre renderiza el elemento (aunque esté oculto). | Renderiza solo si la condición es `true`.           |
+| **Rendimiento**         | Mejor para cambios frecuentes, ya que usa CSS.      | Mejor si el elemento se muestra/oculta pocas veces. |
+| **Efecto en el DOM**    | Aplica `display: none`.                             | Añade o elimina el elemento del DOM.                |
+
+🥷🏻 **Ejemplo 2: Ocultar un Elemento con `v-show`**
+
+```html
+<template>
+  <div>
+    <h1 v-show="mostrarTitulo">Este título se puede ocultar.</h1>
+    <button @click="mostrarTitulo = !mostrarTitulo">
+      {{ mostrarTitulo ? "Ocultar" : "Mostrar" }} Título
+    </button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      mostrarTitulo: true,
+    };
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**
+
+- El título `<h1>` será visible solo cuando `mostrarTitulo` sea `true`. Cambiar esta variable con el botón actualiza el CSS del título (`display: none`).
+
+
+### ⚙ v-on
+
+La directiva `v-on` se utiliza para escuchar eventos del DOM y ejecutar métodos o expresiones cuando ocurren. Es una herramienta esencial en Vue.js para manejar interactividad, como responder a clics de botones, movimientos del mouse, teclas del teclado, entre otros eventos.
+
+
+🔡 **Sintaxis Básica**
+
+```html
+<elemento v-on:evento="manejador"></elemento>
+```
+
+- **`evento`**: El evento DOM que deseas escuchar, como `click`, `input`, `submit`, etc.
+- **`manejador`**: El método o expresión que se ejecutará cuando ocurra el evento.
+
+👋🏻 **Shorthand**
+
+Vue.js ofrece una versión abreviada de `v-on`:
+```html
+<elemento @evento="manejador"></elemento>
+```
+
+🖱️ **Ejemplo 1: Responder a un click**
+
+```html
+<template>
+  <div>
+    <button v-on:click="saludar">Haz clic aquí</button>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    saludar() {
+      alert("¡Hola! Has hecho clic en el botón.");
+    },
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**  
+
+- El botón escucha el evento `click`.
+- Cuando se hace clic, se llama al método `saludar`, que muestra una alerta.
+
+🗃️ **Paso de Argumentos**
+
+Puedes pasar argumentos a los métodos utilizando paréntesis:
+
+```html
+<template>
+  <div>
+    <button @click="mostrarMensaje('Hola Mundo')">Mostrar Mensaje</button>
+  </div>
+</template>
+
+<script>
+export default {
+  methods: {
+    mostrarMensaje(mensaje) {
+      alert(mensaje);
+    },
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**
+
+- Al hacer clic, el botón pasa la cadena `"Hola Mundo"` como argumento al método `mostrarMensaje`.
+
+🫧 **Eventos con Modificadores**
+
+Los modificadores son sufijos de la directiva que alteran su comportamiento.
+
+1. **`stop`**: Detiene la propagación del evento.
+   ```html
+   <button @click.stop="detenerPropagacion">Haz clic</button>
+   ```
+
+2. **`prevent`**: Previene el comportamiento predeterminado del evento.
+   ```html
+   <form @submit.prevent="enviarFormulario">...</form>
+   ```
+
+3. **`once`**: Escucha el evento una sola vez.
+   ```html
+   <button @click.once="saludarUnaVez">Haz clic</button>
+   ```
+
+4. **`capture`**: Usa el modo de captura de eventos.
+   ```html
+   <div @click.capture="manejarClick">...</div>
+   ```
+
+---
+
+🍥 **Ejemplo 2: Uso de Modificadores**
+
+```html
+<template>
+  <div>
+    <form @submit.prevent="procesarFormulario">
+      <input type="text" v-model="nombre" placeholder="Escribe tu nombre" />
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      nombre: "",
+    };
+  },
+  methods: {
+    procesarFormulario() {
+      alert(`Formulario enviado por: ${this.nombre}`);
+    },
+  },
+};
+</script>
+```
+
+**Explicación:**  
+- `@submit.prevent` evita que la página se recargue al enviar el formulario.
+
+---
+
+🍄 **Uso de Eventos Nativos y Personalizados**
+
+!!!note "**Eventos Nativos**"
+
+Puedes escuchar cualquier evento nativo del DOM, como `mouseenter`, `blur`, etc.
+```html
+<div @mouseenter="mostrarTooltip">Pasa el mouse aquí</div>
+```
+
+!!!tip "**Eventos Personalizados**"
+
+En componentes personalizados, puedes emitir eventos con `$emit` y escucharlos con `v-on`.
+
+Componente hijo:
+```javascript
+this.$emit('mi-evento', datos);
+```
+
+Componente padre:
+```html
+<hijo @mi-evento="manejarEvento"></hijo>
+```
+
+---
+
+🚩 **Ejemplo 3: Toggle de Estado**
+
+```html
+<template>
+  <div>
+    <p>Estado: {{ activo ? "Activo" : "Inactivo" }}</p>
+    <button @click="activo = !activo">Cambiar Estado</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      activo: false,
+    };
+  },
+};
+</script>
+```
+
+👉🏻 **Explicación:**
+
+- El botón usa un evento `click` para alternar el valor booleano de `activo`.
+- Esto cambia dinámicamente el texto mostrado.
