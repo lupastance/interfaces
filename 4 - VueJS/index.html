@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -433,6 +433,75 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#metodos-o-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      💭 Métodos o funciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="💭 Métodos o funciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#definir-y-usar-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definir y Usar Métodos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-con-argumentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos con Argumentos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acceso-a-datos-y-otras-propiedades" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acceso a Datos y Otras Propiedades
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metodos-en-expresiones-del-template" class="md-nav__link">
+    <span class="md-ellipsis">
+      Métodos en Expresiones del Template
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usar-metodos-en-eventos-de-formularios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usar Métodos en Eventos de Formularios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#llamar-metodos-desde-otros-metodos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Llamar Métodos Desde Otros Métodos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#directivas" class="md-nav__link">
     <span class="md-ellipsis">
       🌀 Directivas
@@ -464,6 +533,33 @@
   <a href="#v-if-v-else" class="md-nav__link">
     <span class="md-ellipsis">
       ⚙ v-if ··· v-else
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙ v-for
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-show" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙ v-show
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#v-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      ⚙ v-on
     </span>
   </a>
   
@@ -648,6 +744,186 @@
 </ul>
 </div>
 <p>🔥🔥 Puedes mostrar cualquiera de estas variables en el HTML de la misma manera usando <code>{{ variable }}</code>.</p>
+<h2 id="metodos-o-funciones">💭 Métodos o funciones</h2>
+<p>En Vue.js, las funciones o métodos son una parte esencial del componente para manejar la lógica. Puedes definirlas dentro de la opción <code>methods</code> del componente. Estas funciones pueden realizar tareas como procesar eventos, manipular datos, o interactuar con la interfaz del usuario.</p>
+<hr />
+<h3 id="definir-y-usar-metodos"><strong>Definir y Usar Métodos</strong></h3>
+<ol>
+<li>
+<p><strong>Definición</strong><br />
+Los métodos se declaran dentro de la propiedad <code>methods</code> de un componente Vue.</p>
+</li>
+<li>
+<p><strong>Uso en la plantilla (template)</strong><br />
+Puedes llamarlos en la plantilla a través de directivas como <code>v-on</code>, o utilizarlos dentro de otras expresiones en el template.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title"><strong>Ejemplo Básico</strong>"</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Hola, {{ nombre }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;saludar&quot;</span><span class="p">&gt;</span>Saludar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Mundo&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`¡Hola, </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">!`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación del código:</strong></p>
+<ul>
+<li>La función <code>saludar</code> se define en <code>methods</code>.</li>
+<li>Al hacer clic en el botón, se ejecuta gracias a la directiva <code>v-on:click</code> (abreviada como <code>@click</code>).</li>
+</ul>
+<h3 id="metodos-con-argumentos"><strong>Métodos con Argumentos</strong></h3>
+<p>Los métodos pueden aceptar argumentos si los pasas desde la plantilla.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;mostrarMensaje(&#39;¡Hola!&#39;)&quot;</span><span class="p">&gt;</span>Mostrar Mensaje<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong>  </p>
+<ul>
+<li>El método <code>mostrarMensaje</code> toma un argumento <code>mensaje</code> y lo muestra en una alerta.</li>
+</ul>
+<h3 id="acceso-a-datos-y-otras-propiedades"><strong>Acceso a Datos y Otras Propiedades</strong></h3>
+<p>Los métodos pueden acceder a las propiedades definidas en <code>data</code>, <code>computed</code>, o incluso invocar otros métodos, utilizando <code>this</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Contador: {{ contador }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;incrementar&quot;</span><span class="p">&gt;</span>Incrementar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">contador</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">incrementar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong>  </p>
+<ul>
+<li><code>this.contador</code> accede a la propiedad <code>contador</code> definida en <code>data</code> y la incrementa.</li>
+</ul>
+<h3 id="metodos-en-expresiones-del-template"><strong>Métodos en Expresiones del Template</strong></h3>
+<p>Los métodos también se pueden usar directamente dentro de las expresiones en el template, pero esto no es una práctica recomendada porque puede afectar al rendimiento.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ obtenerMensaje() }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">obtenerMensaje</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="s2">&quot;Hola desde un método&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="usar-metodos-en-eventos-de-formularios"><strong>Usar Métodos en Eventos de Formularios</strong></h3>
+<p>Los métodos son útiles para manejar eventos como <code>submit</code> en formularios.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">form</span> <span class="err">@</span><span class="na">submit</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;procesarFormulario&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Escribe tu nombre&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">procesarFormulario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`Formulario enviado por: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong>  </p>
+<ul>
+<li><code>@submit.prevent</code> evita que el formulario recargue la página.</li>
+<li>El método <code>procesarFormulario</code> muestra un mensaje con el valor de <code>nombre</code>.</li>
+</ul>
+<h3 id="llamar-metodos-desde-otros-metodos"><strong>Llamar Métodos Desde Otros Métodos</strong></h3>
+<p>Puedes llamar un método dentro de otro método, ideal para evitar repetir código.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;manejarEvento&quot;</span><span class="p">&gt;</span>Haz clic<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">manejarEvento</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">saludar</span><span class="p">();</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;Hola desde otro método&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong><br />
+- <code>manejarEvento</code> llama al método <code>saludar</code> usando <code>this</code>.</p>
+<div class="admonition warning">
+<p class="admonition-title"><strong>Cuando Usar Métodos</strong></p>
+<ol>
+<li><strong>Para manejar eventos</strong>: Responder a clics, entradas de texto, envíos de formularios, etc.</li>
+<li><strong>Para procesar datos</strong>: Realizar cálculos o manipulaciones antes de mostrarlos en la interfaz.</li>
+<li><strong>Para organizar lógica</strong>: Separar tareas en funciones más pequeñas para mayor claridad.</li>
+</ol>
+</div>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Buenas Prácticas</strong></p>
+<ol>
+<li><strong>Evita lógica compleja en el template:</strong> Usa métodos para encapsular la lógica.</li>
+<li><strong>Nombres descriptivos:</strong> Dale nombres que expliquen lo que hacen, como <code>calcularTotal</code> o <code>validarFormulario</code>.</li>
+<li><strong>Reutilización:</strong> Divide las funciones en métodos reutilizables siempre que sea posible.</li>
+</ol>
+</div>
 <h2 id="directivas">🌀 Directivas</h2>
 <p>En Vue.js, las <strong>directivas</strong> son atributos especiales que se agregan a los elementos HTML para manipular el DOM (Document Object Model) de manera reactiva. Estas directivas son precedidas por el prefijo <code>v-</code>, lo que las distingue de los atributos normales.</p>
 <p>A continuación, se mencionan algunas de las directivas más comunes en Vue.js:</p>
@@ -1028,6 +1304,393 @@ export default {
 <li><strong><code>v-if</code></strong>: Es más costoso en términos de rendimiento si la condición cambia frecuentemente, ya que implica montar y desmontar el DOM cada vez que la condición cambia.</li>
 <li><strong><code>v-show</code></strong>: Si solo necesitas ocultar y mostrar un elemento sin eliminarlo del DOM, puedes usar <code>v-show</code>, que solo cambia la propiedad <code>display</code> en CSS en lugar de montar/desmontar el elemento, siendo más eficiente en esos casos.</li>
 </ul>
+<h3 id="v-for">⚙ v-for</h3>
+<p>La directiva <code>v-for</code> en Vue.js se utiliza para renderizar listas o elementos repetitivos basados en una colección de datos. Es una herramienta muy poderosa que permite iterar sobre arrays, objetos o rangos y renderizar dinámicamente elementos en la interfaz.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">elemento</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(elemento, índice) in colección&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;valorÚnico&quot;</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!-- contenido --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">elemento</span><span class="p">&gt;</span>
+</code></pre></div>
+<ol>
+<li><strong><code>elemento</code></strong>: Representa el valor actual de la iteración (el elemento del array, valor de la propiedad, etc.).</li>
+<li><strong><code>índice</code></strong> (opcional): Representa la posición actual dentro de la colección.</li>
+<li><strong><code>colección</code></strong>: Puede ser un array, un objeto o un rango de números.</li>
+<li><strong><code>:key</code></strong>: Es un atributo especial para mejorar el rendimiento, ya que ayuda a Vue a rastrear los elementos únicos en la lista.</li>
+</ol>
+<hr />
+<p>📚 <strong>Ejemplo 1: Iterar sobre un Array</strong></p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(nombre, index) in nombres&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;index&quot;</span><span class="p">&gt;</span>
+    {{ index + 1 }}. {{ nombre }}
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">nombres</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;María&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Carlos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Ana&quot;</span><span class="p">]</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<strong>Resultado Renderizado:</strong>
+<div class="highlight"><pre><span></span><code>1. Juan
+2. María
+3. Carlos
+4. Ana
+</code></pre></div></p>
+<hr />
+<p>🗼 <strong>Ejemplo 2: Iterar sobre un Objeto</strong></p>
+<p>Cuando iteras sobre un objeto, puedes acceder tanto a las claves como a los valores.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(valor, clave) in usuario&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;clave&quot;</span><span class="p">&gt;</span>
+    {{ clave }}: {{ valor }}
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">usuario</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Juan&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">edad</span><span class="o">:</span><span class="w"> </span><span class="mf">30</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">ciudad</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Madrid&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Resultado Renderizado:</strong>
+<div class="highlight"><pre><span></span><code>nombre: Juan  
+edad: 30  
+ciudad: Madrid
+</code></pre></div></p>
+<hr />
+<p>🔢 <strong>Ejemplo 3: Iterar sobre un Rango de Números</strong></p>
+<p>Puedes generar un rango de números directamente con la directiva <code>v-for</code>.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;numero in 5&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;numero&quot;</span><span class="p">&gt;</span>
+    Número {{ numero }}
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Resultado Renderizado:</strong>
+<div class="highlight"><pre><span></span><code>Número 1  
+Número 2  
+Número 3  
+Número 4  
+Número 5
+</code></pre></div></p>
+<hr />
+<p>⛓️ <strong>Ejemplo 4: Renderizado Anidado</strong></p>
+<p>La directiva <code>v-for</code> también se puede anidar para iterar sobre listas dentro de listas.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(categoria, index) in categorias&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;index&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>{{ categoria.nombre }}<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(producto, i) in categoria.productos&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;i&quot;</span><span class="p">&gt;</span>
+      {{ producto }}
+    <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">categorias</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Frutas&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">productos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Manzana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Pera&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Plátano&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Verduras&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">productos</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Lechuga&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Zanahoria&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Espinaca&quot;</span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Resultado Renderizado:</strong>
+<div class="highlight"><pre><span></span><code>Frutas
+- Manzana
+- Pera
+- Plátano
+
+Verduras
+- Lechuga
+- Zanahoria
+- Espinaca
+</code></pre></div></p>
+<div class="admonition warning">
+<p class="admonition-title">Consejos Importantes</p>
+<ol>
+<li>
+<p><strong><code>key</code> es esencial para el rendimiento:</strong>
+   Vue utiliza <code>:key</code> para identificar de manera única cada elemento en la lista. Si no se usa, puede haber problemas de rendimiento o errores al actualizar listas dinámicamente.</p>
+</li>
+<li>
+<p><strong>Evitar iterar sin límite:</strong>
+   Si tienes listas muy largas o iteraciones anidadas, puede afectar el rendimiento. Intenta usar paginación u otras técnicas para manejar grandes conjuntos de datos.</p>
+</li>
+<li>
+<p><strong>Usar <code>v-for</code> con <code>v-if</code>:</strong>
+   Si necesitas condicionar el renderizado dentro de un <code>v-for</code>, evita combinarlos en el mismo elemento. En lugar de eso, anida el <code>v-if</code> dentro del hijo:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;tarea in tareas&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;tarea.id&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;tarea.completada&quot;</span><span class="p">&gt;</span>{{ tarea.nombre }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<hr />
+<h3 id="v-show">⚙ v-show</h3>
+<p>La directiva <code>v-show</code> se utiliza para mostrar u ocultar elementos HTML basándose en una condición booleana. A diferencia de <code>v-if</code>, <code>v-show</code> no elimina el elemento del DOM cuando la condición no se cumple; simplemente controla la propiedad CSS <code>display</code>.</p>
+<div class="admonition error">
+<p class="admonition-title">Cómo funciona <code>v-show</code></p>
+</div>
+<ul>
+<li>Si la condición es <code>true</code>, el elemento será visible.</li>
+<li>Si la condición es <code>false</code>, el elemento estará oculto (<code>display: none</code>).</li>
+</ul>
+<p>🔡 <strong>Sintaxis</strong>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">elemento</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&quot;condición&quot;</span><span class="p">&gt;</span>
+  <span class="cm">&lt;!-- Contenido --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">elemento</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>🔍 <strong>Ejemplo 1: Mostrar/Ocultar un Mensaje</strong>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;mostrar = !mostrar&quot;</span><span class="p">&gt;</span>
+      {{ mostrar ? &quot;Ocultar Mensaje&quot; : &quot;Mostrar Mensaje&quot; }}
+    <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&quot;mostrar&quot;</span><span class="p">&gt;</span>¡Hola! Este es un mensaje visible.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">mostrar</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>👉🏻 <strong>Explicación:</strong></p>
+<ul>
+<li>Al hacer clic en el botón, la variable <code>mostrar</code> cambia entre <code>true</code> y <code>false</code>.</li>
+<li>Si <code>mostrar</code> es <code>true</code>, el párrafo será visible; si es <code>false</code>, estará oculto.</li>
+</ul>
+<p>❌ <strong>Diferencia entre <code>v-show</code> y <code>v-if</code></strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Característica</strong></th>
+<th><strong>v-show</strong></th>
+<th><strong>v-if</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Renderizado inicial</strong></td>
+<td>Siempre renderiza el elemento (aunque esté oculto).</td>
+<td>Renderiza solo si la condición es <code>true</code>.</td>
+</tr>
+<tr>
+<td><strong>Rendimiento</strong></td>
+<td>Mejor para cambios frecuentes, ya que usa CSS.</td>
+<td>Mejor si el elemento se muestra/oculta pocas veces.</td>
+</tr>
+<tr>
+<td><strong>Efecto en el DOM</strong></td>
+<td>Aplica <code>display: none</code>.</td>
+<td>Añade o elimina el elemento del DOM.</td>
+</tr>
+</tbody>
+</table>
+<p>🥷🏻 <strong>Ejemplo 2: Ocultar un Elemento con <code>v-show</code></strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&quot;mostrarTitulo&quot;</span><span class="p">&gt;</span>Este título se puede ocultar.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;mostrarTitulo = !mostrarTitulo&quot;</span><span class="p">&gt;</span>
+      {{ mostrarTitulo ? &quot;Ocultar&quot; : &quot;Mostrar&quot; }} Título
+    <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">mostrarTitulo</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong></p>
+<ul>
+<li>El título <code>&lt;h1&gt;</code> será visible solo cuando <code>mostrarTitulo</code> sea <code>true</code>. Cambiar esta variable con el botón actualiza el CSS del título (<code>display: none</code>).</li>
+</ul>
+<h3 id="v-on">⚙ v-on</h3>
+<p>La directiva <code>v-on</code> se utiliza para escuchar eventos del DOM y ejecutar métodos o expresiones cuando ocurren. Es una herramienta esencial en Vue.js para manejar interactividad, como responder a clics de botones, movimientos del mouse, teclas del teclado, entre otros eventos.</p>
+<p>🔡 <strong>Sintaxis Básica</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">elemento</span> <span class="na">v-on:evento</span><span class="o">=</span><span class="s">&quot;manejador&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">elemento</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
+<li><strong><code>evento</code></strong>: El evento DOM que deseas escuchar, como <code>click</code>, <code>input</code>, <code>submit</code>, etc.</li>
+<li><strong><code>manejador</code></strong>: El método o expresión que se ejecutará cuando ocurra el evento.</li>
+</ul>
+<p>👋🏻 <strong>Shorthand</strong></p>
+<p>Vue.js ofrece una versión abreviada de <code>v-on</code>:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">elemento</span> <span class="err">@</span><span class="na">evento</span><span class="o">=</span><span class="s">&quot;manejador&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">elemento</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>🖱️ <strong>Ejemplo 1: Responder a un click</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&quot;saludar&quot;</span><span class="p">&gt;</span>Haz clic aquí<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;¡Hola! Has hecho clic en el botón.&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong>  </p>
+<ul>
+<li>El botón escucha el evento <code>click</code>.</li>
+<li>Cuando se hace clic, se llama al método <code>saludar</code>, que muestra una alerta.</li>
+</ul>
+<p>🗃️ <strong>Paso de Argumentos</strong></p>
+<p>Puedes pasar argumentos a los métodos utilizando paréntesis:</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;mostrarMensaje(&#39;Hola Mundo&#39;)&quot;</span><span class="p">&gt;</span>Mostrar Mensaje<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">mostrarMensaje</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong></p>
+<ul>
+<li>Al hacer clic, el botón pasa la cadena <code>"Hola Mundo"</code> como argumento al método <code>mostrarMensaje</code>.</li>
+</ul>
+<p>🫧 <strong>Eventos con Modificadores</strong></p>
+<p>Los modificadores son sufijos de la directiva que alteran su comportamiento.</p>
+<ol>
+<li>
+<p><strong><code>stop</code></strong>: Detiene la propagación del evento.
+   <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">stop</span><span class="o">=</span><span class="s">&quot;detenerPropagacion&quot;</span><span class="p">&gt;</span>Haz clic<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>prevent</code></strong>: Previene el comportamiento predeterminado del evento.
+   <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="err">@</span><span class="na">submit</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;enviarFormulario&quot;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>once</code></strong>: Escucha el evento una sola vez.
+   <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">once</span><span class="o">=</span><span class="s">&quot;saludarUnaVez&quot;</span><span class="p">&gt;</span>Haz clic<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>capture</code></strong>: Usa el modo de captura de eventos.
+   <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="err">@</span><span class="na">click</span><span class="err">.</span><span class="na">capture</span><span class="o">=</span><span class="s">&quot;manejarClick&quot;</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<p>🍥 <strong>Ejemplo 2: Uso de Modificadores</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="err">@</span><span class="na">submit</span><span class="err">.</span><span class="na">prevent</span><span class="o">=</span><span class="s">&quot;procesarFormulario&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;nombre&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Escribe tu nombre&quot;</span> <span class="p">/&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">nombre</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">procesarFormulario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="sb">`Formulario enviado por: </span><span class="si">${</span><span class="k">this</span><span class="p">.</span><span class="nx">nombre</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Explicación:</strong><br />
+- <code>@submit.prevent</code> evita que la página se recargue al enviar el formulario.</p>
+<hr />
+<p>🍄 <strong>Uso de Eventos Nativos y Personalizados</strong></p>
+<div class="admonition note">
+<p class="admonition-title"><strong>Eventos Nativos</strong></p>
+</div>
+<p>Puedes escuchar cualquier evento nativo del DOM, como <code>mouseenter</code>, <code>blur</code>, etc.
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="err">@</span><span class="na">mouseenter</span><span class="o">=</span><span class="s">&quot;mostrarTooltip&quot;</span><span class="p">&gt;</span>Pasa el mouse aquí<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title"><strong>Eventos Personalizados</strong></p>
+</div>
+<p>En componentes personalizados, puedes emitir eventos con <code>$emit</code> y escucharlos con <code>v-on</code>.</p>
+<p>Componente hijo:
+<div class="highlight"><pre><span></span><code><span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s1">&#39;mi-evento&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">datos</span><span class="p">);</span>
+</code></pre></div></p>
+<p>Componente padre:
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">hijo</span> <span class="err">@</span><span class="na">mi-evento</span><span class="o">=</span><span class="s">&quot;manejarEvento&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">hijo</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<hr />
+<p>🚩 <strong>Ejemplo 3: Toggle de Estado</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Estado: {{ activo ? &quot;Activo&quot; : &quot;Inactivo&quot; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;activo = !activo&quot;</span><span class="p">&gt;</span>Cambiar Estado<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">activo</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>👉🏻 <strong>Explicación:</strong></p>
+<ul>
+<li>El botón usa un evento <code>click</code> para alternar el valor booleano de <code>activo</code>.</li>
+<li>Esto cambia dinámicamente el texto mostrado.</li>
+</ul>
 
 
 
@@ -1115,10 +1778,10 @@ export default {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   </body>
