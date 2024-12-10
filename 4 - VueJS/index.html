@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -560,6 +560,66 @@
   <a href="#v-on" class="md-nav__link">
     <span class="md-ellipsis">
       ⚙ v-on
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#componentes" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Componentes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📦 Componentes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#propiedades-props" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propiedades (props)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eventos-personalizados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Eventos Personalizados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-dinamicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Dinámicos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-anidados" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Anidados
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#componentes-anidados-dinamicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Componentes Anidados Dinámicos
     </span>
   </a>
   
@@ -1691,6 +1751,501 @@ Verduras
 <li>El botón usa un evento <code>click</code> para alternar el valor booleano de <code>activo</code>.</li>
 <li>Esto cambia dinámicamente el texto mostrado.</li>
 </ul>
+<hr />
+<h2 id="componentes">📦 <strong>Componentes</strong></h2>
+<p>En Vue.js, un <strong>componente</strong> es una unidad reutilizable e independiente de interfaz de usuario que encapsula su estructura (HTML), estilo (CSS) y comportamiento (JavaScript). Los componentes permiten dividir la interfaz de usuario en pequeñas piezas manejables y modulares, lo que facilita el desarrollo, la reutilización y el mantenimiento del código.</p>
+<p>💢 <strong>Por qué usar Componentes</strong></p>
+<ol>
+<li><strong>Reutilización:</strong> Puedes usar un mismo componente en diferentes partes de tu aplicación, reduciendo la duplicación de código.</li>
+<li><strong>Modularidad:</strong> Ayudan a organizar el código dividiéndolo en piezas más pequeñas y manejables.</li>
+<li><strong>Mantenibilidad:</strong> Los cambios en un componente afectan solo a ese componente y no al resto de la aplicación.</li>
+<li><strong>Escalabilidad:</strong> Facilitan el desarrollo de aplicaciones más grandes y complejas.</li>
+</ol>
+<hr />
+<p>💡 <strong>Estructura de un Componente en Vue.js</strong></p>
+<p>Un componente consta de:</p>
+<ol>
+<li><strong>Template:</strong> Define el HTML del componente.</li>
+<li><strong>Script:</strong> Contiene la lógica del componente (datos, métodos, etc.).</li>
+<li><strong>Style:</strong> Define el CSS específico del componente.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;{{ titulo }}&lt;/h1&gt;
+    &lt;p&gt;{{ descripcion }}&lt;/p&gt;
+    &lt;button @click=&quot;saludar&quot;&gt;Haz clic aquí&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  name: &quot;MiComponente&quot;,
+  data() {
+    return {
+      titulo: &quot;Hola, soy un componente&quot;,
+      descripcion: &quot;Este es un ejemplo básico de un componente en Vue.&quot;,
+    };
+  },
+  methods: {
+    saludar() {
+      alert(&quot;¡Hola desde el componente!&quot;);
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+h1 {
+  color: blue;
+}
+p {
+  font-size: 18px;
+}
+&lt;/style&gt;
+</code></pre></div>
+<hr />
+<p>🪁 <strong>Cómo Registrar y Usar un Componente</strong></p>
+<p>Un componente se registra localmente cuando se usa solo dentro de un componente específico.</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;MiComponente /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import MiComponente from &quot;./MiComponente.vue&quot;; // Importamos el componente
+
+export default {
+  components: {
+    MiComponente, // que no se os olvide definir el componente en vuestro script
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+<p>🎈 <strong>2. Registro Global</strong></p>
+<p>Un componente se registra globalmente cuando quieres que esté disponible en toda la aplicación. Esto se hace en el archivo principal (<code>main.js</code>).</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="nx">Vue</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;vue&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">MiComponente</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./components/MiComponente.vue&quot;</span><span class="p">;</span>
+
+<span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="s2">&quot;MiComponente&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">MiComponente</span><span class="p">);</span>
+</code></pre></div>
+<p>Ahora puedes usar <code>&lt;MiComponente /&gt;</code> en cualquier lugar de tu aplicación sin necesidad de importarlo en cada componente.</p>
+<hr />
+<h3 id="propiedades-props"><strong>Propiedades (<code>props</code>)</strong></h3>
+<p>Los componentes permiten <strong>pasar datos desde el componente padre al hijo</strong> utilizando propiedades (<code>props</code>).</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">🔰Componente Padre</label><label for="__tabbed_6_2">✨Componente Hijo ~ <code>HijoComponente.vue</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;HijoComponente nombre=&quot;Juan&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import HijoComponente from &quot;./HijoComponente.vue&quot;;
+
+export default {
+  components: {
+    HijoComponente,
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Hola, {{ nombre }}&lt;/h2&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: [&quot;nombre&quot;], // Definimos la prop
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">El hijo recibe el dato <code>nombre</code> desde el padre y lo utiliza dentro de su plantilla.</p>
+</div>
+<h3 id="eventos-personalizados"><strong>Eventos Personalizados</strong></h3>
+<p>Los componentes hijos pueden <strong>enviar eventos al componente padre</strong> para notificar cambios o acciones utilizando <code>$emit</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">🔰 Componente Padre</label><label for="__tabbed_7_2">✨ Componente Hijo (<code>Boton.vue</code>)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;Boton @eventoClic=&quot;manejarEvento&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Boton from &quot;./Boton.vue&quot;;
+
+export default {
+  components: {
+    Boton,
+  },
+  methods: {
+    manejarEvento(mensaje) {
+      alert(mensaje); // Muestra &quot;¡Botón pulsado!&quot;
+    },
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;button @click=&quot;enviarEvento&quot;&gt;Haz clic&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  methods: {
+    enviarEvento() {
+      this.$emit(&quot;eventoClic&quot;, &quot;¡Botón pulsado!&quot;);
+    },
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
+<p>🎛 <strong>Comunicación entre Componentes</strong></p>
+<ol>
+<li><strong>De Padre a Hijo:</strong> Se realiza con <code>props</code>.</li>
+<li><strong>De Hijo a Padre:</strong> Se realiza con eventos personalizados y <code>$emit</code>.</li>
+<li><strong>Entre Componentes Hermanos:</strong> Usando un patrón como un <strong>bus de eventos</strong> o un estado compartido.</li>
+</ol>
+<p>💯 <strong>Ejemplo Completo</strong></p>
+<ul>
+<li><strong>Componente Padre:</strong> Gestiona un contador.</li>
+<li><strong>Componente Hijo:</strong> Botones para incrementar o decrementar el contador.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">🔰Componente Padre (<code>App.vue</code>)</label><label for="__tabbed_8_2">✨ Componente Hijo ~ <code>Boton.vue</code></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Contador: {{ contador }}&lt;/h1&gt;
+    &lt;Boton texto=&quot;Incrementar&quot; :accion=&quot;incrementar&quot; /&gt;
+    &lt;Boton texto=&quot;Decrementar&quot; :accion=&quot;decrementar&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Boton from &quot;./Boton.vue&quot;;
+
+export default {
+  components: {
+    Boton,
+  },
+  data() {
+    return {
+      contador: 0,
+    };
+  },
+  methods: {
+    incrementar() {
+      this.contador++;
+    },
+    decrementar() {
+      this.contador--;
+    },
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;button @click=&quot;accion&quot;&gt;{{ texto }}&lt;/button&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: [&quot;texto&quot;, &quot;accion&quot;],
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<div class="admonition error">
+<p class="admonition-title"><strong>Beneficios Clave de los Componentes</strong></p>
+<ol>
+<li><strong>Reutilización:</strong> Usas un componente en múltiples lugares con diferente configuración.</li>
+<li><strong>Separación de Preocupaciones:</strong> La lógica, la estructura y el estilo están contenidos en un único archivo.</li>
+<li><strong>Escalabilidad:</strong> Facilitan la construcción de aplicaciones complejas y mantenibles.</li>
+</ol>
+</div>
+<hr />
+<h3 id="componentes-dinamicos"><strong>Componentes Dinámicos</strong></h3>
+<p>Los <strong>componentes dinámicos</strong> permiten renderizar diferentes componentes en una misma ubicación de forma dinámica, según ciertas condiciones. Esto es útil cuando necesitas alternar entre varios componentes en una misma área sin replicar lógica o estructura.</p>
+<div class="admonition danger">
+<p class="admonition-title"><strong>La Directiva <code>is</code></strong></p>
+</div>
+<p>En Vue.js, se usa el atributo especial <code>is</code> en una etiqueta <code>&lt;component&gt;</code> para renderizar un componente dinámico.</p>
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Componente Dinámico&lt;/h1&gt;
+    &lt;button @click=&quot;componenteActual = &#39;ComponenteA&#39;&quot;&gt;Mostrar A&lt;/button&gt;
+    &lt;button @click=&quot;componenteActual = &#39;ComponenteB&#39;&quot;&gt;Mostrar B&lt;/button&gt;
+
+    &lt;component :is=&quot;componenteActual&quot;&gt;&lt;/component&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import ComponenteA from &#39;./ComponenteA.vue&#39;;
+import ComponenteB from &#39;./ComponenteB.vue&#39;;
+
+export default {
+  components: {
+    ComponenteA,
+    ComponenteB,
+  },
+  data() {
+    return {
+      componenteActual: &#39;ComponenteA&#39;, // Componente inicial
+    };
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+<p>💫 <strong>Explicación</strong></p>
+<ul>
+<li>La etiqueta <code>&lt;component&gt;</code> renderiza un componente según el valor de <code>componenteActual</code>.</li>
+<li>Los botones permiten cambiar el valor de <code>componenteActual</code> y, por tanto, el componente que se muestra.</li>
+</ul>
+<hr />
+<h3 id="componentes-anidados"><strong>Componentes Anidados</strong></h3>
+<p>Los <strong>componentes anidados</strong> son aquellos que están contenidos dentro de otros componentes. Esto permite crear estructuras jerárquicas en las interfaces de usuario.</p>
+<p>💢 <strong>Ejemplo Básico de Componentes Anidados</strong></p>
+<p>Supongamos que estamos construyendo un sistema de comentarios. Un <strong>componente padre</strong> mostrará una lista de comentarios, y cada <strong>componente hijo</strong> representará un comentario individual.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">✨ <strong>Componente Hijo: <code>Comentario.vue</code></strong></label><label for="__tabbed_9_2">🔰<strong>Componente Padre: <code>ListaComentarios.vue</code></strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div class=&quot;comentario&quot;&gt;
+    &lt;h3&gt;{{ autor }}&lt;/h3&gt;
+    &lt;p&gt;{{ mensaje }}&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    autor: String,
+    mensaje: String,
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.comentario {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Lista de Comentarios&lt;/h1&gt;
+    &lt;Comentario
+      v-for=&quot;(comentario, index) in comentarios&quot;
+      :key=&quot;index&quot;
+      :autor=&quot;comentario.autor&quot;
+      :mensaje=&quot;comentario.mensaje&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Comentario from &#39;./Comentario.vue&#39;;
+
+export default {
+  components: {
+    Comentario,
+  },
+  data() {
+    return {
+      comentarios: [
+        { autor: &#39;Ana&#39;, mensaje: &#39;¡Me encanta este artículo!&#39; },
+        { autor: &#39;Carlos&#39;, mensaje: &#39;¡Muy interesante!&#39; },
+        { autor: &#39;Luisa&#39;, mensaje: &#39;Gracias por compartir esta información.&#39; },
+      ],
+    };
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>🧙‍♂️ <strong>Ejemplo Avanzado: Comunicación en Componentes Anidados</strong></p>
+<ul>
+<li>Un componente padre que contiene una lista de tareas.</li>
+<li>Cada tarea es representada por un componente hijo.</li>
+<li>El hijo puede emitir un evento al padre, por ejemplo, para eliminar la tarea.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">✨<strong>Componente Hijo: <code>Tarea.vue</code></strong></label><label for="__tabbed_10_2">🔰<strong>Componente Padre: <code>ListaTareas.vue</code></strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div class=&quot;tarea&quot;&gt;
+    &lt;p&gt;{{ titulo }}&lt;/p&gt;
+    &lt;button @click=&quot;$emit(&#39;eliminar&#39;)&quot;&gt;Eliminar&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    titulo: String,
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.tarea {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+&lt;/style&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Mis Tareas&lt;/h1&gt;
+    &lt;Tarea
+      v-for=&quot;(tarea, index) in tareas&quot;
+      :key=&quot;index&quot;
+      :titulo=&quot;tarea&quot;
+      @eliminar=&quot;eliminarTarea(index)&quot;
+    /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Tarea from &#39;./Tarea.vue&#39;;
+
+export default {
+  components: {
+    Tarea,
+  },
+  data() {
+    return {
+      tareas: [&#39;Comprar pan&#39;, &#39;Hacer ejercicio&#39;, &#39;Estudiar Vue.js&#39;],
+    };
+  },
+  methods: {
+    eliminarTarea(index) {
+      this.tareas.splice(index, 1);
+    },
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<h3 id="componentes-anidados-dinamicos"><strong>Componentes Anidados Dinámicos</strong></h3>
+<p>Se pueden combinar <strong>componentes dinámicos</strong> y <strong>componentes anidados</strong> para crear aplicaciones más complejas. Por ejemplo, un componente padre puede decidir qué tipo de componente hijo mostrar basado en los datos.</p>
+<p>💥 <strong>Ejemplo</strong>, un sistema de notificaciones con diferentes tipos de notificaciones:</p>
+<ul>
+<li><strong>Éxito</strong></li>
+<li><strong>Error</strong></li>
+<li><strong>Advertencia</strong></li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1"><strong>Componente Hijo: <code>Notificacion.vue</code></strong></label><label for="__tabbed_11_2"><strong>Componente Padre</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div :class=&quot;[&#39;notificacion&#39;, tipo]&quot;&gt;
+    &lt;slot&gt;&lt;/slot&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  props: {
+    tipo: {
+      type: String,
+      default: &#39;info&#39;,
+    },
+  },
+};
+&lt;/script&gt;
+
+&lt;style scoped&gt;
+.notificacion {
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.notificacion.exito {
+  background-color: #d4edda;
+  color: #155724;
+}
+.notificacion.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+.notificacion.advertencia {
+  background-color: #fff3cd;
+  color: #856404;
+}
+&lt;/style&gt;
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>&lt;template&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Sistema de Notificaciones&lt;/h1&gt;
+    &lt;component :is=&quot;componenteActual&quot;&gt;
+      &lt;Notificacion tipo=&quot;exito&quot;&gt;¡Operación exitosa!&lt;/Notificacion&gt;
+      &lt;Notificacion tipo=&quot;error&quot;&gt;Algo salió mal.&lt;/Notificacion&gt;
+      &lt;Notificacion tipo=&quot;advertencia&quot;&gt;Cuidado con este cambio.&lt;/Notificacion&gt;
+    &lt;/component&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+import Notificacion from &#39;./Notificacion.vue&#39;;
+
+export default {
+  components: {
+    Notificacion,
+  },
+  data() {
+    return {
+      componenteActual: &#39;Notificacion&#39;,
+    };
+  },
+};
+&lt;/script&gt;
+</code></pre></div>
+</div>
+</div>
+</div>
+<hr />
 
 
 
@@ -1778,10 +2333,10 @@ Verduras
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
