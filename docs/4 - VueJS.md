@@ -1251,3 +1251,517 @@ export default {
 
 - El botón usa un evento `click` para alternar el valor booleano de `activo`.
 - Esto cambia dinámicamente el texto mostrado.
+
+---
+
+## 📦 **Componentes**
+
+En Vue.js, un **componente** es una unidad reutilizable e independiente de interfaz de usuario que encapsula su estructura (HTML), estilo (CSS) y comportamiento (JavaScript). Los componentes permiten dividir la interfaz de usuario en pequeñas piezas manejables y modulares, lo que facilita el desarrollo, la reutilización y el mantenimiento del código.
+
+💢 **Por qué usar Componentes**
+
+1. **Reutilización:** Puedes usar un mismo componente en diferentes partes de tu aplicación, reduciendo la duplicación de código.
+2. **Modularidad:** Ayudan a organizar el código dividiéndolo en piezas más pequeñas y manejables.
+3. **Mantenibilidad:** Los cambios en un componente afectan solo a ese componente y no al resto de la aplicación.
+4. **Escalabilidad:** Facilitan el desarrollo de aplicaciones más grandes y complejas.
+
+---
+
+💡 **Estructura de un Componente en Vue.js**
+
+Un componente consta de:
+
+1. **Template:** Define el HTML del componente.
+2. **Script:** Contiene la lógica del componente (datos, métodos, etc.).
+3. **Style:** Define el CSS específico del componente.
+
+```vue
+<template>
+  <div>
+    <h1>{{ titulo }}</h1>
+    <p>{{ descripcion }}</p>
+    <button @click="saludar">Haz clic aquí</button>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "MiComponente",
+  data() {
+    return {
+      titulo: "Hola, soy un componente",
+      descripcion: "Este es un ejemplo básico de un componente en Vue.",
+    };
+  },
+  methods: {
+    saludar() {
+      alert("¡Hola desde el componente!");
+    },
+  },
+};
+</script>
+
+<style scoped>
+h1 {
+  color: blue;
+}
+p {
+  font-size: 18px;
+}
+</style>
+```
+
+---
+
+🪁 **Cómo Registrar y Usar un Componente**
+
+Un componente se registra localmente cuando se usa solo dentro de un componente específico.
+
+```vue
+<template>
+  <div>
+    <MiComponente />
+  </div>
+</template>
+
+<script>
+import MiComponente from "./MiComponente.vue"; // Importamos el componente
+
+export default {
+  components: {
+    MiComponente, // que no se os olvide definir el componente en vuestro script
+  },
+};
+</script>
+```
+
+🎈 **2. Registro Global**
+
+Un componente se registra globalmente cuando quieres que esté disponible en toda la aplicación. Esto se hace en el archivo principal (`main.js`).
+
+```javascript
+import Vue from "vue";
+import MiComponente from "./components/MiComponente.vue";
+
+Vue.component("MiComponente", MiComponente);
+```
+
+Ahora puedes usar `<MiComponente />` en cualquier lugar de tu aplicación sin necesidad de importarlo en cada componente.
+
+---
+
+### **Propiedades (`props`)**
+
+Los componentes permiten **pasar datos desde el componente padre al hijo** utilizando propiedades (`props`).
+
+=== "🔰Componente Padre"
+    ```vue
+    <template>
+      <div>
+        <HijoComponente nombre="Juan" />
+      </div>
+    </template>
+
+    <script>
+    import HijoComponente from "./HijoComponente.vue";
+
+    export default {
+      components: {
+        HijoComponente,
+      },
+    };
+    </script>
+    ```
+=== "✨Componente Hijo ~ `HijoComponente.vue`"
+    ```vue
+    <template>
+      <div>
+        <h2>Hola, {{ nombre }}</h2>
+      </div>
+    </template>
+
+    <script>
+    export default {
+      props: ["nombre"], // Definimos la prop
+    };
+    </script>
+    ```
+
+!!!info "El hijo recibe el dato `nombre` desde el padre y lo utiliza dentro de su plantilla."
+
+### **Eventos Personalizados**
+
+Los componentes hijos pueden **enviar eventos al componente padre** para notificar cambios o acciones utilizando `$emit`.
+
+=== "🔰 Componente Padre"
+    ```vue
+    <template>
+      <div>
+        <Boton @eventoClic="manejarEvento" />
+      </div>
+    </template>
+
+    <script>
+    import Boton from "./Boton.vue";
+
+    export default {
+      components: {
+        Boton,
+      },
+      methods: {
+        manejarEvento(mensaje) {
+          alert(mensaje); // Muestra "¡Botón pulsado!"
+        },
+      },
+    };
+    </script>
+    ```
+
+=== "✨ Componente Hijo (`Boton.vue`)"
+    ```vue
+    <template>
+      <button @click="enviarEvento">Haz clic</button>
+    </template>
+
+    <script>
+    export default {
+      methods: {
+        enviarEvento() {
+          this.$emit("eventoClic", "¡Botón pulsado!");
+        },
+      },
+    };
+    </script>
+    ```
+
+---
+
+🎛 **Comunicación entre Componentes**
+
+1. **De Padre a Hijo:** Se realiza con `props`.
+2. **De Hijo a Padre:** Se realiza con eventos personalizados y `$emit`.
+3. **Entre Componentes Hermanos:** Usando un patrón como un **bus de eventos** o un estado compartido.
+
+💯 **Ejemplo Completo**
+
+- **Componente Padre:** Gestiona un contador.
+- **Componente Hijo:** Botones para incrementar o decrementar el contador.
+
+=== "🔰Componente Padre (`App.vue`)"
+    ```vue
+    <template>
+      <div>
+        <h1>Contador: {{ contador }}</h1>
+        <Boton texto="Incrementar" :accion="incrementar" />
+        <Boton texto="Decrementar" :accion="decrementar" />
+      </div>
+    </template>
+
+    <script>
+    import Boton from "./Boton.vue";
+
+    export default {
+      components: {
+        Boton,
+      },
+      data() {
+        return {
+          contador: 0,
+        };
+      },
+      methods: {
+        incrementar() {
+          this.contador++;
+        },
+        decrementar() {
+          this.contador--;
+        },
+      },
+    };
+    </script>
+    ```
+
+=== "✨ Componente Hijo ~ `Boton.vue`"
+    ```vue
+    <template>
+      <button @click="accion">{{ texto }}</button>
+    </template>
+
+    <script>
+    export default {
+      props: ["texto", "accion"],
+    };
+    </script>
+    ```
+
+!!!error "**Beneficios Clave de los Componentes**"
+    1. **Reutilización:** Usas un componente en múltiples lugares con diferente configuración.
+    2. **Separación de Preocupaciones:** La lógica, la estructura y el estilo están contenidos en un único archivo.
+    3. **Escalabilidad:** Facilitan la construcción de aplicaciones complejas y mantenibles.
+
+---
+
+### **Componentes Dinámicos**
+
+Los **componentes dinámicos** permiten renderizar diferentes componentes en una misma ubicación de forma dinámica, según ciertas condiciones. Esto es útil cuando necesitas alternar entre varios componentes en una misma área sin replicar lógica o estructura.
+
+!!!danger "**La Directiva `is`**"
+
+En Vue.js, se usa el atributo especial `is` en una etiqueta `<component>` para renderizar un componente dinámico.
+
+```vue
+<template>
+  <div>
+    <h1>Componente Dinámico</h1>
+    <button @click="componenteActual = 'ComponenteA'">Mostrar A</button>
+    <button @click="componenteActual = 'ComponenteB'">Mostrar B</button>
+    
+    <component :is="componenteActual"></component>
+  </div>
+</template>
+
+<script>
+import ComponenteA from './ComponenteA.vue';
+import ComponenteB from './ComponenteB.vue';
+
+export default {
+  components: {
+    ComponenteA,
+    ComponenteB,
+  },
+  data() {
+    return {
+      componenteActual: 'ComponenteA', // Componente inicial
+    };
+  },
+};
+</script>
+```
+
+💫 **Explicación**
+
+- La etiqueta `<component>` renderiza un componente según el valor de `componenteActual`.
+- Los botones permiten cambiar el valor de `componenteActual` y, por tanto, el componente que se muestra.
+
+---
+
+### **Componentes Anidados**
+
+Los **componentes anidados** son aquellos que están contenidos dentro de otros componentes. Esto permite crear estructuras jerárquicas en las interfaces de usuario.
+
+💢 **Ejemplo Básico de Componentes Anidados**
+
+Supongamos que estamos construyendo un sistema de comentarios. Un **componente padre** mostrará una lista de comentarios, y cada **componente hijo** representará un comentario individual.
+
+=== "✨ **Componente Hijo: `Comentario.vue`**"
+    ```vue
+    <template>
+      <div class="comentario">
+        <h3>{{ autor }}</h3>
+        <p>{{ mensaje }}</p>
+      </div>
+    </template>
+
+    <script>
+    export default {
+      props: {
+        autor: String,
+        mensaje: String,
+      },
+    };
+    </script>
+
+    <style scoped>
+    .comentario {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    </style>
+    ```
+
+=== "🔰**Componente Padre: `ListaComentarios.vue`**"
+    ```vue
+    <template>
+      <div>
+        <h1>Lista de Comentarios</h1>
+        <Comentario
+          v-for="(comentario, index) in comentarios"
+          :key="index"
+          :autor="comentario.autor"
+          :mensaje="comentario.mensaje"
+        />
+      </div>
+    </template>
+
+    <script>
+    import Comentario from './Comentario.vue';
+
+    export default {
+      components: {
+        Comentario,
+      },
+      data() {
+        return {
+          comentarios: [
+            { autor: 'Ana', mensaje: '¡Me encanta este artículo!' },
+            { autor: 'Carlos', mensaje: '¡Muy interesante!' },
+            { autor: 'Luisa', mensaje: 'Gracias por compartir esta información.' },
+          ],
+        };
+      },
+    };
+    </script>
+    ```
+
+🧙‍♂️ **Ejemplo Avanzado: Comunicación en Componentes Anidados**
+
+- Un componente padre que contiene una lista de tareas.
+- Cada tarea es representada por un componente hijo.
+- El hijo puede emitir un evento al padre, por ejemplo, para eliminar la tarea.
+
+=== "✨**Componente Hijo: `Tarea.vue`**"
+      ```vue
+      <template>
+        <div class="tarea">
+          <p>{{ titulo }}</p>
+          <button @click="$emit('eliminar')">Eliminar</button>
+        </div>
+      </template>
+
+      <script>
+      export default {
+        props: {
+          titulo: String,
+        },
+      };
+      </script>
+
+      <style scoped>
+      .tarea {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      </style>
+      ```
+
+=== "🔰**Componente Padre: `ListaTareas.vue`**"
+    ```vue
+    <template>
+      <div>
+        <h1>Mis Tareas</h1>
+        <Tarea
+          v-for="(tarea, index) in tareas"
+          :key="index"
+          :titulo="tarea"
+          @eliminar="eliminarTarea(index)"
+        />
+      </div>
+    </template>
+
+    <script>
+    import Tarea from './Tarea.vue';
+
+    export default {
+      components: {
+        Tarea,
+      },
+      data() {
+        return {
+          tareas: ['Comprar pan', 'Hacer ejercicio', 'Estudiar Vue.js'],
+        };
+      },
+      methods: {
+        eliminarTarea(index) {
+          this.tareas.splice(index, 1);
+        },
+      },
+    };
+    </script>
+    ```
+
+### **Componentes Anidados Dinámicos**
+
+Se pueden combinar **componentes dinámicos** y **componentes anidados** para crear aplicaciones más complejas. Por ejemplo, un componente padre puede decidir qué tipo de componente hijo mostrar basado en los datos.
+
+💥 **Ejemplo**, un sistema de notificaciones con diferentes tipos de notificaciones:
+
+- **Éxito**
+- **Error**
+- **Advertencia**
+
+=== "**Componente Hijo: `Notificacion.vue`**"
+    ```vue
+    <template>
+      <div :class="['notificacion', tipo]">
+        <slot></slot>
+      </div>
+    </template>
+
+    <script>
+    export default {
+      props: {
+        tipo: {
+          type: String,
+          default: 'info',
+        },
+      },
+    };
+    </script>
+
+    <style scoped>
+    .notificacion {
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+    .notificacion.exito {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .notificacion.error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+    .notificacion.advertencia {
+      background-color: #fff3cd;
+      color: #856404;
+    }
+    </style>
+    ```
+
+=== "**Componente Padre**"
+    ```vue
+    <template>
+      <div>
+        <h1>Sistema de Notificaciones</h1>
+        <component :is="componenteActual">
+          <Notificacion tipo="exito">¡Operación exitosa!</Notificacion>
+          <Notificacion tipo="error">Algo salió mal.</Notificacion>
+          <Notificacion tipo="advertencia">Cuidado con este cambio.</Notificacion>
+        </component>
+      </div>
+    </template>
+
+    <script>
+    import Notificacion from './Notificacion.vue';
+
+    export default {
+      components: {
+        Notificacion,
+      },
+      data() {
+        return {
+          componenteActual: 'Notificacion',
+        };
+      },
+    };
+    </script>
+    ```
+
+---
