@@ -2293,18 +2293,21 @@ Verduras
 <p>Vue Router es una solución de enrutamiento que permite a los desarrolladores definir y gestionar las rutas (URLs) de su aplicación. Proporciona una forma declarativa de conectar rutas específicas con componentes de Vue, permitiendo que los usuarios naveguen entre diferentes vistas sin recargar la página completa.</p>
 <p>En una SPA (Simple Page Application), todo el contenido de la aplicación se carga inicialmente, y el router se encarga de actualizar dinámicamente la vista según la URL actual, proporcionando una experiencia fluida y rápida similar a la de una aplicación nativa.</p>
 <h3 id="instalacion-de-vue-router">Instalación de Vue Router</h3>
-<p>Lo primero que tenemos que hacer es <em>instalar el Router en nuestro proyecto</em> de la siguiente manera:</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span>npm<span class="w"> </span>install<span class="w"> </span>vue-router
+<p>Lo primero que tenemos que hacer es <em>instalar el <code>Router</code> en nuestro proyecto</em> de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>vue-router
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Ten en cuenta que...</p>
-<p>... puedes instalar el router de manera GLOBAL para usarlo en todos los proyectos de vue que tengas en tu ordenador, para ello puedes lanza el siguiente comando:</p>
+<p>... puedes instalar el router de manera GLOBAL para usarlo en todos los proyectos de vue que tengas en tu ordenador, para ello puedes lanzar el siguiente comando:</p>
 <p>👉🏻 <strong>npm install -g vue-router</strong> 👈🏻</p>
 <p>y así no tendrás que instalar el router cada vez que crees un proyecto nuevo.</p>
 </div>
 <h3 id="anadir-el-router-a-un-proyecto-ya-existente">Añadir el Router a un proyecto ⭕ ya existente ⭕</h3>
 <p>Cuando creamos los primeros proyectos en VueJS, elegimos ciertos paquetes de base que se iban a instalar en nuestro sistema.</p>
-<p>A la hora de hacer <strong>npm create vue@latest</strong> la consola nos hacía una serie de preguntas relacionadas con las dependencias de nuestro proyecto de Vue, pero si os acrodáis, le dijimos a todo que no... en esa lista estaba incluído el Router ded Vue.</p>
+<p>A la hora de hacer <strong>npm create vue@latest</strong> la consola nos hacía una serie de preguntas relacionadas con las dependencias de nuestro proyecto de Vue, pero si os acrodáis, le dijimos a todo que no... en esa lista estaba incluído el Router de Vue.</p>
+<p><center>
+  <img alt="" src="../assets/vue-install.png" />
+</center></p>
 <p>Pero no pasa nada, podemos instalar cualquier paquete después de haber creado el proyeto de Vue.</p>
 <p>💡 Lo único que hay que tener en cuenta es, añadir ese paquete (en este caso el Router de Vue) a nuestro proyecto ya existente.</p>
 <div class="admonition warning">
@@ -2334,7 +2337,7 @@ Verduras
 <div class="admonition tip">
 <p class="admonition-title">3. Definiendo las rutas de nuestro sitio y creando el historial</p>
 </div>
-<p>En este paso debemos decirle a nuestra aplicación dónde se encuentrar las rutas que hemos establecido más arriba y qué componente de vue está asignado a cada una de ellas.</p>
+<p>En este paso debemos decirle a nuestra aplicación dónde se encuentrar las rutas que hemos establecido más arriba y qué componente de <code>vue</code> está asignado a cada una de ellas.</p>
 <div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createRouter</span><span class="w"> </span><span class="p">({</span>
 <span class="w">    </span><span class="c1">// Aquí instanciamos a 🧭 createWebHistory para crear el historial navegable a través del navegador</span>
 <span class="w">    </span><span class="nx">history</span><span class="o">:</span><span class="w"> </span><span class="nx">createWebHistory</span><span class="p">(),</span>
@@ -2390,10 +2393,10 @@ Verduras
 <span class="w">    </span><span class="c1">// app.mount(&#39;#app&#39;);</span>
 </code></pre></div>
 <h3 id="utilizando-el-router">Utilizando el Router</h3>
-<p>Ahora que ya hemos preparado las dependencias y acuatlizado nuestro archivo 🟡 main.js 🟡 ya estamos listo para utilizarlo en nuestros archivos <strong>.vue</strong></p>
+<p>Ahora que ya hemos preparado las dependencias y acuatlizado nuestro archivo 🟡 main.js 🟡 ya estamos listos para utilizarlo en nuestros archivos <strong>.vue</strong></p>
 <div class="admonition note">
 <p class="admonition-title">Recomendación sobre App.vue</p>
-<p>Hemos hecho uso de nuestro App.vue como archivo index.html, es decir, hemos creado la vista principal dentro de App.vue pero es recomendable crear un archivo .vue a parte donde carguemos la página principal, como por ejemplo en 🔰Home.vue🔰 o cualquier otro nombre que haga referencia a la sección principal de nuestra web</p>
+<p>Hemos hecho uso de nuestro App.vue como archivo index.html, es decir, hemos creado la vista principal dentro de App.vue pero es recomendable crear un archivo <code>.vue</code> a parte donde carguemos la página principal, como por ejemplo en 🔰Home.vue🔰 o cualquier otro nombre que haga referencia a la sección principal de nuestra web</p>
 </div>
 <p>A continuación, haremos uso del componente 🟪router-view🟪 (también conocido como <code>&lt;RouterView&gt;</code>) que viene por defecto con el router para poder decirle a nuestro sistema que debe cargar las rutas que hemos añadido en nuestro archivo <strong>main.js</strong>. </p>
 <p>Cambiaremos las líneas de nuestro archivo <code>App.vue</code> para que quede lo más limpio posible.</p>
