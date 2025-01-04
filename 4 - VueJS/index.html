@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -630,6 +630,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#router" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛣️ Router
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🛣️ Router">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-vue-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación de Vue Router
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#anadir-el-router-a-un-proyecto-ya-existente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Añadir el Router a un proyecto ⭕ ya existente ⭕
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utilizando-el-router" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utilizando el Router
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -698,27 +740,27 @@
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;script&gt;
-  export default {
-    data() {
-        return {
-          message: &quot;¡Hola desde Vue.js!&quot;
-        };
-    }
-  };
-&lt;/script&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">  </span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;¡Hola desde Vue.js!&quot;</span>
+<span class="w">        </span><span class="p">};</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;template&gt;
-  &lt;div&gt;
-    &lt;h1&gt;{{ message }}&lt;/h1&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;style scoped&gt;
-    h1 {
-    color: blue;
-    }
-&lt;/style&gt;
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 <h2 id="variables">🔢 Variables</h2>
 <p>En Vue.js, las <strong>variables</strong> son utilizadas para almacenar datos que luego puedes mostrar en la interfaz de usuario. Estas variables se definen dentro de la opción <code>data</code> de un componente. Vue hace que estas variables sean <strong>reactivas</strong>, lo que significa que cuando cambian, la vista (lo que el usuario ve en el navegador) se actualiza automáticamente.</p>
@@ -795,7 +837,7 @@
 <span class="p">}</span>
 <span class="o">&lt;</span><span class="err">/script&gt;</span>
 </code></pre></div>
-<div class="admonition error">
+<div class="admonition danger">
 <p class="admonition-title">Explicación del código</p>
 <ul>
 <li><code>message</code> es una cadena de texto.</li>
@@ -991,82 +1033,82 @@ Puedes llamarlos en la plantilla a través de directivas como <code>v-on</code>,
 <p class="admonition-title">v-bind</p>
 <p><strong><code>v-bind</code></strong> se utiliza para enlazar un atributo o una propiedad de un componente con una variable o expresión en el componente. Esto permite modificar dinámicamente los atributos HTML de un elemento.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;img v-bind:src=&quot;imageSource&quot; /&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">img</span> <span class="na">v-bind:src</span><span class="o">=</span><span class="s">&quot;imageSource&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">v-model</p>
 <p><strong><code>v-model</code></strong> se usa para crear un enlace bidireccional entre un campo de entrada y una variable. Esto es útil para formularios y otros elementos interactivos.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;input v-model=&quot;message&quot; /&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;message&quot;</span> <span class="p">/&gt;</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">v-for</p>
 <p><strong><code>v-for</code></strong> se utiliza para renderizar una lista de elementos basados en una colección, como un array u objeto. Es muy útil para crear elementos dinámicos.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;ul&gt;
-    &lt;li v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;{{ item.name }}&lt;/li&gt;
-&lt;/ul&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">li</span> <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;item in items&quot;</span> <span class="na">:key</span><span class="o">=</span><span class="s">&quot;item.id&quot;</span><span class="p">&gt;</span>{{ item.name }}<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">v-if</p>
 <p><strong><code>v-if</code></strong> renderiza condicionalmente un bloque de código solo si la expresión es verdadera. Es útil para mostrar u ocultar elementos basados en ciertas condiciones.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;p v-if=&quot;isVisible&quot;&gt;Este mensaje se muestra si esVisible es verdadero&lt;/p&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;isVisible&quot;</span><span class="p">&gt;</span>Este mensaje se muestra si esVisible es verdadero<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition error">
 <p class="admonition-title">v-else</p>
 <p><strong><code>v-else</code></strong> se usa junto con <code>v-if</code> para renderizar un bloque cuando la expresión de <code>v-if</code> es falsa. Es útil para crear bloques alternativos.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;p v-if=&quot;isVisible&quot;&gt;Este mensaje es visible&lt;/p&gt;
-&lt;p v-else&gt;Este mensaje aparece cuando isVisible es falso&lt;/p&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;isVisible&quot;</span><span class="p">&gt;</span>Este mensaje es visible<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-else</span><span class="p">&gt;</span>Este mensaje aparece cuando isVisible es falso<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">v-show</p>
 <p><strong><code>v-show</code></strong> es similar a <code>v-if</code>, pero en lugar de agregar o eliminar el elemento del DOM, solo cambia su visibilidad (usando <code>display: none</code>).</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;p v-show=&quot;isVisible&quot;&gt;Este mensaje se muestra si isVisible es verdadero&lt;/p&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-show</span><span class="o">=</span><span class="s">&quot;isVisible&quot;</span><span class="p">&gt;</span>Este mensaje se muestra si isVisible es verdadero<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">v-on</p>
 <p><strong><code>v-on</code></strong> se utiliza para escuchar eventos DOM y ejecutar métodos cuando esos eventos son disparados. Permite manejar interacciones del usuario.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;button v-on:click=&quot;submitForm&quot;&gt;Enviar&lt;/button&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-on:click</span><span class="o">=</span><span class="s">&quot;submitForm&quot;</span><span class="p">&gt;</span>Enviar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">v-slot</p>
 <p><strong><code>v-slot</code></strong> permite pasar contenido a los componentes hijo a través de slots. Facilita la creación de componentes reutilizables con contenido dinámico.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;my-component v-slot:header&gt;
-    &lt;h1&gt;Contenido de encabezado&lt;/h1&gt;
-&lt;/my-component&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">my-component</span> <span class="na">v-slot:header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Contenido de encabezado<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">my-component</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">v-cloak</p>
 <p><strong><code>v-cloak</code></strong> es utilizado para ocultar un elemento y su contenido hasta que Vue haya terminado de compilar el componente. Es útil para evitar ver el contenido sin procesar durante la carga.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;div v-cloak&gt;
-    &lt;p&gt;{{ message }}&lt;/p&gt;
-&lt;/div&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-cloak</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">v-pre</p>
 <p><strong><code>v-pre</code></strong> evita que Vue compile el contenido de un elemento y sus descendientes. Esto es útil cuando sabes que no necesitas que Vue procese un bloque específico de contenido.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;div v-pre&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-pre</span><span class="p">&gt;</span>
     {{ rawContent }}
-&lt;/div&gt;
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">v-text</p>
 <p><strong><code>v-text</code></strong> se utiliza para actualizar el contenido de texto de un elemento, reemplazando cualquier texto dentro de él. Es útil para manipular solo el texto.</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;p v-text=&quot;message&quot;&gt;&lt;/p&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-text</span><span class="o">=</span><span class="s">&quot;message&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition error">
 <p class="admonition-title">v-html</p>
 <p><strong><code>v-html</code></strong> permite inyectar contenido HTML en el DOM. Esto puede ser útil, pero ten cuidado con el contenido no confiable para evitar vulnerabilidades de seguridad (como XSS).</p>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;div v-html=&quot;rawHtml&quot;&gt;&lt;/div&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-html</span><span class="o">=</span><span class="s">&quot;rawHtml&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Estas directivas permiten interactuar con el DOM y manejar datos de manera eficiente en las aplicaciones Vue.js, proporcionando funcionalidades clave como enlace de datos, control de flujo y manejo de eventos.</p>
 <hr />
@@ -1075,7 +1117,7 @@ Puedes llamarlos en la plantilla a través de directivas como <code>v-on</code>,
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Sintaxis básica</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;v-bind:atributo=&quot;expresión&quot;&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">v-bind:atributo</span><span class="err">=&quot;</span><span class="na">expresión</span><span class="err">&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
@@ -1094,22 +1136,22 @@ Puedes llamarlos en la plantilla a través de directivas como <code>v-on</code>,
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;!-- v-bind enlaza el atributo src con la propiedad imageSource --&gt;
-    &lt;img v-bind:src=&quot;imageSource&quot; /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- v-bind enlaza el atributo src con la propiedad imageSource --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">v-bind:src</span><span class="o">=</span><span class="s">&quot;imageSource&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      imageSource: &#39;https://example.com/imagen.jpg&#39;
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">imageSource</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/imagen.jpg&#39;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">En este ejemplo... 👆</p>
@@ -1125,26 +1167,26 @@ export default {
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;!-- Usando un objeto para enlazar varios atributos --&gt;
-    &lt;button v-bind=&quot;buttonAttributes&quot;&gt;Haz clic aquí&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Usando un objeto para enlazar varios atributos --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="na">v-bind</span><span class="o">=</span><span class="s">&quot;buttonAttributes&quot;</span><span class="p">&gt;</span>Haz clic aquí<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      buttonAttributes: {
-        type: &#39;button&#39;,
-        class: &#39;btn btn-primary&#39;,
-        disabled: false
-      }
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">buttonAttributes</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;button&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="kd">class</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;btn btn-primary&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">disabled</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">En este caso</p>
@@ -1159,7 +1201,7 @@ export default {
 <div class="tabbed-block"></div>
 </div>
 </div>
-<div class="highlight"><pre><span></span><code>&lt;input v-model=&quot;variable&quot;&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;variable&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Donde</p>
@@ -1167,23 +1209,23 @@ export default {
 </div>
 <p>💢 Ejemplo de uso</p>
 <p>Imagina que quieres crear un campo de texto en el que el usuario pueda escribir algo, y que al mismo tiempo, el valor escrito se refleje automáticamente en la propiedad <code>message</code> de Vue.</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;!-- El valor del input está vinculado a la propiedad message --&gt;
-    &lt;input v-model=&quot;message&quot; placeholder=&quot;Escribe algo...&quot;&gt;
-    &lt;p&gt;El mensaje es: {{ message }}&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- El valor del input está vinculado a la propiedad message --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;message&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Escribe algo...&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>El mensaje es: {{ message }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      message: &#39;&#39;
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">message</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">En este ejemplo</p>
@@ -1198,87 +1240,87 @@ export default {
 <li><strong>Casillas de verificación (<code>checkbox</code>)</strong></li>
 </ol>
 <p>Para un checkbox, <code>v-model</code> se enlaza con un valor booleano (verdadero o falso).</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;input type=&quot;checkbox&quot; v-model=&quot;isChecked&quot;&gt;
-    &lt;p&gt;¿Está marcado? {{ isChecked ? &#39;Sí&#39; : &#39;No&#39; }}&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;isChecked&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>¿Está marcado? {{ isChecked ? &#39;Sí&#39; : &#39;No&#39; }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      isChecked: false
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">isChecked</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <ol>
 <li><strong>Botones de opción (<code>radio</code>)</strong></li>
 </ol>
 <p>Para un grupo de botones de opción, <code>v-model</code> se enlaza con una variable cuyo valor corresponde al valor del botón seleccionado.</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;input type=&quot;radio&quot; id=&quot;option1&quot; value=&quot;Opción 1&quot; v-model=&quot;selectedOption&quot;&gt;
-    &lt;label for=&quot;option1&quot;&gt;Opción 1&lt;/label&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;option1&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Opción 1&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selectedOption&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;option1&quot;</span><span class="p">&gt;</span>Opción 1<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-    &lt;input type=&quot;radio&quot; id=&quot;option2&quot; value=&quot;Opción 2&quot; v-model=&quot;selectedOption&quot;&gt;
-    &lt;label for=&quot;option2&quot;&gt;Opción 2&lt;/label&gt;
+    <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;radio&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;option2&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;Opción 2&quot;</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selectedOption&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;option2&quot;</span><span class="p">&gt;</span>Opción 2<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
 
-    &lt;p&gt;Opción seleccionada: {{ selectedOption }}&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Opción seleccionada: {{ selectedOption }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      selectedOption: &#39;Opción 1&#39;
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">selectedOption</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Opción 1&#39;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <ol>
 <li><strong>Elementos <code>select</code> (listas desplegables)</strong></li>
 </ol>
 <p>Para un <code>select</code>, <code>v-model</code> se puede usar para obtener el valor de la opción seleccionada.</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;select v-model=&quot;selectedValue&quot;&gt;
-      &lt;option disabled value=&quot;&quot;&gt;Seleccione una opción&lt;/option&gt;
-      &lt;option value=&quot;1&quot;&gt;Opción 1&lt;/option&gt;
-      &lt;option value=&quot;2&quot;&gt;Opción 2&lt;/option&gt;
-      &lt;option value=&quot;3&quot;&gt;Opción 3&lt;/option&gt;
-    &lt;/select&gt;
-    &lt;p&gt;Opción seleccionada: {{ selectedValue }}&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">select</span> <span class="na">v-model</span><span class="o">=</span><span class="s">&quot;selectedValue&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">disabled</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">&gt;</span>Seleccione una opción<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;1&quot;</span><span class="p">&gt;</span>Opción 1<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;2&quot;</span><span class="p">&gt;</span>Opción 2<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">option</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;3&quot;</span><span class="p">&gt;</span>Opción 3<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Opción seleccionada: {{ selectedValue }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      selectedValue: &#39;&#39;
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">selectedValue</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;&#39;</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>💦 Modificadores de <code>v-model</code></p>
 <p><code>v-model</code> puede utilizar ciertos modificadores para ajustar su comportamiento. Los más comunes son:</p>
 <p>1️⃣ <strong><code>.lazy</code></strong>: Solo actualiza la propiedad cuando el campo de texto pierde el foco (en lugar de actualizarla en cada pulsación de tecla).</p>
-<div class="highlight"><pre><span></span><code>&lt;input v-model.lazy=&quot;message&quot;&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="err">.</span><span class="na">lazy</span><span class="o">=</span><span class="s">&quot;message&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>2️⃣ <strong><code>.number</code></strong>: Convierte el valor de entrada en un número cuando se asigna a la propiedad.</p>
-<div class="highlight"><pre><span></span><code>&lt;input v-model.number=&quot;age&quot; type=&quot;number&quot;&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="err">.</span><span class="na">number</span><span class="o">=</span><span class="s">&quot;age&quot;</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>3️⃣ <strong><code>.trim</code></strong>: Elimina los espacios en blanco al principio y al final del valor.</p>
-<div class="highlight"><pre><span></span><code>&lt;input v-model.trim=&quot;message&quot;&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">input</span> <span class="na">v-model</span><span class="err">.</span><span class="na">trim</span><span class="o">=</span><span class="s">&quot;message&quot;</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="admonition error">
+<div class="admonition danger">
 <p class="admonition-title">Resumen</p>
 <ul>
 <li><strong><code>v-model</code></strong> crea un enlace bidireccional entre un campo de entrada y una propiedad en el modelo de Vue.</li>
@@ -1291,8 +1333,8 @@ export default {
 <h3 id="v-if-v-else">⚙ v-if ··· v-else</h3>
 <p>Las directivas <code>v-if</code> y <code>v-else</code> en Vue.js se utilizan para <strong>renderizar condicionalmente</strong> un bloque de código HTML en función del valor de una expresión booleana. Son muy útiles cuando quieres mostrar u ocultar partes de tu interfaz de usuario en función de ciertas condiciones.</p>
 <p>💫 Sintaxis básica</p>
-<div class="highlight"><pre><span></span><code>&lt;div v-if=&quot;condición&quot;&gt;Contenido visible si la condición es verdadera&lt;/div&gt;
-&lt;div v-else&gt;Contenido visible si la condición es falsa&lt;/div&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;condición&quot;</span><span class="p">&gt;</span>Contenido visible si la condición es verdadera<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">v-else</span><span class="p">&gt;</span>Contenido visible si la condición es falsa<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition warning">
 <p class="admonition-title">Donde..."</p>
@@ -1303,22 +1345,22 @@ export default {
 </div>
 <p>💢 Ejemplo de uso</p>
 <p>Imagina que quieres mostrar un mensaje que cambie dependiendo de si el usuario ha iniciado sesión o no. Usarías <code>v-if</code> y <code>v-else</code> para manejar estas condiciones.</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;p v-if=&quot;isLoggedIn&quot;&gt;¡Bienvenido de nuevo!&lt;/p&gt;
-    &lt;p v-else&gt;Por favor, inicia sesión.&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;isLoggedIn&quot;</span><span class="p">&gt;</span>¡Bienvenido de nuevo!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-else</span><span class="p">&gt;</span>Por favor, inicia sesión.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      isLoggedIn: false // Cambia a true para probar
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">isLoggedIn</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="c1">// Cambia a true para probar</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">En este ejemplo</p>
@@ -1333,23 +1375,23 @@ export default {
 <li><strong><code>v-else</code></strong>: Renderiza el bloque solo si la expresión de <code>v-if</code> es <code>false</code>. Es importante que el bloque de <code>v-else</code> siempre esté justo después de un bloque <code>v-if</code> o <code>v-else-if</code>.</li>
 </ul>
 <p>Puedes combinar <code>v-if</code>, <code>v-else-if</code>, y <code>v-else</code> para manejar múltiples condiciones de forma más estructurada.</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;p v-if=&quot;status === &#39;loading&#39;&quot;&gt;Cargando...&lt;/p&gt;
-    &lt;p v-else-if=&quot;status === &#39;error&#39;&quot;&gt;Hubo un error&lt;/p&gt;
-    &lt;p v-else&gt;Contenido cargado correctamente&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-if</span><span class="o">=</span><span class="s">&quot;status === &#39;loading&#39;&quot;</span><span class="p">&gt;</span>Cargando...<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-else-if</span><span class="o">=</span><span class="s">&quot;status === &#39;error&#39;&quot;</span><span class="p">&gt;</span>Hubo un error<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span> <span class="na">v-else</span><span class="p">&gt;</span>Contenido cargado correctamente<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  data() {
-    return {
-      status: &#39;loading&#39; // Cambia el valor para probar
-    };
-  }
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">status</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;loading&#39;</span><span class="w"> </span><span class="c1">// Cambia el valor para probar</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">En este caso</p>
@@ -1512,7 +1554,7 @@ Verduras
 <hr />
 <h3 id="v-show">⚙ v-show</h3>
 <p>La directiva <code>v-show</code> se utiliza para mostrar u ocultar elementos HTML basándose en una condición booleana. A diferencia de <code>v-if</code>, <code>v-show</code> no elimina el elemento del DOM cuando la condición no se cumple; simplemente controla la propiedad CSS <code>display</code>.</p>
-<div class="admonition error">
+<div class="admonition danger">
 <p class="admonition-title">Cómo funciona <code>v-show</code></p>
 </div>
 <ul>
@@ -1769,58 +1811,58 @@ Verduras
 <li><strong>Script:</strong> Contiene la lógica del componente (datos, métodos, etc.).</li>
 <li><strong>Style:</strong> Define el CSS específico del componente.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;h1&gt;{{ titulo }}&lt;/h1&gt;
-    &lt;p&gt;{{ descripcion }}&lt;/p&gt;
-    &lt;button @click=&quot;saludar&quot;&gt;Haz clic aquí&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>{{ titulo }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ descripcion }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;saludar&quot;</span><span class="p">&gt;</span>Haz clic aquí<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  name: &quot;MiComponente&quot;,
-  data() {
-    return {
-      titulo: &quot;Hola, soy un componente&quot;,
-      descripcion: &quot;Este es un ejemplo básico de un componente en Vue.&quot;,
-    };
-  },
-  methods: {
-    saludar() {
-      alert(&quot;¡Hola desde el componente!&quot;);
-    },
-  },
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;MiComponente&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Hola, soy un componente&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">descripcion</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Este es un ejemplo básico de un componente en Vue.&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">saludar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="s2">&quot;¡Hola desde el componente!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;style scoped&gt;
-h1 {
-  color: blue;
-}
-p {
-  font-size: 18px;
-}
-&lt;/style&gt;
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span>
+<span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">blue</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 <hr />
 <p>🪁 <strong>Cómo Registrar y Usar un Componente</strong></p>
 <p>Un componente se registra localmente cuando se usa solo dentro de un componente específico.</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;MiComponente /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">MiComponente</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import MiComponente from &quot;./MiComponente.vue&quot;; // Importamos el componente
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">MiComponente</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./MiComponente.vue&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// Importamos el componente</span>
 
-export default {
-  components: {
-    MiComponente, // que no se os olvide definir el componente en vuestro script
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">MiComponente</span><span class="p">,</span><span class="w"> </span><span class="c1">// que no se os olvide definir el componente en vuestro script</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>🎈 <strong>2. Registro Global</strong></p>
 <p>Un componente se registra globalmente cuando quieres que esté disponible en toda la aplicación. Esto se hace en el archivo principal (<code>main.js</code>).</p>
@@ -1836,35 +1878,35 @@ export default {
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">🔰Componente Padre</label><label for="__tabbed_6_2">✨Componente Hijo ~ <code>HijoComponente.vue</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;HijoComponente nombre=&quot;Juan&quot; /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">HijoComponente</span> <span class="na">nombre</span><span class="o">=</span><span class="s">&quot;Juan&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import HijoComponente from &quot;./HijoComponente.vue&quot;;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">HijoComponente</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./HijoComponente.vue&quot;</span><span class="p">;</span>
 
-export default {
-  components: {
-    HijoComponente,
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">HijoComponente</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;h2&gt;Hola, {{ nombre }}&lt;/h2&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Hola, {{ nombre }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  props: [&quot;nombre&quot;], // Definimos la prop
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">],</span><span class="w"> </span><span class="c1">// Definimos la prop</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
@@ -1877,42 +1919,42 @@ export default {
 <div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">🔰 Componente Padre</label><label for="__tabbed_7_2">✨ Componente Hijo (<code>Boton.vue</code>)</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;Boton @eventoClic=&quot;manejarEvento&quot; /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">Boton</span> <span class="err">@</span><span class="na">eventoClic</span><span class="o">=</span><span class="s">&quot;manejarEvento&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import Boton from &quot;./Boton.vue&quot;;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Boton</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./Boton.vue&quot;</span><span class="p">;</span>
 
-export default {
-  components: {
-    Boton,
-  },
-  methods: {
-    manejarEvento(mensaje) {
-      alert(mensaje); // Muestra &quot;¡Botón pulsado!&quot;
-    },
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Boton</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">manejarEvento</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">alert</span><span class="p">(</span><span class="nx">mensaje</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muestra &quot;¡Botón pulsado!&quot;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;button @click=&quot;enviarEvento&quot;&gt;Haz clic&lt;/button&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;enviarEvento&quot;</span><span class="p">&gt;</span>Haz clic<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  methods: {
-    enviarEvento() {
-      this.$emit(&quot;eventoClic&quot;, &quot;¡Botón pulsado!&quot;);
-    },
-  },
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">enviarEvento</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">$emit</span><span class="p">(</span><span class="s2">&quot;eventoClic&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;¡Botón pulsado!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
@@ -1932,53 +1974,53 @@ export default {
 <div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">🔰Componente Padre (<code>App.vue</code>)</label><label for="__tabbed_8_2">✨ Componente Hijo ~ <code>Boton.vue</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;h1&gt;Contador: {{ contador }}&lt;/h1&gt;
-    &lt;Boton texto=&quot;Incrementar&quot; :accion=&quot;incrementar&quot; /&gt;
-    &lt;Boton texto=&quot;Decrementar&quot; :accion=&quot;decrementar&quot; /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Contador: {{ contador }}<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">Boton</span> <span class="na">texto</span><span class="o">=</span><span class="s">&quot;Incrementar&quot;</span> <span class="na">:accion</span><span class="o">=</span><span class="s">&quot;incrementar&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">Boton</span> <span class="na">texto</span><span class="o">=</span><span class="s">&quot;Decrementar&quot;</span> <span class="na">:accion</span><span class="o">=</span><span class="s">&quot;decrementar&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import Boton from &quot;./Boton.vue&quot;;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Boton</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./Boton.vue&quot;</span><span class="p">;</span>
 
-export default {
-  components: {
-    Boton,
-  },
-  data() {
-    return {
-      contador: 0,
-    };
-  },
-  methods: {
-    incrementar() {
-      this.contador++;
-    },
-    decrementar() {
-      this.contador--;
-    },
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Boton</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">contador</span><span class="o">:</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">incrementar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">contador</span><span class="o">++</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">decrementar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">contador</span><span class="o">--</span><span class="p">;</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;button @click=&quot;accion&quot;&gt;{{ texto }}&lt;/button&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;accion&quot;</span><span class="p">&gt;</span>{{ texto }}<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  props: [&quot;texto&quot;, &quot;accion&quot;],
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;texto&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;accion&quot;</span><span class="p">],</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
 </div>
-<div class="admonition error">
+<div class="admonition danger">
 <p class="admonition-title"><strong>Beneficios Clave de los Componentes</strong></p>
 <ol>
 <li><strong>Reutilización:</strong> Usas un componente en múltiples lugares con diferente configuración.</li>
@@ -1993,32 +2035,32 @@ export default {
 <p class="admonition-title"><strong>La Directiva <code>is</code></strong></p>
 </div>
 <p>En Vue.js, se usa el atributo especial <code>is</code> en una etiqueta <code>&lt;component&gt;</code> para renderizar un componente dinámico.</p>
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;h1&gt;Componente Dinámico&lt;/h1&gt;
-    &lt;button @click=&quot;componenteActual = &#39;ComponenteA&#39;&quot;&gt;Mostrar A&lt;/button&gt;
-    &lt;button @click=&quot;componenteActual = &#39;ComponenteB&#39;&quot;&gt;Mostrar B&lt;/button&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Componente Dinámico<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;componenteActual = &#39;ComponenteA&#39;&quot;</span><span class="p">&gt;</span>Mostrar A<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;componenteActual = &#39;ComponenteB&#39;&quot;</span><span class="p">&gt;</span>Mostrar B<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
 
-    &lt;component :is=&quot;componenteActual&quot;&gt;&lt;/component&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+    <span class="p">&lt;</span><span class="nt">component</span> <span class="na">:is</span><span class="o">=</span><span class="s">&quot;componenteActual&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">component</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import ComponenteA from &#39;./ComponenteA.vue&#39;;
-import ComponenteB from &#39;./ComponenteB.vue&#39;;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">ComponenteA</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./ComponenteA.vue&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">ComponenteB</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./ComponenteB.vue&#39;</span><span class="p">;</span>
 
-export default {
-  components: {
-    ComponenteA,
-    ComponenteB,
-  },
-  data() {
-    return {
-      componenteActual: &#39;ComponenteA&#39;, // Componente inicial
-    };
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ComponenteA</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ComponenteB</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">componenteActual</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;ComponenteA&#39;</span><span class="p">,</span><span class="w"> </span><span class="c1">// Componente inicial</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>💫 <strong>Explicación</strong></p>
 <ul>
@@ -2033,63 +2075,63 @@ export default {
 <div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">✨ <strong>Componente Hijo: <code>Comentario.vue</code></strong></label><label for="__tabbed_9_2">🔰<strong>Componente Padre: <code>ListaComentarios.vue</code></strong></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div class=&quot;comentario&quot;&gt;
-    &lt;h3&gt;{{ autor }}&lt;/h3&gt;
-    &lt;p&gt;{{ mensaje }}&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;comentario&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>{{ autor }}<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ mensaje }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  props: {
-    autor: String,
-    mensaje: String,
-  },
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">autor</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">mensaje</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;style scoped&gt;
-.comentario {
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-&lt;/style&gt;
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span>
+<span class="p">.</span><span class="nc">comentario</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ccc</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;h1&gt;Lista de Comentarios&lt;/h1&gt;
-    &lt;Comentario
-      v-for=&quot;(comentario, index) in comentarios&quot;
-      :key=&quot;index&quot;
-      :autor=&quot;comentario.autor&quot;
-      :mensaje=&quot;comentario.mensaje&quot;
-    /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Lista de Comentarios<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">Comentario</span>
+      <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(comentario, index) in comentarios&quot;</span>
+      <span class="na">:key</span><span class="o">=</span><span class="s">&quot;index&quot;</span>
+      <span class="na">:autor</span><span class="o">=</span><span class="s">&quot;comentario.autor&quot;</span>
+      <span class="na">:mensaje</span><span class="o">=</span><span class="s">&quot;comentario.mensaje&quot;</span>
+    <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import Comentario from &#39;./Comentario.vue&#39;;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Comentario</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./Comentario.vue&#39;</span><span class="p">;</span>
 
-export default {
-  components: {
-    Comentario,
-  },
-  data() {
-    return {
-      comentarios: [
-        { autor: &#39;Ana&#39;, mensaje: &#39;¡Me encanta este artículo!&#39; },
-        { autor: &#39;Carlos&#39;, mensaje: &#39;¡Muy interesante!&#39; },
-        { autor: &#39;Luisa&#39;, mensaje: &#39;Gracias por compartir esta información.&#39; },
-      ],
-    };
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Comentario</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">comentarios</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">autor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Ana&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">mensaje</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;¡Me encanta este artículo!&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">autor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Carlos&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">mensaje</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;¡Muy interesante!&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">autor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Luisa&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">mensaje</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Gracias por compartir esta información.&#39;</span><span class="w"> </span><span class="p">},</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
@@ -2103,65 +2145,65 @@ export default {
 <div class="tabbed-set tabbed-alternate" data-tabs="10:2"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><input id="__tabbed_10_2" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">✨<strong>Componente Hijo: <code>Tarea.vue</code></strong></label><label for="__tabbed_10_2">🔰<strong>Componente Padre: <code>ListaTareas.vue</code></strong></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div class=&quot;tarea&quot;&gt;
-    &lt;p&gt;{{ titulo }}&lt;/p&gt;
-    &lt;button @click=&quot;$emit(&#39;eliminar&#39;)&quot;&gt;Eliminar&lt;/button&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;tarea&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>{{ titulo }}<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click</span><span class="o">=</span><span class="s">&quot;$emit(&#39;eliminar&#39;)&quot;</span><span class="p">&gt;</span>Eliminar<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  props: {
-    titulo: String,
-  },
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">titulo</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;style scoped&gt;
-.tarea {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-&lt;/style&gt;
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span>
+<span class="p">.</span><span class="nc">tarea</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="p">;</span>
+<span class="w">  </span><span class="k">justify-content</span><span class="p">:</span><span class="w"> </span><span class="kc">space-between</span><span class="p">;</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="kt">px</span><span class="w"> </span><span class="kc">solid</span><span class="w"> </span><span class="mh">#ddd</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;h1&gt;Mis Tareas&lt;/h1&gt;
-    &lt;Tarea
-      v-for=&quot;(tarea, index) in tareas&quot;
-      :key=&quot;index&quot;
-      :titulo=&quot;tarea&quot;
-      @eliminar=&quot;eliminarTarea(index)&quot;
-    /&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mis Tareas<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">Tarea</span>
+      <span class="na">v-for</span><span class="o">=</span><span class="s">&quot;(tarea, index) in tareas&quot;</span>
+      <span class="na">:key</span><span class="o">=</span><span class="s">&quot;index&quot;</span>
+      <span class="na">:titulo</span><span class="o">=</span><span class="s">&quot;tarea&quot;</span>
+      <span class="err">@</span><span class="na">eliminar</span><span class="o">=</span><span class="s">&quot;eliminarTarea(index)&quot;</span>
+    <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import Tarea from &#39;./Tarea.vue&#39;;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Tarea</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./Tarea.vue&#39;</span><span class="p">;</span>
 
-export default {
-  components: {
-    Tarea,
-  },
-  data() {
-    return {
-      tareas: [&#39;Comprar pan&#39;, &#39;Hacer ejercicio&#39;, &#39;Estudiar Vue.js&#39;],
-    };
-  },
-  methods: {
-    eliminarTarea(index) {
-      this.tareas.splice(index, 1);
-    },
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Tarea</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">tareas</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Comprar pan&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Hacer ejercicio&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Estudiar Vue.js&#39;</span><span class="p">],</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">methods</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">eliminarTarea</span><span class="p">(</span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">tareas</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
@@ -2177,75 +2219,255 @@ export default {
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1"><strong>Componente Hijo: <code>Notificacion.vue</code></strong></label><label for="__tabbed_11_2"><strong>Componente Padre</strong></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div :class=&quot;[&#39;notificacion&#39;, tipo]&quot;&gt;
-    &lt;slot&gt;&lt;/slot&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">:class</span><span class="o">=</span><span class="s">&quot;[&#39;notificacion&#39;, tipo]&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">slot</span><span class="p">&gt;&lt;/</span><span class="nt">slot</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-export default {
-  props: {
-    tipo: {
-      type: String,
-      default: &#39;info&#39;,
-    },
-  },
-};
-&lt;/script&gt;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">props</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">tipo</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">type</span><span class="o">:</span><span class="w"> </span><span class="nb">String</span><span class="p">,</span>
+<span class="w">      </span><span class="k">default</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 
-&lt;style scoped&gt;
-.notificacion {
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-}
-.notificacion.exito {
-  background-color: #d4edda;
-  color: #155724;
-}
-.notificacion.error {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-.notificacion.advertencia {
-  background-color: #fff3cd;
-  color: #856404;
-}
-&lt;/style&gt;
+<span class="p">&lt;</span><span class="nt">style</span> <span class="na">scoped</span><span class="p">&gt;</span>
+<span class="p">.</span><span class="nc">notificacion</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">padding</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">border-radius</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">  </span><span class="k">margin-bottom</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">notificacion</span><span class="p">.</span><span class="nc">exito</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#d4edda</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#155724</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">notificacion</span><span class="p">.</span><span class="nc">error</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#f8d7da</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#721c24</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">notificacion</span><span class="p">.</span><span class="nc">advertencia</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff3cd</span><span class="p">;</span>
+<span class="w">  </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="mh">#856404</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>&lt;template&gt;
-  &lt;div&gt;
-    &lt;h1&gt;Sistema de Notificaciones&lt;/h1&gt;
-    &lt;component :is=&quot;componenteActual&quot;&gt;
-      &lt;Notificacion tipo=&quot;exito&quot;&gt;¡Operación exitosa!&lt;/Notificacion&gt;
-      &lt;Notificacion tipo=&quot;error&quot;&gt;Algo salió mal.&lt;/Notificacion&gt;
-      &lt;Notificacion tipo=&quot;advertencia&quot;&gt;Cuidado con este cambio.&lt;/Notificacion&gt;
-    &lt;/component&gt;
-  &lt;/div&gt;
-&lt;/template&gt;
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Sistema de Notificaciones<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">component</span> <span class="na">:is</span><span class="o">=</span><span class="s">&quot;componenteActual&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">Notificacion</span> <span class="na">tipo</span><span class="o">=</span><span class="s">&quot;exito&quot;</span><span class="p">&gt;</span>¡Operación exitosa!<span class="p">&lt;/</span><span class="nt">Notificacion</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">Notificacion</span> <span class="na">tipo</span><span class="o">=</span><span class="s">&quot;error&quot;</span><span class="p">&gt;</span>Algo salió mal.<span class="p">&lt;/</span><span class="nt">Notificacion</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">Notificacion</span> <span class="na">tipo</span><span class="o">=</span><span class="s">&quot;advertencia&quot;</span><span class="p">&gt;</span>Cuidado con este cambio.<span class="p">&lt;/</span><span class="nt">Notificacion</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">component</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
 
-&lt;script&gt;
-import Notificacion from &#39;./Notificacion.vue&#39;;
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Notificacion</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./Notificacion.vue&#39;</span><span class="p">;</span>
 
-export default {
-  components: {
-    Notificacion,
-  },
-  data() {
-    return {
-      componenteActual: &#39;Notificacion&#39;,
-    };
-  },
-};
-&lt;/script&gt;
+<span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">Notificacion</span><span class="p">,</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">componenteActual</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Notificacion&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </code></pre></div>
 </div>
 </div>
 </div>
 <hr />
+<h2 id="router">🛣️ Router</h2>
+<p><img align="right" alt="" src="../assets/vue-router.png" /></p>
+<p>Vue Router es una solución de enrutamiento que permite a los desarrolladores definir y gestionar las rutas (URLs) de su aplicación. Proporciona una forma declarativa de conectar rutas específicas con componentes de Vue, permitiendo que los usuarios naveguen entre diferentes vistas sin recargar la página completa.</p>
+<p>En una SPA (Simple Page Application), todo el contenido de la aplicación se carga inicialmente, y el router se encarga de actualizar dinámicamente la vista según la URL actual, proporcionando una experiencia fluida y rápida similar a la de una aplicación nativa.</p>
+<h3 id="instalacion-de-vue-router">Instalación de Vue Router</h3>
+<p>Lo primero que tenemos que hacer es <em>instalar el Router en nuestro proyecto</em> de la siguiente manera:</p>
+<div class="highlight"><pre><span></span><code><span class="w">  </span>npm<span class="w"> </span>install<span class="w"> </span>vue-router
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Ten en cuenta que...</p>
+<p>... puedes instalar el router de manera GLOBAL para usarlo en todos los proyectos de vue que tengas en tu ordenador, para ello puedes lanza el siguiente comando:</p>
+<p>👉🏻 <strong>npm install -g vue-router</strong> 👈🏻</p>
+<p>y así no tendrás que instalar el router cada vez que crees un proyecto nuevo.</p>
+</div>
+<h3 id="anadir-el-router-a-un-proyecto-ya-existente">Añadir el Router a un proyecto ⭕ ya existente ⭕</h3>
+<p>Cuando creamos los primeros proyectos en VueJS, elegimos ciertos paquetes de base que se iban a instalar en nuestro sistema.</p>
+<p>A la hora de hacer <strong>npm create vue@latest</strong> la consola nos hacía una serie de preguntas relacionadas con las dependencias de nuestro proyecto de Vue, pero si os acrodáis, le dijimos a todo que no... en esa lista estaba incluído el Router ded Vue.</p>
+<p>Pero no pasa nada, podemos instalar cualquier paquete después de haber creado el proyeto de Vue.</p>
+<p>💡 Lo único que hay que tener en cuenta es, añadir ese paquete (en este caso el Router de Vue) a nuestro proyecto ya existente.</p>
+<div class="admonition warning">
+<p class="admonition-title">1. Modificamos el archivo main.js para que importe el paquete</p>
+</div>
+<p>Debemos decirle a nuestro archivo maestro <strong>main.js</strong> que cargue el nuevo paquete que hemos instalado, en este caso, el Router.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Añadimos esta línea por el principio de nuestro archivo</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createRouter</span><span class="p">,</span><span class="w"> </span><span class="nx">createWebHistory</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue-router&#39;</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">2. Importando los componentes que van a hacer de vistas en nuestro proyecto, es decir, las secciones</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="c1">// Vamos a crear 3 secciones diferentes en este ejemplo</span>
+
+<span class="cm">/* La sección 🏠 Home:</span>
+<span class="cm">   que será nuestra vista principal, como si de index.html se tratase */</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./components/Home.vue&#39;</span><span class="p">;</span>
+
+<span class="cm">/* La sección ℹ️ About</span>
+<span class="cm">   que nos renderizará la típica sección con información del sitio */</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">About</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./components/About.vue&#39;</span><span class="p">;</span>
+
+<span class="cm">/* La sección 📚 Contact</span>
+<span class="cm">   que puede mostrar un formulario de contacto */</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Contact</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./components/Contact.vue&#39;</span><span class="p">;</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">3. Definiendo las rutas de nuestro sitio y creando el historial</p>
+</div>
+<p>En este paso debemos decirle a nuestra aplicación dónde se encuentrar las rutas que hemos establecido más arriba y qué componente de vue está asignado a cada una de ellas.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createRouter</span><span class="w"> </span><span class="p">({</span>
+<span class="w">    </span><span class="c1">// Aquí instanciamos a 🧭 createWebHistory para crear el historial navegable a través del navegador</span>
+<span class="w">    </span><span class="nx">history</span><span class="o">:</span><span class="w"> </span><span class="nx">createWebHistory</span><span class="p">(),</span>
+
+<span class="w">    </span><span class="c1">// Aquí definimos las rutas, con un array de objetos.</span>
+<span class="w">    </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="c1">// El 🛣️ path hace referencia a la url que debemos escribir en el navegador</span>
+<span class="w">        </span><span class="c1">// El 📦 component... bueno, no creo que necesite presentación, lo hemos declarado antes 👆🏻</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/about&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">About</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/contact&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Contact</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">})</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">4. Instanciando todo</p>
+</div>
+<p>Ahora solo queda modificar la instancia de createApp que teníamos y lo sustituimos por estas líneas:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// 1. Crea la instancia de la aplicación a partir del componente raíz (App).</span>
+<span class="c1">// 2. Registra el plugin Vue Router para gestionar las rutas de la aplicación.</span>
+<span class="c1">// 3. Monta la aplicación en el elemento del DOM con el id &quot;app&quot;.</span>
+
+<span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">router</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">);</span>
+</code></pre></div>
+<p>🧰 <em>main.js</em> &gt;&gt; Ejemplo completo</p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="s1">&#39;./assets/main.css&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createRouter</span><span class="p">,</span><span class="w"> </span><span class="nx">createWebHistory</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue-router&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">createApp</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;vue&#39;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">App</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./App.vue&#39;</span>
+
+<span class="k">import</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./components/Home.vue&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">About</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./components/About.vue&#39;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="nx">Contact</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./components/Contact.vue&#39;</span><span class="p">;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">router</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">createRouter</span><span class="w"> </span><span class="p">({</span>
+<span class="w">    </span><span class="nx">history</span><span class="o">:</span><span class="w"> </span><span class="nx">createWebHistory</span><span class="p">(),</span>
+<span class="w">    </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Home</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/about&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">About</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/contact&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">Contact</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">})</span>
+
+<span class="nx">createApp</span><span class="p">(</span><span class="nx">App</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">router</span><span class="p">)</span>
+<span class="w">    </span><span class="p">.</span><span class="nx">mount</span><span class="p">(</span><span class="s1">&#39;#app&#39;</span><span class="p">);</span>
+
+<span class="c1">// Otra forma de instanciarlo todo 👇🏻</span>
+<span class="w">    </span><span class="c1">// const app = createApp(App);</span>
+<span class="w">    </span><span class="c1">// app.use(router);</span>
+<span class="w">    </span><span class="c1">// app.mount(&#39;#app&#39;);</span>
+</code></pre></div>
+<h3 id="utilizando-el-router">Utilizando el Router</h3>
+<p>Ahora que ya hemos preparado las dependencias y acuatlizado nuestro archivo 🟡 main.js 🟡 ya estamos listo para utilizarlo en nuestros archivos <strong>.vue</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Recomendación sobre App.vue</p>
+<p>Hemos hecho uso de nuestro App.vue como archivo index.html, es decir, hemos creado la vista principal dentro de App.vue pero es recomendable crear un archivo .vue a parte donde carguemos la página principal, como por ejemplo en 🔰Home.vue🔰 o cualquier otro nombre que haga referencia a la sección principal de nuestra web</p>
+</div>
+<p>A continuación, haremos uso del componente 🟪router-view🟪 (también conocido como <code>&lt;RouterView&gt;</code>) que viene por defecto con el router para poder decirle a nuestro sistema que debe cargar las rutas que hemos añadido en nuestro archivo <strong>main.js</strong>. </p>
+<p>Cambiaremos las líneas de nuestro archivo <code>App.vue</code> para que quede lo más limpio posible.</p>
+<div class="highlight"><pre><span></span><code><span class="cm">&lt;!-- No necesitamos nada más --&gt;</span>
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">RouterView</span> <span class="p">/&gt;</span>
+    <span class="cm">&lt;!-- &lt;router-view&gt;&lt;/router-view&gt; --&gt;</span>
+    <span class="cm">&lt;!-- &lt;router-view /&gt; --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+<span class="cm">&lt;!-- ⛔ FIN del archivo --&gt;</span>
+</code></pre></div>
+<p>Ya tenemos listo nuestro enrutamiento, ahora solo falta crear los enlaces en nuestra app. Podemos hacer uso de los enlaces en cualquier componente.</p>
+<p>Vamos a crear un archivo de vue llamado <code>Header.vue</code> donde pongamos una navegación por todos los enlaces del router que hemos creado y los distintos componentes que carguen el contenido correspondiente.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="12:4"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><input id="__tabbed_12_2" name="__tabbed_12" type="radio" /><input id="__tabbed_12_3" name="__tabbed_12" type="radio" /><input id="__tabbed_12_4" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">🏘️ Home.vue</label><label for="__tabbed_12_2">🔰 Header.vue</label><label for="__tabbed_12_3">ℹ️ About.vue</label><label for="__tabbed_12_4">📚 Contact.vue</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="k">import</span><span class="w"> </span><span class="nx">Header</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./Header.vue&#39;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">components</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nx">Header</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">Header</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+            🏘️ Estás en Home
+        <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">nav</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&quot;/about&quot;</span><span class="p">&gt;</span>About<span class="p">&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&quot;/contact&quot;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+        ℹ️ Estás en About
+    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+        📚 Estás en Contacto
+    <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</div>
 
 
 
@@ -2333,10 +2555,10 @@ export default {
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   </body>
