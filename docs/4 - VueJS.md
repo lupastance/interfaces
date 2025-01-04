@@ -1775,14 +1775,14 @@ En una SPA (Simple Page Application), todo el contenido de la aplicación se car
 
 ### Instalación de Vue Router
 
-Lo primero que tenemos que hacer es *instalar el Router en nuestro proyecto* de la siguiente manera:
+Lo primero que tenemos que hacer es *instalar el `Router` en nuestro proyecto* de la siguiente manera:
 
 ```bash
-  npm install vue-router
+npm install vue-router
 ```
 
 !!!warning "Ten en cuenta que..."
-    ... puedes instalar el router de manera GLOBAL para usarlo en todos los proyectos de vue que tengas en tu ordenador, para ello puedes lanza el siguiente comando:
+    ... puedes instalar el router de manera GLOBAL para usarlo en todos los proyectos de vue que tengas en tu ordenador, para ello puedes lanzar el siguiente comando:
     
     👉🏻 **npm install -g vue-router** 👈🏻
     
@@ -1792,7 +1792,11 @@ Lo primero que tenemos que hacer es *instalar el Router en nuestro proyecto* de 
 
 Cuando creamos los primeros proyectos en VueJS, elegimos ciertos paquetes de base que se iban a instalar en nuestro sistema.
 
-A la hora de hacer **npm create vue@latest** la consola nos hacía una serie de preguntas relacionadas con las dependencias de nuestro proyecto de Vue, pero si os acrodáis, le dijimos a todo que no... en esa lista estaba incluído el Router ded Vue.
+A la hora de hacer **npm create vue@latest** la consola nos hacía una serie de preguntas relacionadas con las dependencias de nuestro proyecto de Vue, pero si os acrodáis, le dijimos a todo que no... en esa lista estaba incluído el Router de Vue.
+
+<center>
+  ![](assets/vue-install.png)
+</center>
 
 Pero no pasa nada, podemos instalar cualquier paquete después de haber creado el proyeto de Vue.
 
@@ -1827,7 +1831,7 @@ import Contact from './components/Contact.vue';
 
 !!! tip "3. Definiendo las rutas de nuestro sitio y creando el historial"
 
-En este paso debemos decirle a nuestra aplicación dónde se encuentrar las rutas que hemos establecido más arriba y qué componente de vue está asignado a cada una de ellas.
+En este paso debemos decirle a nuestra aplicación dónde se encuentrar las rutas que hemos establecido más arriba y qué componente de `vue` está asignado a cada una de ellas.
 
 ```js
 const router = createRouter ({
@@ -1892,10 +1896,10 @@ createApp(App)
 
 ### Utilizando el Router
 
-Ahora que ya hemos preparado las dependencias y acuatlizado nuestro archivo 🟡 main.js 🟡 ya estamos listo para utilizarlo en nuestros archivos **.vue**
+Ahora que ya hemos preparado las dependencias y acuatlizado nuestro archivo 🟡 main.js 🟡 ya estamos listos para utilizarlo en nuestros archivos **.vue**
 
 !!!note "Recomendación sobre App.vue"
-    Hemos hecho uso de nuestro App.vue como archivo index.html, es decir, hemos creado la vista principal dentro de App.vue pero es recomendable crear un archivo .vue a parte donde carguemos la página principal, como por ejemplo en 🔰Home.vue🔰 o cualquier otro nombre que haga referencia a la sección principal de nuestra web
+    Hemos hecho uso de nuestro App.vue como archivo index.html, es decir, hemos creado la vista principal dentro de App.vue pero es recomendable crear un archivo `.vue` a parte donde carguemos la página principal, como por ejemplo en 🔰Home.vue🔰 o cualquier otro nombre que haga referencia a la sección principal de nuestra web
 
 A continuación, haremos uso del componente 🟪router-view🟪 (también conocido como `<RouterView>`) que viene por defecto con el router para poder decirle a nuestro sistema que debe cargar las rutas que hemos añadido en nuestro archivo **main.js**. 
 
