@@ -37,7 +37,7 @@ Todo archivo de VueJS tiene como extensión `.vue` y su código básico está di
 🔵 `style` · En este último bloque escribiremos el código CSS de nuestro componente
 
 === "🔰App.vue"
-```vue
+```html
 <script>
   export default {
     data() {
@@ -143,7 +143,7 @@ export default {
 }
 </script>
 ```
-!!!error "Explicación del código"
+!!!danger "Explicación del código"
     - `message` es una cadena de texto.
     - `count` es un número.
     - `isActive` es un valor booleano (`true` o `false`).
@@ -414,21 +414,21 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
 !!! tip "v-bind"
     **`v-bind`** se utiliza para enlazar un atributo o una propiedad de un componente con una variable o expresión en el componente. Esto permite modificar dinámicamente los atributos HTML de un elemento.
 
-```vue
+```html
 <img v-bind:src="imageSource" />
 ```
 
 !!! note "v-model"
     **`v-model`** se usa para crear un enlace bidireccional entre un campo de entrada y una variable. Esto es útil para formularios y otros elementos interactivos.
 
-```vue
+```html
 <input v-model="message" />
 ```
 
 !!! warning "v-for"
     **`v-for`** se utiliza para renderizar una lista de elementos basados en una colección, como un array u objeto. Es muy útil para crear elementos dinámicos.
 
-```vue
+```html
 <ul>
     <li v-for="item in items" :key="item.id">{{ item.name }}</li>
 </ul>
@@ -437,14 +437,14 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
 !!! info "v-if"
     **`v-if`** renderiza condicionalmente un bloque de código solo si la expresión es verdadera. Es útil para mostrar u ocultar elementos basados en ciertas condiciones.
 
-```vue
+```html
 <p v-if="isVisible">Este mensaje se muestra si esVisible es verdadero</p>
 ```
 
 !!! error "v-else"
     **`v-else`** se usa junto con `v-if` para renderizar un bloque cuando la expresión de `v-if` es falsa. Es útil para crear bloques alternativos.
 
-```vue
+```html
 <p v-if="isVisible">Este mensaje es visible</p>
 <p v-else>Este mensaje aparece cuando isVisible es falso</p>
 ```
@@ -452,21 +452,21 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
 !!! tip "v-show"
     **`v-show`** es similar a `v-if`, pero en lugar de agregar o eliminar el elemento del DOM, solo cambia su visibilidad (usando `display: none`).
 
-```vue
+```html
 <p v-show="isVisible">Este mensaje se muestra si isVisible es verdadero</p>
 ```
 
 !!! warning "v-on"
     **`v-on`** se utiliza para escuchar eventos DOM y ejecutar métodos cuando esos eventos son disparados. Permite manejar interacciones del usuario.
 
-```vue
+```html
 <button v-on:click="submitForm">Enviar</button>
 ```
 
 !!! info "v-slot"
     **`v-slot`** permite pasar contenido a los componentes hijo a través de slots. Facilita la creación de componentes reutilizables con contenido dinámico.
 
-```vue
+```html
 <my-component v-slot:header>
     <h1>Contenido de encabezado</h1>
 </my-component>
@@ -475,7 +475,7 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
 !!! tip "v-cloak"
     **`v-cloak`** es utilizado para ocultar un elemento y su contenido hasta que Vue haya terminado de compilar el componente. Es útil para evitar ver el contenido sin procesar durante la carga.
 
-```vue
+```html
 <div v-cloak>
     <p>{{ message }}</p>
 </div>
@@ -484,7 +484,7 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
 !!! warning "v-pre"
     **`v-pre`** evita que Vue compile el contenido de un elemento y sus descendientes. Esto es útil cuando sabes que no necesitas que Vue procese un bloque específico de contenido.
 
-```vue
+```html
 <div v-pre>
     {{ rawContent }}
 </div>
@@ -493,14 +493,14 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
 !!! info "v-text"
     **`v-text`** se utiliza para actualizar el contenido de texto de un elemento, reemplazando cualquier texto dentro de él. Es útil para manipular solo el texto.
 
-```vue
+```html
 <p v-text="message"></p>
 ```
 
 !!! error "v-html"
     **`v-html`** permite inyectar contenido HTML en el DOM. Esto puede ser útil, pero ten cuidado con el contenido no confiable para evitar vulnerabilidades de seguridad (como XSS).
     
-```vue
+```html
 <div v-html="rawHtml"></div>
 ```
 
@@ -513,7 +513,7 @@ Estas directivas permiten interactuar con el DOM y manejar datos de manera efici
 La directiva `v-bind` se utiliza en Vue.js para **enlazar dinámicamente atributos** o propiedades de un elemento HTML a una **expresión de Vue** (generalmente una variable o propiedad del componente). De esta manera, puedes modificar el valor de un atributo de forma reactiva, lo que significa que si la variable asociada cambia, el atributo en el DOM también se actualizará automáticamente.
 
 === "Sintaxis básica"
-    ```vue
+    ```html
     <v-bind:atributo="expresión">
     ```
 
@@ -526,7 +526,7 @@ La directiva `v-bind` se utiliza en Vue.js para **enlazar dinámicamente atribut
 Imagina que tienes una propiedad `imageSource` en tu componente Vue y deseas que el atributo `src` de una etiqueta `<img>` se actualice automáticamente cuando el valor de `imageSource` cambie.
 
 === "Usando v-bind"
-```vue
+```html
 <template>
   <div>
     <!-- v-bind enlaza el atributo src con la propiedad imageSource -->
@@ -554,7 +554,7 @@ export default {
 Puedes usar `v-bind` para enlazar múltiples atributos a la vez, usando un objeto de JavaScript. Esto es útil cuando deseas enlazar varios atributos de un elemento dinámicamente.
 
 === "Multiples atributos"
-```vue
+```html
 <template>
   <div>
     <!-- Usando un objeto para enlazar varios atributos -->
@@ -589,7 +589,7 @@ La directiva `v-model` en Vue.js se utiliza para **crear un enlace bidireccional
 Un **enlace bidireccional** significa que el valor de la propiedad de Vue y el valor del campo de entrada están sincronizados en todo momento. Si el valor de la propiedad cambia, el campo de entrada se actualiza, y si el valor del campo de entrada cambia (por ejemplo, el usuario escribe algo), la propiedad de Vue también se actualiza.
 
 === "Sintaxis básica"
-```vue
+```html
 <input v-model="variable">
 ```
 
@@ -600,7 +600,7 @@ Un **enlace bidireccional** significa que el valor de la propiedad de Vue y el v
 
 Imagina que quieres crear un campo de texto en el que el usuario pueda escribir algo, y que al mismo tiempo, el valor escrito se refleje automáticamente en la propiedad `message` de Vue.
 
-```vue
+```html
 <template>
   <div>
     <!-- El valor del input está vinculado a la propiedad message -->
@@ -632,7 +632,7 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
    
    Para un checkbox, `v-model` se enlaza con un valor booleano (verdadero o falso).
 
-   ```vue
+   ```html
    <template>
      <div>
        <input type="checkbox" v-model="isChecked">
@@ -655,7 +655,7 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
 
    Para un grupo de botones de opción, `v-model` se enlaza con una variable cuyo valor corresponde al valor del botón seleccionado.
 
-   ```vue
+   ```html
    <template>
      <div>
        <input type="radio" id="option1" value="Opción 1" v-model="selectedOption">
@@ -683,7 +683,7 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
 
    Para un `select`, `v-model` se puede usar para obtener el valor de la opción seleccionada.
 
-   ```vue
+   ```html
    <template>
      <div>
        <select v-model="selectedValue">
@@ -713,23 +713,23 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
 
 1️⃣ **`.lazy`**: Solo actualiza la propiedad cuando el campo de texto pierde el foco (en lugar de actualizarla en cada pulsación de tecla).
 
-   ```vue
+   ```html
    <input v-model.lazy="message">
    ```
 
 2️⃣ **`.number`**: Convierte el valor de entrada en un número cuando se asigna a la propiedad.
 
-   ```vue
+   ```html
    <input v-model.number="age" type="number">
    ```
 
 3️⃣ **`.trim`**: Elimina los espacios en blanco al principio y al final del valor.
 
-   ```vue
+   ```html
    <input v-model.trim="message">
    ```
 
-!!!error "Resumen"
+!!!danger "Resumen"
     - **`v-model`** crea un enlace bidireccional entre un campo de entrada y una propiedad en el modelo de Vue.
     - Puedes usarlo con elementos como `<input>`, `<checkbox>`, `<select>`, y otros campos interactivos.
     - Al cambiar el valor en el campo de entrada, la propiedad vinculada se actualiza automáticamente y viceversa.
@@ -743,7 +743,7 @@ Las directivas `v-if` y `v-else` en Vue.js se utilizan para **renderizar condici
 
 💫 Sintaxis básica
 
-```vue
+```html
 <div v-if="condición">Contenido visible si la condición es verdadera</div>
 <div v-else>Contenido visible si la condición es falsa</div>
 ```
@@ -756,7 +756,7 @@ Las directivas `v-if` y `v-else` en Vue.js se utilizan para **renderizar condici
 
 Imagina que quieres mostrar un mensaje que cambie dependiendo de si el usuario ha iniciado sesión o no. Usarías `v-if` y `v-else` para manejar estas condiciones.
 
-```vue
+```html
 <template>
   <div>
     <p v-if="isLoggedIn">¡Bienvenido de nuevo!</p>
@@ -786,7 +786,7 @@ export default {
 
 Puedes combinar `v-if`, `v-else-if`, y `v-else` para manejar múltiples condiciones de forma más estructurada.
 
-```vue
+```html
 <template>
   <div>
     <p v-if="status === 'loading'">Cargando...</p>
@@ -994,7 +994,7 @@ Verduras
 
 La directiva `v-show` se utiliza para mostrar u ocultar elementos HTML basándose en una condición booleana. A diferencia de `v-if`, `v-show` no elimina el elemento del DOM cuando la condición no se cumple; simplemente controla la propiedad CSS `display`.
 
-!!!error "Cómo funciona `v-show`"
+!!!danger "Cómo funciona `v-show`"
 
 - Si la condición es `true`, el elemento será visible.
 - Si la condición es `false`, el elemento estará oculto (`display: none`).
@@ -1275,7 +1275,7 @@ Un componente consta de:
 2. **Script:** Contiene la lógica del componente (datos, métodos, etc.).
 3. **Style:** Define el CSS específico del componente.
 
-```vue
+```html
 <template>
   <div>
     <h1>{{ titulo }}</h1>
@@ -1317,7 +1317,7 @@ p {
 
 Un componente se registra localmente cuando se usa solo dentro de un componente específico.
 
-```vue
+```html
 <template>
   <div>
     <MiComponente />
@@ -1355,7 +1355,7 @@ Ahora puedes usar `<MiComponente />` en cualquier lugar de tu aplicación sin ne
 Los componentes permiten **pasar datos desde el componente padre al hijo** utilizando propiedades (`props`).
 
 === "🔰Componente Padre"
-    ```vue
+    ```html
     <template>
       <div>
         <HijoComponente nombre="Juan" />
@@ -1373,7 +1373,7 @@ Los componentes permiten **pasar datos desde el componente padre al hijo** utili
     </script>
     ```
 === "✨Componente Hijo ~ `HijoComponente.vue`"
-    ```vue
+    ```html
     <template>
       <div>
         <h2>Hola, {{ nombre }}</h2>
@@ -1394,7 +1394,7 @@ Los componentes permiten **pasar datos desde el componente padre al hijo** utili
 Los componentes hijos pueden **enviar eventos al componente padre** para notificar cambios o acciones utilizando `$emit`.
 
 === "🔰 Componente Padre"
-    ```vue
+    ```html
     <template>
       <div>
         <Boton @eventoClic="manejarEvento" />
@@ -1418,7 +1418,7 @@ Los componentes hijos pueden **enviar eventos al componente padre** para notific
     ```
 
 === "✨ Componente Hijo (`Boton.vue`)"
-    ```vue
+    ```html
     <template>
       <button @click="enviarEvento">Haz clic</button>
     </template>
@@ -1448,7 +1448,7 @@ Los componentes hijos pueden **enviar eventos al componente padre** para notific
 - **Componente Hijo:** Botones para incrementar o decrementar el contador.
 
 === "🔰Componente Padre (`App.vue`)"
-    ```vue
+    ```html
     <template>
       <div>
         <h1>Contador: {{ contador }}</h1>
@@ -1482,7 +1482,7 @@ Los componentes hijos pueden **enviar eventos al componente padre** para notific
     ```
 
 === "✨ Componente Hijo ~ `Boton.vue`"
-    ```vue
+    ```html
     <template>
       <button @click="accion">{{ texto }}</button>
     </template>
@@ -1494,7 +1494,7 @@ Los componentes hijos pueden **enviar eventos al componente padre** para notific
     </script>
     ```
 
-!!!error "**Beneficios Clave de los Componentes**"
+!!!danger "**Beneficios Clave de los Componentes**"
     1. **Reutilización:** Usas un componente en múltiples lugares con diferente configuración.
     2. **Separación de Preocupaciones:** La lógica, la estructura y el estilo están contenidos en un único archivo.
     3. **Escalabilidad:** Facilitan la construcción de aplicaciones complejas y mantenibles.
@@ -1509,7 +1509,7 @@ Los **componentes dinámicos** permiten renderizar diferentes componentes en una
 
 En Vue.js, se usa el atributo especial `is` en una etiqueta `<component>` para renderizar un componente dinámico.
 
-```vue
+```html
 <template>
   <div>
     <h1>Componente Dinámico</h1>
@@ -1554,7 +1554,7 @@ Los **componentes anidados** son aquellos que están contenidos dentro de otros 
 Supongamos que estamos construyendo un sistema de comentarios. Un **componente padre** mostrará una lista de comentarios, y cada **componente hijo** representará un comentario individual.
 
 === "✨ **Componente Hijo: `Comentario.vue`**"
-    ```vue
+    ```html
     <template>
       <div class="comentario">
         <h3>{{ autor }}</h3>
@@ -1582,7 +1582,7 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
     ```
 
 === "🔰**Componente Padre: `ListaComentarios.vue`**"
-    ```vue
+    ```html
     <template>
       <div>
         <h1>Lista de Comentarios</h1>
@@ -1622,7 +1622,7 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
 - El hijo puede emitir un evento al padre, por ejemplo, para eliminar la tarea.
 
 === "✨**Componente Hijo: `Tarea.vue`**"
-      ```vue
+      ```html
       <template>
         <div class="tarea">
           <p>{{ titulo }}</p>
@@ -1651,7 +1651,7 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
       ```
 
 === "🔰**Componente Padre: `ListaTareas.vue`**"
-    ```vue
+    ```html
     <template>
       <div>
         <h1>Mis Tareas</h1>
@@ -1696,7 +1696,7 @@ Se pueden combinar **componentes dinámicos** y **componentes anidados** para cr
 - **Advertencia**
 
 === "**Componente Hijo: `Notificacion.vue`**"
-    ```vue
+    ```html
     <template>
       <div :class="['notificacion', tipo]">
         <slot></slot>
@@ -1736,7 +1736,7 @@ Se pueden combinar **componentes dinámicos** y **componentes anidados** para cr
     ```
 
 === "**Componente Padre**"
-    ```vue
+    ```html
     <template>
       <div>
         <h1>Sistema de Notificaciones</h1>
@@ -1765,3 +1765,211 @@ Se pueden combinar **componentes dinámicos** y **componentes anidados** para cr
     ```
 
 ---
+
+## 🛣️ Router
+![](assets/vue-router.png){align="right"}
+
+Vue Router es una solución de enrutamiento que permite a los desarrolladores definir y gestionar las rutas (URLs) de su aplicación. Proporciona una forma declarativa de conectar rutas específicas con componentes de Vue, permitiendo que los usuarios naveguen entre diferentes vistas sin recargar la página completa.
+
+En una SPA (Simple Page Application), todo el contenido de la aplicación se carga inicialmente, y el router se encarga de actualizar dinámicamente la vista según la URL actual, proporcionando una experiencia fluida y rápida similar a la de una aplicación nativa.
+
+### Instalación de Vue Router
+
+Lo primero que tenemos que hacer es *instalar el Router en nuestro proyecto* de la siguiente manera:
+
+```bash
+  npm install vue-router
+```
+
+!!!warning "Ten en cuenta que..."
+    ... puedes instalar el router de manera GLOBAL para usarlo en todos los proyectos de vue que tengas en tu ordenador, para ello puedes lanza el siguiente comando:
+    
+    👉🏻 **npm install -g vue-router** 👈🏻
+    
+    y así no tendrás que instalar el router cada vez que crees un proyecto nuevo.
+
+### Añadir el Router a un proyecto ⭕ ya existente ⭕
+
+Cuando creamos los primeros proyectos en VueJS, elegimos ciertos paquetes de base que se iban a instalar en nuestro sistema.
+
+A la hora de hacer **npm create vue@latest** la consola nos hacía una serie de preguntas relacionadas con las dependencias de nuestro proyecto de Vue, pero si os acrodáis, le dijimos a todo que no... en esa lista estaba incluído el Router ded Vue.
+
+Pero no pasa nada, podemos instalar cualquier paquete después de haber creado el proyeto de Vue.
+
+💡 Lo único que hay que tener en cuenta es, añadir ese paquete (en este caso el Router de Vue) a nuestro proyecto ya existente.
+
+!!!warning "1. Modificamos el archivo main.js para que importe el paquete"
+
+Debemos decirle a nuestro archivo maestro **main.js** que cargue el nuevo paquete que hemos instalado, en este caso, el Router.
+
+```js
+// Añadimos esta línea por el principio de nuestro archivo
+import { createRouter, createWebHistory } from 'vue-router';
+```
+
+!!!tip "2. Importando los componentes que van a hacer de vistas en nuestro proyecto, es decir, las secciones"
+
+```js
+// Vamos a crear 3 secciones diferentes en este ejemplo
+
+/* La sección 🏠 Home:
+   que será nuestra vista principal, como si de index.html se tratase */
+import Home from './components/Home.vue';
+
+/* La sección ℹ️ About
+   que nos renderizará la típica sección con información del sitio */
+import About from './components/About.vue';
+
+/* La sección 📚 Contact
+   que puede mostrar un formulario de contacto */
+import Contact from './components/Contact.vue';
+```
+
+!!! tip "3. Definiendo las rutas de nuestro sitio y creando el historial"
+
+En este paso debemos decirle a nuestra aplicación dónde se encuentrar las rutas que hemos establecido más arriba y qué componente de vue está asignado a cada una de ellas.
+
+```js
+const router = createRouter ({
+    // Aquí instanciamos a 🧭 createWebHistory para crear el historial navegable a través del navegador
+    history: createWebHistory(),
+
+    // Aquí definimos las rutas, con un array de objetos.
+    routes: [
+        // El 🛣️ path hace referencia a la url que debemos escribir en el navegador
+        // El 📦 component... bueno, no creo que necesite presentación, lo hemos declarado antes 👆🏻
+        { path: '/', component: Home },
+        { path: '/about', component: About },
+        { path: '/contact', component: Contact }
+    ]
+})
+```
+
+!!! tip "4. Instanciando todo"
+
+Ahora solo queda modificar la instancia de createApp que teníamos y lo sustituimos por estas líneas:
+
+```js
+// 1. Crea la instancia de la aplicación a partir del componente raíz (App).
+// 2. Registra el plugin Vue Router para gestionar las rutas de la aplicación.
+// 3. Monta la aplicación en el elemento del DOM con el id "app".
+
+createApp(App)
+    .use(router)
+    .mount('#app');
+```
+
+🧰 *main.js* >> Ejemplo completo
+
+```js
+import './assets/main.css'
+import { createRouter, createWebHistory } from 'vue-router'
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import Home from './components/Home.vue';
+import About from './components/About.vue';
+import Contact from './components/Contact.vue';
+
+const router = createRouter ({
+    history: createWebHistory(),
+    routes: [
+        { path: '/', component: Home },
+        { path: '/about', component: About },
+        { path: '/contact', component: Contact }
+    ]
+})
+
+createApp(App)
+    .use(router)
+    .mount('#app');
+
+// Otra forma de instanciarlo todo 👇🏻
+    // const app = createApp(App);
+    // app.use(router);
+    // app.mount('#app');
+```
+
+### Utilizando el Router
+
+Ahora que ya hemos preparado las dependencias y acuatlizado nuestro archivo 🟡 main.js 🟡 ya estamos listo para utilizarlo en nuestros archivos **.vue**
+
+!!!note "Recomendación sobre App.vue"
+    Hemos hecho uso de nuestro App.vue como archivo index.html, es decir, hemos creado la vista principal dentro de App.vue pero es recomendable crear un archivo .vue a parte donde carguemos la página principal, como por ejemplo en 🔰Home.vue🔰 o cualquier otro nombre que haga referencia a la sección principal de nuestra web
+
+A continuación, haremos uso del componente 🟪router-view🟪 (también conocido como `<RouterView>`) que viene por defecto con el router para poder decirle a nuestro sistema que debe cargar las rutas que hemos añadido en nuestro archivo **main.js**. 
+
+Cambiaremos las líneas de nuestro archivo `App.vue` para que quede lo más limpio posible.
+
+```html
+<!-- No necesitamos nada más -->
+<template>
+    <RouterView />
+    <!-- <router-view></router-view> -->
+    <!-- <router-view /> -->
+</template>
+<!-- ⛔ FIN del archivo -->
+```
+
+Ya tenemos listo nuestro enrutamiento, ahora solo falta crear los enlaces en nuestra app. Podemos hacer uso de los enlaces en cualquier componente.
+
+Vamos a crear un archivo de vue llamado `Header.vue` donde pongamos una navegación por todos los enlaces del router que hemos creado y los distintos componentes que carguen el contenido correspondiente.
+
+=== "🏘️ Home.vue"
+    ```html
+    <script>
+        import Header from './Header.vue';
+
+        export default {
+            components: {
+                Header
+            }
+        }
+    </script>
+
+    <template>
+        <div>
+            <Header />
+            <h1>
+                🏘️ Estás en Home
+            </h1>
+        </div>
+    </template>
+
+    <style></style>
+    ```
+
+=== "🔰 Header.vue"
+    ```html
+    <template>
+        <nav>
+            <router-link to="/">Home</router-link>
+            <router-link to="/about">About</router-link>
+            <router-link to="/contact">Contact</router-link>
+        </nav>
+    </template>
+    ```
+=== "ℹ️ About.vue"
+    ```html
+    <template>
+        <h1>
+            ℹ️ Estás en About
+        </h1>
+    </template>
+
+    <script></script>
+
+    <style></style>
+    ```
+=== "📚 Contact.vue"
+    ```html
+    <template>
+        <h1>
+            📚 Estás en Contacto
+        </h1>
+    </template>
+
+    <script></script>
+
+    <style></style>
+    ```
