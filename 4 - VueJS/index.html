@@ -667,8 +667,26 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#rutas-dinamicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rutas dinámicas
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#propiedades-computadas" class="md-nav__link">
+    <span class="md-ellipsis">
+      🎒 Propiedades computadas
+    </span>
+  </a>
   
 </li>
       
@@ -2471,6 +2489,45 @@ Verduras
 </div>
 </div>
 </div>
+<h3 id="rutas-dinamicas">Rutas dinámicas</h3>
+<p>En Vue Router, las rutas dinámicas son aquellas que incluyen parámetros variables en su URL, lo que permite manejar datos específicos en las vistas. Estas rutas son útiles para aplicaciones donde necesitas mostrar contenido basado en un identificador único, como un blog, una tienda en línea o un sistema de usuarios.</p>
+<p>Ejemplo básico ➡️ Una ruta dinámica puede definirse con un parámetro en la URL, precedido por dos puntos (:). Por ejemplo, para mostrar un post específico:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">🟡 main.js</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">routes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;/post/:id&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="nx">PostComponent</span><span class="w"> </span><span class="p">},</span>
+<span class="p">];</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>En este caso, <strong><em>:id</em></strong> es un parámetro dinámico que puede cambiar según el post que quieras mostrar (por ejemplo, /post/123 o /post/456).</p>
+</div>
+<p>🤹🏻‍♂️ Acceso al parámetro dinámico ~ Dentro del componente asociado a la ruta, puedes acceder al valor del parámetro dinámico usando $route.params</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">🔰 Post.vue</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<div class="highlight"><pre><span></span><code><span class="k">export</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">computed</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">postId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">$route</span><span class="p">.</span><span class="nx">params</span><span class="p">.</span><span class="nx">id</span><span class="p">;</span><span class="w"> </span><span class="c1">// Obtiene el valor de &#39;id&#39; desde la URL</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="p">};</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Ventajas de las rutas dinámicas</p>
+<p>🙆🏻 Flexibilidad: Permiten manejar múltiples datos con un solo componente.<br>
+⚡ Reactividad: Los parámetros cambian automáticamente cuando la URL cambia.<br>
+🗃️ Organización: Facilitan estructurar aplicaciones complejas con rutas reutilizables.<br></p>
+</div>
+<p>Si defines una ruta como /post/:id y navegas a /post/123, el componente asociado podrá mostrar información basada en el id proporcionado, como "Post 123".</p>
+<p>Las rutas dinámicas son una pieza clave para construir aplicaciones web modernas y escalables en Vue.</p>
+<h2 id="propiedades-computadas">🎒 Propiedades computadas</h2>
 
 
 
