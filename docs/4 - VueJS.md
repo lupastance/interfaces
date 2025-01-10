@@ -1977,3 +1977,44 @@ Vamos a crear un archivo de vue llamado `Header.vue` donde pongamos una navegaci
 
     <style></style>
     ```
+
+### Rutas dinámicas
+
+En Vue Router, las rutas dinámicas son aquellas que incluyen parámetros variables en su URL, lo que permite manejar datos específicos en las vistas. Estas rutas son útiles para aplicaciones donde necesitas mostrar contenido basado en un identificador único, como un blog, una tienda en línea o un sistema de usuarios.
+
+Ejemplo básico ➡️ Una ruta dinámica puede definirse con un parámetro en la URL, precedido por dos puntos (:). Por ejemplo, para mostrar un post específico:
+
+
+=== "🟡 main.js"
+```js
+const routes = [
+  { path: '/post/:id', component: PostComponent },
+];
+```
+
+!!!info
+    En este caso, ***:id*** es un parámetro dinámico que puede cambiar según el post que quieras mostrar (por ejemplo, /post/123 o /post/456).
+
+🤹🏻‍♂️ Acceso al parámetro dinámico ~ Dentro del componente asociado a la ruta, puedes acceder al valor del parámetro dinámico usando $route.params
+
+=== "🔰 Post.vue"
+```js
+export default {
+  computed: {
+    postId() {
+      return this.$route.params.id; // Obtiene el valor de 'id' desde la URL
+    },
+  },
+};
+```
+
+!!!tip "Ventajas de las rutas dinámicas"
+    🙆🏻 Flexibilidad: Permiten manejar múltiples datos con un solo componente.<br>
+    ⚡ Reactividad: Los parámetros cambian automáticamente cuando la URL cambia.<br>
+    🗃️ Organización: Facilitan estructurar aplicaciones complejas con rutas reutilizables.<br>
+
+Si defines una ruta como /post/:id y navegas a /post/123, el componente asociado podrá mostrar información basada en el id proporcionado, como "Post 123".
+
+Las rutas dinámicas son una pieza clave para construir aplicaciones web modernas y escalables en Vue.
+
+## 🎒 Propiedades computadas
