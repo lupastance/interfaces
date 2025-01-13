@@ -2018,3 +2018,167 @@ Si defines una ruta como /post/:id y navegas a /post/123, el componente asociado
 Las rutas dinámicas son una pieza clave para construir aplicaciones web modernas y escalables en Vue.
 
 ## 🎒 Propiedades computadas
+
+Las **propiedades computadas** son una de las características más potentes de Vue.js. Se utilizan para definir lógica que depende de los datos de tu componente y se actualizan automáticamente cuando esos datos cambian. Esto permite mantener tu código más limpio y evitar duplicación.
+
+❓ **¿Qué son las propiedades computadas?**
+
+Son funciones que se declaran en la sección `computed` de un componente Vue. Estas funciones actúan como propiedades que puedes usar en tu plantilla, pero a diferencia de las propiedades normales, están basadas en otros datos reactivos y se recalculan automáticamente cuando esos datos cambian.
+
+### **Ventajas de las Propiedades Computadas**
+
+1. **Cacheadas Automáticamente**: Una propiedad computada solo se recalcula cuando cambian los datos en los que depende. Si no hay cambios, Vue reutiliza el resultado anterior, lo que mejora el rendimiento.
+2. **Separación de Lógica**: Ayudan a mantener la lógica separada de la plantilla, haciendo el código más legible y fácil de mantener.
+3. **Reactivas**: Se actualizan automáticamente cuando cambian los datos reactivos.
+
+!!!note "**Ejemplo Básico**"
+    Supongamos que tienes un componente donde almacenas el nombre y el apellido de un usuario, pero quieres mostrar el nombre completo.
+
+```html
+<template>
+  <div>
+    <p>Nombre: {{ nombre }}</p>
+    <p>Apellido: {{ apellido }}</p>
+    <p>Nombre Completo: {{ nombreCompleto }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      nombre: 'Juan',
+      apellido: 'Pérez',
+    };
+  },
+  computed: {
+    nombreCompleto() {
+      return `${this.nombre} ${this.apellido}`;
+    },
+  },
+};
+</script>
+```
+
+!!!note "Explicación"
+      - `nombreCompleto` es una propiedad computada que combina `nombre` y `apellido`.
+      - Si cambias `nombre` o `apellido`, `nombreCompleto` se recalcula automáticamente.
+
+!!!warning "**Ejemplo con Dependencias**"
+Las propiedades computadas pueden depender de múltiples datos reactivos.
+
+```html
+<template>
+  <div>
+    <p>Precio Unitario: {{ precio }}</p>
+    <p>Cantidad: {{ cantidad }}</p>
+    <p>Total: {{ total }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      precio: 10,
+      cantidad: 3,
+    };
+  },
+  computed: {
+    total() {
+      return this.precio * this.cantidad;
+    },
+  },
+};
+</script>
+```
+
+### **Propiedades Computadas 🆚 Métodos**
+
+A veces, podrías pensar que un método puede hacer lo mismo que una propiedad computada. Sin embargo, hay diferencias importantes:
+
+!!!tip "Propiedad Computada"
+    - Es cacheada.
+    - Solo se recalcula cuando cambian los datos en los que depende.
+
+!!!danger "Método""
+    - No es cacheado.
+    - Se ejecuta cada vez que se invoca, incluso si los datos no han cambiado.
+
+⚡ **Ejemplo Comparativo**
+
+```html
+<template>
+  <div>
+    <p>Propiedad Computada: {{ propiedadComputada }}</p>
+    <p>Método: {{ metodo() }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      numero: 5,
+    };
+  },
+  computed: {
+    propiedadComputada() {
+      console.log('Recalculando propiedad computada');
+      return this.numero * 2;
+    },
+  },
+  methods: {
+    metodo() {
+      console.log('Ejecutando método');
+      return this.numero * 2;
+    },
+  },
+};
+</script>
+```
+
+!!!note Salida en la Consola
+    - La propiedad computada solo recalcula si `numero` cambia.
+    - El método se ejecuta cada vez que se llama, incluso si `numero` no ha cambiado.
+
+
+### **Propiedades Computadas con `get` y `set`**
+
+Las propiedades computadas también pueden tener un **setter** para permitir escribir valores en ellas.
+
+```html
+<template>
+  <div>
+    <p>Nombre Completo: {{ nombreCompleto }}</p>
+    <input v-model="nombreCompleto" />
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      nombre: 'Juan',
+      apellido: 'Pérez',
+    };
+  },
+  computed: {
+    nombreCompleto: {
+      get() {
+        return `${this.nombre} ${this.apellido}`;
+      },
+      set(valor) {
+        const partes = valor.split(' ');
+        this.nombre = partes[0];
+        this.apellido = partes[1] || '';
+      },
+    },
+  },
+};
+</script>
+```
+
+!!!tip "Explicación"
+    - Cuando escribes en el campo de texto, el `setter` actualiza las propiedades `nombre` y `apellido`.
+    - Esto permite usar propiedades computadas con dos vías de enlace (`v-model`).
