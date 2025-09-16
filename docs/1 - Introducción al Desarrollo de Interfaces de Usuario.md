@@ -59,7 +59,6 @@ Una interfaz gráfica de usuario (UI) es la capa de interacción entre el usuari
 
 1. **Etiquetas semánticas**:
       - `<header>`, `<footer>`, `<section>`, `<article>`: Estructuran el contenido de forma semántica, facilitando la comprensión del contenido tanto para usuarios como para motores de búsqueda.
-     
       - **Inputs y controles de formularios**: Elementos como `<input>`, `<textarea>`, `<select>` son esenciales en la captura de datos del usuario.
 
 2. **Atributos de accesibilidad**:
@@ -69,6 +68,7 @@ Una interfaz gráfica de usuario (UI) es la capa de interacción entre el usuari
 3. **Formularios en HTML5**:
       - HTML5 permite la creación de formularios con validación básica integrada a través de atributos como `required`, `pattern`, y tipos de datos como `email`, `tel`, y `url`.
       - Ejemplo de un formulario básico:
+ 
       ```html
         <form action="/submit" method="POST">
             <label for="name">Nombre:</label>
@@ -124,24 +124,28 @@ button {
 ### ***Diseño responsivo***
 
 - **Media Queries**: Permiten ajustar los estilos según el tamaño de la pantalla.
-  ```css
-  @media (max-width: 600px) {
-    form {
-      width: 100%;
-    }
+  
+```css
+@media (max-width: 600px) {
+  form {
+    width: 100%;
   }
-  ```
+}
+```
   
 ### ***Disposición de elementos con Flexbox y Grid***
 
 - **Flexbox**: Se usa para organizar elementos en una fila o columna flexible.
+  
   ```css
   .container {
     display: flex;
     justify-content: space-between;
   }
   ```
+
 - **Grid**: Se usa para crear disposiciones más complejas.
+  
   ```css
   .grid {
     display: grid;
@@ -158,29 +162,34 @@ button {
 ### ***Introducción al DOM (Document Object Model)***
 - El **DOM** representa la estructura del documento HTML como un árbol de objetos manipulables por JavaScript.
 - **Selección de elementos**: Se utilizan métodos como `document.getElementById()` o `document.querySelector()`.
-  ```javascript
-  const form = document.getElementById('contactForm');
-  ```
+
+```javascript
+const form = document.getElementById('contactForm');
+```
 
 ### ***Manejo de eventos en JavaScript***
+
 - Los eventos permiten asociar acciones a interacciones del usuario, como `click`, `input`, `submit`.
-  ```javascript
-  document.querySelector('button').addEventListener('click', function() {
-    alert('¡Botón clicado!');
-  });
-  ```
+
+```javascript
+document.querySelector('button').addEventListener('click', function() {
+  alert('¡Botón clicado!');
+});
+```
 
 ### ***Validación y manipulación de formularios***
+
 - Validar datos de formulario antes de su envío:
-  ```javascript
-  form.addEventListener('submit', function(event) {
-    const name = document.getElementById('name').value;
-    if (name === '') {
-      alert('Por favor, ingrese su nombre');
-      event.preventDefault();
-    }
-  });
-  ```
+
+```javascript
+form.addEventListener('submit', function(event) {
+  const name = document.getElementById('name').value;
+  if (name === '') {
+    alert('Por favor, ingrese su nombre');
+    event.preventDefault();
+  }
+});
+```
 
 ## **1.4 Desarrollo de una aplicación web básica**
 

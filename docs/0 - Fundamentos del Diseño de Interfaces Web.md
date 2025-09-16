@@ -191,6 +191,7 @@ Los colores también pueden utilizarse para señalar estados o acciones específ
 Un buen uso del color puede dirigir la atención del usuario hacia áreas clave de la página. Por ejemplo, en una landing page, el color principal se puede usar para dirigir al usuario hacia el botón de compra o registro, mientras que colores secundarios se utilizan para otros elementos menos importantes.
 
 ### 🛗 Colores y Accesibilidad
+
 ![Accesibilidad](assets/accesibilidad.png){align="right"}
 
 El uso del color también tiene un impacto significativo en la accesibilidad de una página web. No todos los usuarios perciben los colores de la misma manera, lo que significa que los diseñadores deben ser conscientes de condiciones como el daltonismo (incapacidad para distinguir ciertos colores) o la baja visión.
@@ -200,9 +201,8 @@ Para garantizar la accesibilidad, es fundamental que los colores no sean el úni
 Existen herramientas, como [Color Oracle](https://colororacle.org/), que permiten simular cómo un sitio web se ve para usuarios con distintas discapacidades visuales, facilitando así el ajuste de la paleta de colores para que sea accesible para todos.
 
 ### 🧭 Tendencias Actuales en el Uso del Color en Web
-<center>
-![Tendencias](assets/1-1-5-trend.png)
-</center>
+
+![Tendencias](assets/1-1-5-trend.png){align="right"}
 
 Las tendencias en el uso del color en el diseño web evolucionan constantemente, influenciadas por cambios en la tecnología, el diseño de dispositivos y las preferencias del usuario. Algunas de las tendencias actuales incluyen:
 
