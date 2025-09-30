@@ -236,6 +236,32 @@ Una extensión para navegadores que permite a los diseñadores extraer colores d
 [Contrast Ratio](https://accessibleweb.com/color-contrast-checker/)<br>
 Una herramienta centrada en verificar la accesibilidad de las combinaciones de colores. Proporciona la relación de contraste entre un color de fondo y un color de primer plano (texto, íconos, etc.), y asegura que cumplan con los estándares de accesibilidad establecidos por la WCAG (Web Content Accessibility Guidelines).
 
+---
+
+### 🌈 Herramientas para Combinación de Colores
+
+![A dictionary of color combination](assets/0-Wada-Sanzo.png){align="right" width="250"}
+
+A veces es complicado elegir una buena combinación que pegue con la idea que tienes en mente. Hace muchos años, el autor 🎌 [Wada Sanzō – 和田 三造](https://en.wikipedia.org/wiki/Sanzo_Wada#A_Dictionary_of_Color_Combinations){target="blank"}, publicó una serie de libros acerca de las combinaciones de colores perfectas entre los años 1933 y 1934.
+
+Más tarde, por el año 2011 se publicó un libro donde recogía toda su obra recopilando las 348 combinaciones de colores que el autor fue juntando.
+
+Hay varias webs que recogen la obra de este autor japonés, haciendo la experiencia mucho más interactiva, donde podréis ver todas las combinaciones que se recoge en el diccionario y podréis ver los códigos de colores para poder usarlos en vuestras aplicaciones o páginas web.
+
+[Wada Sanzo | A Dictionary of Color Combinations](https://sanzo-wada.dmbk.io/){target="blank"}<br>
+En esta web podemos seleccionar un color que nos guste y se mostrará en qué combinaciones de colores aparece en el diccionario de las combinaciones de color.
+
+[A Dictionary of Color Combinationsby Sanzo Wada](https://colors.elwyn.co/){target="blank"}<br>
+En esta versión del diccionario veremos las combinaciones directamente, pudiendo filtrar por combinaciones de 2, 3 y 4 colores, además nos da la opción de cambiar entre varios sitemas de nomenclatura del color 👉 RGB, HEX, CMYK y vec3
+
+![](assets/0-color-combinations.jpg)
+///caption
+El libro lo podéis comprar en ➡️ Amazon<br>[A Dictionary of Color Combinations](https://www.amazon.es/DICTIONARY-COMBINATIONS-Kabushiki-Kaisha-Seigensha/dp/4861522471/){target="blank"}
+///
+---
+
+
+
 ### 🧑🏻‍💻 Implementación del Color en CSS
 
 ![Color picker](assets/1-2-8-css.png){align="right"}
