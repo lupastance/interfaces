@@ -143,4 +143,4 @@ La calificación final se calculará con los siguientes porcentajes:
 
 Usaremos Discord como método de comunicación de información sobre la asignatura y este curso. Podéis hablar por el chat cuando queráis y usar los canales de estudio con audio por si queréis estudiar en un mismo sitio.
 
-La invitación al canal es la siguiente ➡️ [https://discord.gg/BFspxVAN](https://discord.gg/BFspxVAN)
+La invitación al canal es la siguiente ➡️ [https://discord.gg/tPwAgaZFk](https://discord.gg/tPwAgaZFk)
