@@ -588,3 +588,74 @@ Al hacer la petición `fetch` a `miapi.php`, obtendrás el mensaje en formato JS
   "mensaje": "Hola mundo"
 }
 ```
+
+### Ejemplo de un formulario con PHP
+
+=== "🟢 index.html"
+
+    ```html
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Formulario con PHP 🚀</title>
+    </head>
+    <body>
+        <form
+            action="datos.php"
+            method="post"
+        >
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Introduce tu nombre"
+            >
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Introduce tu correo"
+            >
+            <input
+                type="password"
+                id="password"
+                name="password"
+            >
+
+            <select name="aeropuertos" id="">
+                <option value="">-- Selecciona una opción</option>
+                <option value="ALC">Alicante</option>
+                <option value="BCN">Barcelona</option>
+                <option value="MAD">Madrid</option>
+            </select>
+
+            <input type="submit" value="Enviar">
+
+        </form>
+    </body>
+    </html>
+    ```
+=== "🔵 datos.php"
+
+    ```php
+        <?php
+          $nombre = $_POST["nombre"];
+          $email = $_POST["email"];
+          $password = $_POST["password"];
+          $aeropuertos = $_POST["aeropuertos"];
+
+          htmlElement('p', 'Nombre: ', $nombre);
+          htmlElement('p', 'E-mail: ', $email);
+          htmlElement('p', 'Password: ', $password);
+          htmlElement('p', 'Aeropuerto: ', $aeropuertos);
+
+          function htmlElement($tag, $label, $cadena){
+              echo '<' . $tag . '>';
+              echo $label . $cadena;
+              echo '</' . $tag . '>';
+          }
+      ?>
+    ```
