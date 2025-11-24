@@ -38,14 +38,10 @@ Todo archivo de VueJS tiene como extensión `.vue` y su código básico está di
 
 === "🔰App.vue"
 ```html
-<script>
-  export default {
-    data() {
-        return {
-          message: "¡Hola desde Vue.js!"
-        };
-    }
-  };
+<script setup>
+import { ref } from 'vue'
+
+const message = ref("¡Hola desde Vue.js!")
 </script>
 
 <template>
@@ -55,10 +51,11 @@ Todo archivo de VueJS tiene como extensión `.vue` y su código básico está di
 </template>
 
 <style scoped>
-    h1 {
-    color: blue;
-    }
+h1 {
+  color: blue;
+}
 </style>
+
 ```
 
 ## 🔢 Variables
@@ -76,15 +73,12 @@ Las variables en Vue se definen dentro de la función `data`, que devuelve un ob
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      message: "¡Hola Mundo!"  // Definimos una variable llamada 'message'
-    };
-  }
-}
+<script setup>
+import { ref } from 'vue'
+
+const message = ref("¡Hola Mundo!")
 </script>
+
 ```
 
 !!!warning "Explicación del código"
@@ -99,19 +93,16 @@ Una vez que defines una variable en `data`, puedes usarla dentro de la plantilla
 ```javascript
 <template>
   <div>
-    <p>{{ message }}</p>  <!-- Mostramos el valor de 'message' en el HTML -->
+    <p>{{ message }}</p>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      message: "¡Bienvenidos a Vue.js!"  // Definimos la variable 'message'
-    };
-  }
-}
+<script setup>
+import { ref } from 'vue'
+
+const message = ref("¡Bienvenidos a Vue.js!")
 </script>
+
 ```
 
 !!!tip "Explicación del código"
@@ -131,17 +122,14 @@ Las variables en Vue pueden ser de diferentes tipos de datos, como **cadenas de 
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      message: "¡Hola desde Vue!",  // Variable de tipo string
-      count: 5,                    // Variable de tipo número
-      isActive: true               // Variable de tipo booleano
-    };
-  }
-}
+<script setup>
+import { ref } from 'vue'
+
+const message = ref("¡Hola desde Vue!")
+const count = ref(5)
+const isActive = ref(true)
 </script>
+
 ```
 !!!danger "Explicación del código"
     - `message` es una cadena de texto.
@@ -175,20 +163,16 @@ Puedes llamarlos en la plantilla a través de directivas como `v-on`, o utilizar
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      nombre: "Mundo",
-    };
-  },
-  methods: {
-    saludar() {
-      alert(`¡Hola, ${this.nombre}!`);
-    },
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const nombre = ref("Mundo")
+
+const saludar = () => {
+  alert(`¡Hola, ${nombre.value}!`)
+}
 </script>
+
 ```
 
 👉🏻 **Explicación del código:**
@@ -206,15 +190,12 @@ Los métodos pueden aceptar argumentos si los pasas desde la plantilla.
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    mostrarMensaje(mensaje) {
-      alert(mensaje);
-    },
-  },
-};
+<script setup>
+const mostrarMensaje = (mensaje) => {
+  alert(mensaje)
+}
 </script>
+
 ```
 
 👉🏻 **Explicación:**  
@@ -232,20 +213,16 @@ Los métodos pueden acceder a las propiedades definidas en `data`, `computed`, o
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      contador: 0,
-    };
-  },
-  methods: {
-    incrementar() {
-      this.contador++;
-    },
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const contador = ref(0)
+
+const incrementar = () => {
+  contador.value++
+}
 </script>
+
 ```
 
 👉🏻 **Explicación:**  
@@ -263,15 +240,12 @@ Los métodos también se pueden usar directamente dentro de las expresiones en e
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    obtenerMensaje() {
-      return "Hola desde un método";
-    },
-  },
-};
+<script setup>
+const obtenerMensaje = () => {
+  return "Hola desde un método"
+}
 </script>
+
 ```
 
 ### **Usar Métodos en Eventos de Formularios**
@@ -286,20 +260,16 @@ Los métodos son útiles para manejar eventos como `submit` en formularios.
   </form>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      nombre: "",
-    };
-  },
-  methods: {
-    procesarFormulario() {
-      alert(`Formulario enviado por: ${this.nombre}`);
-    },
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const nombre = ref("")
+
+const procesarFormulario = () => {
+  alert(`Formulario enviado por: ${nombre.value}`)
+}
 </script>
+
 ```
 
 👉🏻 **Explicación:**  
@@ -318,18 +288,16 @@ Puedes llamar un método dentro de otro método, ideal para evitar repetir códi
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    manejarEvento() {
-      this.saludar();
-    },
-    saludar() {
-      alert("Hola desde otro método");
-    },
-  },
-};
+<script setup>
+const saludar = () => {
+  alert("Hola desde otro método")
+}
+
+const manejarEvento = () => {
+  saludar()
+}
 </script>
+
 ```
 
 👉🏻 **Explicación:**  
@@ -347,64 +315,6 @@ export default {
     3. **Reutilización:** Divide las funciones en métodos reutilizables siempre que sea posible.
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 🌀 Directivas
 
 En Vue.js, las **directivas** son atributos especiales que se agregan a los elementos HTML para manipular el DOM (Document Object Model) de manera reactiva. Estas directivas son precedidas por el prefijo `v-`, lo que las distingue de los atributos normales.
@@ -415,7 +325,7 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
     **`v-bind`** se utiliza para enlazar un atributo o una propiedad de un componente con una variable o expresión en el componente. Esto permite modificar dinámicamente los atributos HTML de un elemento.
 
 ```html
-<img v-bind:src="imageSource" />
+<img :src="imageSource" />
 ```
 
 !!! note "v-model"
@@ -460,15 +370,17 @@ A continuación, se mencionan algunas de las directivas más comunes en Vue.js:
     **`v-on`** se utiliza para escuchar eventos DOM y ejecutar métodos cuando esos eventos son disparados. Permite manejar interacciones del usuario.
 
 ```html
-<button v-on:click="submitForm">Enviar</button>
+<button @click="submitForm">Enviar</button>
 ```
 
 !!! info "v-slot"
     **`v-slot`** permite pasar contenido a los componentes hijo a través de slots. Facilita la creación de componentes reutilizables con contenido dinámico.
 
 ```html
-<my-component v-slot:header>
+<my-component>
+  <template #header>
     <h1>Contenido de encabezado</h1>
+  </template>
 </my-component>
 ```
 
@@ -530,19 +442,16 @@ Imagina que tienes una propiedad `imageSource` en tu componente Vue y deseas que
 <template>
   <div>
     <!-- v-bind enlaza el atributo src con la propiedad imageSource -->
-    <img v-bind:src="imageSource" />
+    <img :src="imageSource" />
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      imageSource: 'https://example.com/imagen.jpg'
-    };
-  }
-};
+<script setup>
+import { ref } from 'vue'
+
+const imageSource = ref('https://example.com/imagen.jpg')
 </script>
+
 ```
 
 !!! warning "En este ejemplo... 👆"
@@ -562,19 +471,16 @@ Puedes usar `v-bind` para enlazar múltiples atributos a la vez, usando un objet
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      buttonAttributes: {
-        type: 'button',
-        class: 'btn btn-primary',
-        disabled: false
-      }
-    };
-  }
-};
+<script setup>
+import { reactive } from 'vue'
+
+const buttonAttributes = reactive({
+  type: 'button',
+  class: 'btn btn-primary',
+  disabled: false
+})
 </script>
+
 ```
 
 !!! note "En este caso"
@@ -604,20 +510,17 @@ Imagina que quieres crear un campo de texto en el que el usuario pueda escribir 
 <template>
   <div>
     <!-- El valor del input está vinculado a la propiedad message -->
-    <input v-model="message" placeholder="Escribe algo...">
+    <input v-model="message" placeholder="Escribe algo..." />
     <p>El mensaje es: {{ message }}</p>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      message: ''
-    };
-  }
-};
+<script setup>
+import { ref } from 'vue'
+
+const message = ref('')
 </script>
+
 ```
 
 !!!tip "En este ejemplo"
@@ -634,21 +537,18 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
 
    ```html
    <template>
-     <div>
-       <input type="checkbox" v-model="isChecked">
-       <p>¿Está marcado? {{ isChecked ? 'Sí' : 'No' }}</p>
-     </div>
+    <div>
+      <input type="checkbox" v-model="isChecked" />
+      <p>¿Está marcado? {{ isChecked ? 'Sí' : 'No' }}</p>
+    </div>
    </template>
 
-   <script>
-   export default {
-     data() {
-       return {
-         isChecked: false
-       };
-     }
-   };
-   </script>
+    <script setup>
+    import { ref } from 'vue'
+
+    const isChecked = ref(false)
+    </script>
+
    ```
 
 2. **Botones de opción (`radio`)**
@@ -657,26 +557,23 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
 
    ```html
    <template>
-     <div>
-       <input type="radio" id="option1" value="Opción 1" v-model="selectedOption">
-       <label for="option1">Opción 1</label>
+      <div>
+        <input type="radio" id="option1" value="Opción 1" v-model="selectedOption" />
+        <label for="option1">Opción 1</label>
 
-       <input type="radio" id="option2" value="Opción 2" v-model="selectedOption">
-       <label for="option2">Opción 2</label>
+        <input type="radio" id="option2" value="Opción 2" v-model="selectedOption" />
+        <label for="option2">Opción 2</label>
 
-       <p>Opción seleccionada: {{ selectedOption }}</p>
-     </div>
-   </template>
+        <p>Opción seleccionada: {{ selectedOption }}</p>
+      </div>
+    </template>
 
-   <script>
-   export default {
-     data() {
-       return {
-         selectedOption: 'Opción 1'
-       };
-     }
-   };
-   </script>
+    <script setup>
+    import { ref } from 'vue'
+
+    const selectedOption = ref('Opción 1')
+    </script>
+
    ```
 
 3. **Elementos `select` (listas desplegables)**
@@ -685,26 +582,23 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
 
    ```html
    <template>
-     <div>
-       <select v-model="selectedValue">
-         <option disabled value="">Seleccione una opción</option>
-         <option value="1">Opción 1</option>
-         <option value="2">Opción 2</option>
-         <option value="3">Opción 3</option>
-       </select>
-       <p>Opción seleccionada: {{ selectedValue }}</p>
-     </div>
-   </template>
+    <div>
+      <select v-model="selectedValue">
+        <option disabled value="">Seleccione una opción</option>
+        <option value="1">Opción 1</option>
+        <option value="2">Opción 2</option>
+        <option value="3">Opción 3</option>
+      </select>
+      <p>Opción seleccionada: {{ selectedValue }}</p>
+    </div>
+  </template>
 
-   <script>
-   export default {
-     data() {
-       return {
-         selectedValue: ''
-       };
-     }
-   };
-   </script>
+  <script setup>
+  import { ref } from 'vue'
+
+  const selectedValue = ref('')
+  </script>
+
    ```
 
 💦 Modificadores de `v-model`
@@ -764,15 +658,12 @@ Imagina que quieres mostrar un mensaje que cambie dependiendo de si el usuario h
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isLoggedIn: false // Cambia a true para probar
-    };
-  }
-};
+<script setup>
+import { ref } from 'vue'
+
+const isLoggedIn = ref(false) // Cambia a true para probar
 </script>
+
 ```
 
 !!!tip "En este ejemplo"
@@ -795,15 +686,12 @@ Puedes combinar `v-if`, `v-else-if`, y `v-else` para manejar múltiples condicio
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      status: 'loading' // Cambia el valor para probar
-    };
-  }
-};
+<script setup>
+import { ref } from 'vue'
+
+const status = ref('loading') // Cambia el valor para probar
 </script>
+
 ```
 
 !!!note "En este caso"
@@ -838,21 +726,20 @@ La directiva `v-for` en Vue.js se utiliza para renderizar listas o elementos rep
 📚 **Ejemplo 1: Iterar sobre un Array**
 
 ```html
-<ul>
-  <li v-for="(nombre, index) in nombres" :key="index">
-    {{ index + 1 }}. {{ nombre }}
-  </li>
-</ul>
+<template>
+  <ul>
+    <li v-for="(nombre, index) in nombres" :key="index">
+      {{ index + 1 }}. {{ nombre }}
+    </li>
+  </ul>
+</template>
 
-<script>
-export default {
-  data() {
-    return {
-      nombres: ["Juan", "María", "Carlos", "Ana"]
-    };
-  }
-};
+<script setup>
+import { ref } from 'vue'
+
+const nombres = ref(["Juan", "María", "Carlos", "Ana"])
 </script>
+
 ```
 **Resultado Renderizado:**
 ```
@@ -869,25 +756,24 @@ export default {
 Cuando iteras sobre un objeto, puedes acceder tanto a las claves como a los valores.
 
 ```html
-<ul>
-  <li v-for="(valor, clave) in usuario" :key="clave">
-    {{ clave }}: {{ valor }}
-  </li>
-</ul>
+<template>
+  <ul>
+    <li v-for="(valor, clave) in usuario" :key="clave">
+      {{ clave }}: {{ valor }}
+    </li>
+  </ul>
+</template>
 
-<script>
-export default {
-  data() {
-    return {
-      usuario: {
-        nombre: "Juan",
-        edad: 30,
-        ciudad: "Madrid"
-      }
-    };
-  }
-};
+<script setup>
+import { reactive } from 'vue'
+
+const usuario = reactive({
+  nombre: "Juan",
+  edad: 30,
+  ciudad: "Madrid"
+})
 </script>
+
 ```
 
 **Resultado Renderizado:**
@@ -927,33 +813,32 @@ Número 5
 La directiva `v-for` también se puede anidar para iterar sobre listas dentro de listas.
 
 ```html
-<div v-for="(categoria, index) in categorias" :key="index">
-  <h3>{{ categoria.nombre }}</h3>
-  <ul>
-    <li v-for="(producto, i) in categoria.productos" :key="i">
-      {{ producto }}
-    </li>
-  </ul>
-</div>
+<template>
+  <div v-for="(categoria, index) in categorias" :key="index">
+    <h3>{{ categoria.nombre }}</h3>
+    <ul>
+      <li v-for="(producto, i) in categoria.productos" :key="i">
+        {{ producto }}
+      </li>
+    </ul>
+  </div>
+</template>
 
-<script>
-export default {
-  data() {
-    return {
-      categorias: [
-        {
-          nombre: "Frutas",
-          productos: ["Manzana", "Pera", "Plátano"]
-        },
-        {
-          nombre: "Verduras",
-          productos: ["Lechuga", "Zanahoria", "Espinaca"]
-        }
-      ]
-    };
+<script setup>
+import { ref } from 'vue'
+
+const categorias = ref([
+  {
+    nombre: "Frutas",
+    productos: ["Manzana", "Pera", "Plátano"]
+  },
+  {
+    nombre: "Verduras",
+    productos: ["Lechuga", "Zanahoria", "Espinaca"]
   }
-};
+])
 </script>
+
 ```
 
 **Resultado Renderizado:**
@@ -1018,15 +903,12 @@ La directiva `v-show` se utiliza para mostrar u ocultar elementos HTML basándos
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      mostrar: true,
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const mostrar = ref(true)
 </script>
+
 ```
 
 👉🏻 **Explicación:**
@@ -1054,15 +936,12 @@ export default {
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      mostrarTitulo: true,
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const mostrarTitulo = ref(true)
 </script>
+
 ```
 
 👉🏻 **Explicación:**
@@ -1096,19 +975,16 @@ Vue.js ofrece una versión abreviada de `v-on`:
 ```html
 <template>
   <div>
-    <button v-on:click="saludar">Haz clic aquí</button>
+    <button @click="saludar">Haz clic aquí</button>
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    saludar() {
-      alert("¡Hola! Has hecho clic en el botón.");
-    },
-  },
-};
+<script setup>
+const saludar = () => {
+  alert("¡Hola! Has hecho clic en el botón.")
+}
 </script>
+
 ```
 
 👉🏻 **Explicación:**  
@@ -1127,15 +1003,12 @@ Puedes pasar argumentos a los métodos utilizando paréntesis:
   </div>
 </template>
 
-<script>
-export default {
-  methods: {
-    mostrarMensaje(mensaje) {
-      alert(mensaje);
-    },
-  },
-};
+<script setup>
+const mostrarMensaje = (mensaje) => {
+  alert(mensaje)
+}
 </script>
+
 ```
 
 👉🏻 **Explicación:**
@@ -1180,20 +1053,16 @@ Los modificadores son sufijos de la directiva que alteran su comportamiento.
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      nombre: "",
-    };
-  },
-  methods: {
-    procesarFormulario() {
-      alert(`Formulario enviado por: ${this.nombre}`);
-    },
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const nombre = ref('')
+
+const procesarFormulario = () => {
+  alert(`Formulario enviado por: ${nombre.value}`)
+}
 </script>
+
 ```
 
 **Explicación:**  
@@ -1236,21 +1105,21 @@ Componente padre:
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      activo: false,
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const activo = ref(false)
 </script>
+
 ```
 
 👉🏻 **Explicación:**
 
 - El botón usa un evento `click` para alternar el valor booleano de `activo`.
 - Esto cambia dinámicamente el texto mostrado.
+
+
+<!-- HASTA AQUÍ -->
 
 ---
 
