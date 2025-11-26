@@ -75,11 +75,62 @@ Sin embargo, no es la mejor opción para aplicaciones intensivas en CPU, como pr
 
 !!!warning "¿Por qué aprender `NodeJS`?"
     Aprender `NodeJS` es una excelente decisión para cualquier desarrollador web moderno, ya que:
+    
     - Es uno de los entornos más demandados en el desarrollo backend.
     - Su simplicidad y eficiencia hacen que sea fácil de aprender y usar.
     - Es el corazón de muchas tecnologías modernas, como frameworks (Express.js, Nest.js) y herramientas de desarrollo (Webpack, Babel).
 
 ## Instalando NodeJS
+
+Dependiendo del sistema operativo que estemos usando, tenemos diferentes maneras de instalar **NodeJS** en nuestro sistema.
+
+A continuación se explica cómo poder instalar el paquete de **NodeJS** de diferentes maneras y sistemas:
+
+      🪟 Windows
+      📦 Instalador
+      💅 Mac
+
+### 🪟 Haciendo uso de *winget* en Windows
+
+Para poder descargar **NodeJS** desde la consola haciendo uso de *winget* pondremos el siguiente comando
+
+```bash
+winget install OpenJS.NodeJS
+```
+
+!!!danger "Recuerda"
+      Una vez instalado, tienes que cerrar la terminal y volverla a abrir si quieres usar node, ya que las variables de entorno no se refrescan después de la instalación de cualquier paquete haciendo uso de *winget* (esto en Linux o Mac no es necesario)
+
+### 💅 Haciendo uso de *homebrew* en Mac
+
+Si somos usuarios de Mac💅 podemos hacer uso del instalador de paquetes por consola llamado **Homebrew**.
+
+Para ello, debemos tener instalado **Homebrew** antes de poder usar dicho gestor de paquetes. Para ello lo instalamos desde la consola con la siguiente instrucción:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Ahora ya podremos hacer uso del comando *brew* así que actulizamos el listado de paquetes:
+
+```bash
+brew update
+```
+
+Y ahora si que si 🔥🔥 instalemos **NodeJS**
+
+```bash
+brew install node
+```
+
+Cuando termine, si todo ha salido bien, tendremos disponible el comando **Node** y **npm** (que es el gestor de paquetes de **NodeJS**). Para comprobar que funciona podemos lanzar los siguientes comandos y optendremos el número de versión de cada uno de ellos que se encuentra instalado en nuestro sistema:
+
+```bash
+node -
+npm -v
+```
+
+### 📦 Descargando el ejecutable desde la página oficial (Windows, Mac y Linux)
 
 Para poder Instalar `NodeJS` debemos dirigirnos a la web oficial y seleccionar el instalador correspondiente a nuestro sistema operativo.
 
