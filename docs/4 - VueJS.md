@@ -60,7 +60,10 @@ h1 {
 
 ## 🔢 Variables
 
-En Vue.js, las **variables** son utilizadas para almacenar datos que luego puedes mostrar en la interfaz de usuario. Estas variables se definen dentro de la opción `data` de un componente. Vue hace que estas variables sean **reactivas**, lo que significa que cuando cambian, la vista (lo que el usuario ve en el navegador) se actualiza automáticamente.
+En Vue 3, las variables se definen dentro del bloque `<script setup>` utilizando `ref()` o `reactive()` para que sean reactivas.
+Estas variables reactivas almacenan datos que luego pueden mostrarse en la interfaz de usuario.
+
+Gracias al sistema de reactividad de Vue 3, cuando el valor de una variable cambia, la vista se actualiza automáticamente sin necesidad de manipulación manual del DOM. Esto permite crear interfaces dinámicas y fáciles de mantener.
 
 ### 1. **Definiendo Variables**
 
@@ -581,24 +584,23 @@ Aunque en el ejemplo anterior hemos visto el uso de `v-model` en un campo de tex
    Para un `select`, `v-model` se puede usar para obtener el valor de la opción seleccionada.
 
    ```html
-   <template>
-    <div>
-      <select v-model="selectedValue">
-        <option disabled value="">Seleccione una opción</option>
-        <option value="1">Opción 1</option>
-        <option value="2">Opción 2</option>
-        <option value="3">Opción 3</option>
-      </select>
-      <p>Opción seleccionada: {{ selectedValue }}</p>
-    </div>
-  </template>
+    <template>
+      <div>
+        <select v-model="selectedValue">
+          <option disabled value="">Seleccione una opción</option>
+          <option value="1">Opción 1</option>
+          <option value="2">Opción 2</option>
+          <option value="3">Opción 3</option>
+        </select>
+        <p>Opción seleccionada: {{ selectedValue }}</p>
+      </div>
+    </template>
 
-  <script setup>
-  import { ref } from 'vue'
+    <script setup>
+    import { ref } from 'vue'
 
-  const selectedValue = ref('')
-  </script>
-
+    const selectedValue = ref('')
+    </script>
    ```
 
 💦 Modificadores de `v-model`
@@ -1452,36 +1454,36 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
 
 === "🔰**Componente Padre: `ListaComentarios.vue`**"
     ```html
-    <template>
-      <div>
-        <h1>Lista de Comentarios</h1>
-        <Comentario
-          v-for="(comentario, index) in comentarios"
-          :key="index"
-          :autor="comentario.autor"
-          :mensaje="comentario.mensaje"
-        />
-      </div>
-    </template>
+      <template>
+        <div>
+          <h1>Lista de Comentarios</h1>
+          <Comentario
+            v-for="(comentario, index) in comentarios"
+            :key="index"
+            :autor="comentario.autor"
+            :mensaje="comentario.mensaje"
+          />
+        </div>
+      </template>
 
-    <script>
-    import Comentario from './Comentario.vue';
+      <script>
+      import Comentario from './Comentario.vue';
 
-    export default {
-      components: {
-        Comentario,
-      },
-      data() {
-        return {
-          comentarios: [
-            { autor: 'Ana', mensaje: '¡Me encanta este artículo!' },
-            { autor: 'Carlos', mensaje: '¡Muy interesante!' },
-            { autor: 'Luisa', mensaje: 'Gracias por compartir esta información.' },
-          ],
-        };
-      },
-    };
-    </script>
+      export default {
+        components: {
+          Comentario,
+        },
+        data() {
+          return {
+            comentarios: [
+              { autor: 'Ana', mensaje: '¡Me encanta este artículo!' },
+              { autor: 'Carlos', mensaje: '¡Muy interesante!' },
+              { autor: 'Luisa', mensaje: 'Gracias por compartir esta información.' },
+            ],
+          };
+        },
+      };
+      </script>
     ```
 
 🧙‍♂️ **Ejemplo Avanzado: Comunicación en Componentes Anidados**
