@@ -1581,11 +1581,6 @@ El **ciclo de vida** de un componente Vue es la serie de etapas por las que pasa
 
 `Vue` nos ofrece **hooks** que nos permiten ejecutar código en cada fase.
 
-
-Perfecto 😎, vamos a hacer una **versión interactiva del ciclo de vida** donde se vean las fases dispararse **en la propia página**, no solo en la consola. Esto hace mucho más claro cuándo se ejecuta cada hook.
-
----
-
 ```vue
 <template>
   <div>
