@@ -1155,22 +1155,17 @@ Un componente consta de:
   </div>
 </template>
 
-<script>
-export default {
-  name: "MiComponente",
-  data() {
-    return {
-      titulo: "Hola, soy un componente",
-      descripcion: "Este es un ejemplo básico de un componente en Vue.",
-    };
-  },
-  methods: {
-    saludar() {
-      alert("¡Hola desde el componente!");
-    },
-  },
-};
+<script setup>
+import { ref } from 'vue'
+
+const titulo = ref('Hola, soy un componente')
+const descripcion = ref('Este es un ejemplo básico de un componente en Vue.')
+
+function saludar() {
+  alert('¡Hola desde el componente!')
+}
 </script>
+
 
 <style scoped>
 h1 {
@@ -1195,15 +1190,10 @@ Un componente se registra localmente cuando se usa solo dentro de un componente 
   </div>
 </template>
 
-<script>
-import MiComponente from "./MiComponente.vue"; // Importamos el componente
-
-export default {
-  components: {
-    MiComponente, // que no se os olvide definir el componente en vuestro script
-  },
-};
+<script setup>
+import MiComponente from './MiComponente.vue'
 </script>
+
 ```
 
 🎈 **2. Registro Global**
@@ -1211,10 +1201,16 @@ export default {
 Un componente se registra globalmente cuando quieres que esté disponible en toda la aplicación. Esto se hace en el archivo principal (`main.js`).
 
 ```javascript
-import Vue from "vue";
-import MiComponente from "./components/MiComponente.vue";
+import { createApp } from 'vue'
+import App from './App.vue'
+import MiComponente from './components/MiComponente.vue'
 
-Vue.component("MiComponente", MiComponente);
+const app = createApp(App)
+
+app.component('MiComponente', MiComponente)
+
+app.mount('#app')
+
 ```
 
 Ahora puedes usar `<MiComponente />` en cualquier lugar de tu aplicación sin necesidad de importarlo en cada componente.
@@ -1233,28 +1229,21 @@ Los componentes permiten **pasar datos desde el componente padre al hijo** utili
       </div>
     </template>
 
-    <script>
-    import HijoComponente from "./HijoComponente.vue";
-
-    export default {
-      components: {
-        HijoComponente,
-      },
-    };
+    <script setup>
+      import HijoComponente from './HijoComponente.vue'
     </script>
+
     ```
 === "✨Componente Hijo ~ `HijoComponente.vue`"
     ```html
     <template>
-      <div>
-        <h2>Hola, {{ nombre }}</h2>
-      </div>
+      <p>Hola {{ nombre }}</p>
     </template>
 
-    <script>
-    export default {
-      props: ["nombre"], // Definimos la prop
-    };
+    <script setup>
+      defineProps({
+        nombre: String
+      })
     </script>
     ```
 
@@ -1272,46 +1261,35 @@ Los componentes hijos pueden **enviar eventos al componente padre** para notific
       </div>
     </template>
 
-    <script>
-    import Boton from "./Boton.vue";
+    <script setup>
+    import Boton from './Boton.vue'
 
-    export default {
-      components: {
-        Boton,
-      },
-      methods: {
-        manejarEvento(mensaje) {
-          alert(mensaje); // Muestra "¡Botón pulsado!"
-        },
-      },
-    };
+    function manejarEvento(mensaje) {
+      alert(mensaje) // Muestra "¡Botón pulsado!"
+    }
     </script>
+
     ```
 
 === "✨ Componente Hijo (`Boton.vue`)"
     ```html
     <template>
-      <button @click="enviarEvento">Haz clic</button>
+      <button @click="$emit('eventoClic', '¡Botón pulsado!')">Haz clic</button>
     </template>
 
-    <script>
-    export default {
-      methods: {
-        enviarEvento() {
-          this.$emit("eventoClic", "¡Botón pulsado!");
-        },
-      },
-    };
+    <script setup>
+      const emit = defineEmits(['eventoClic'])
     </script>
+
     ```
 
 ---
 
 🎛 **Comunicación entre Componentes**
 
-1. **De Padre a Hijo:** Se realiza con `props`.
-2. **De Hijo a Padre:** Se realiza con eventos personalizados y `$emit`.
-3. **Entre Componentes Hermanos:** Usando un patrón como un **bus de eventos** o un estado compartido.
+1. **De Padre a Hijo:** Se realiza con `props`
+2. **De Hijo a Padre:** Se realiza con eventos personalizados y `$emit`
+3. **Entre Componentes Hermanos:** Usando un patrón como un **bus de eventos** o un estado compartido (usando Pinia🍍)
 
 💯 **Ejemplo Completo**
 
@@ -1328,28 +1306,21 @@ Los componentes hijos pueden **enviar eventos al componente padre** para notific
       </div>
     </template>
 
-    <script>
-    import Boton from "./Boton.vue";
+    <script setup>
+      import { ref } from 'vue'
+      import Boton from './Boton.vue'
 
-    export default {
-      components: {
-        Boton,
-      },
-      data() {
-        return {
-          contador: 0,
-        };
-      },
-      methods: {
-        incrementar() {
-          this.contador++;
-        },
-        decrementar() {
-          this.contador--;
-        },
-      },
-    };
+      const contador = ref(0)
+
+      function incrementar() {
+        contador.value++
+      }
+
+      function decrementar() {
+        contador.value--
+      }
     </script>
+
     ```
 
 === "✨ Componente Hijo ~ `Boton.vue`"
@@ -1358,11 +1329,10 @@ Los componentes hijos pueden **enviar eventos al componente padre** para notific
       <button @click="accion">{{ texto }}</button>
     </template>
 
-    <script>
-    export default {
-      props: ["texto", "accion"],
-    };
+    <script setup>
+      const props = defineProps(['texto', 'accion'])
     </script>
+
     ```
 
 !!!danger "**Beneficios Clave de los Componentes**"
@@ -1386,26 +1356,25 @@ En Vue.js, se usa el atributo especial `is` en una etiqueta `<component>` para r
     <h1>Componente Dinámico</h1>
     <button @click="componenteActual = 'ComponenteA'">Mostrar A</button>
     <button @click="componenteActual = 'ComponenteB'">Mostrar B</button>
-    
-    <component :is="componenteActual"></component>
+
+    <!-- Usamos el objeto 'componentes' para evitar errores si el nombre no coincide -->
+    <component :is="componentes[componenteActual]" />
   </div>
 </template>
 
-<script>
-import ComponenteA from './ComponenteA.vue';
-import ComponenteB from './ComponenteB.vue';
+<script setup>
+import { ref } from 'vue'
+import ComponenteA from './ComponenteA.vue'
+import ComponenteB from './ComponenteB.vue'
 
-export default {
-  components: {
-    ComponenteA,
-    ComponenteB,
-  },
-  data() {
-    return {
-      componenteActual: 'ComponenteA', // Componente inicial
-    };
-  },
-};
+// Reactivo para controlar qué componente mostrar
+const componenteActual = ref('ComponenteA')
+
+// Registramos los componentes en un objeto
+const componentes = {
+  ComponenteA,
+  ComponenteB
+}
 </script>
 ```
 
@@ -1433,22 +1402,20 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
       </div>
     </template>
 
-    <script>
-    export default {
-      props: {
+    <script setup>
+      defineProps({
         autor: String,
-        mensaje: String,
-      },
-    };
+        mensaje: String
+      })
     </script>
 
     <style scoped>
-    .comentario {
-      margin-bottom: 20px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
+      .comentario {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
     </style>
     ```
 
@@ -1466,23 +1433,15 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
         </div>
       </template>
 
-      <script>
-      import Comentario from './Comentario.vue';
+      <script setup>
+        import { ref } from 'vue'
+        import Comentario from './Comentario.vue'
 
-      export default {
-        components: {
-          Comentario,
-        },
-        data() {
-          return {
-            comentarios: [
-              { autor: 'Ana', mensaje: '¡Me encanta este artículo!' },
-              { autor: 'Carlos', mensaje: '¡Muy interesante!' },
-              { autor: 'Luisa', mensaje: 'Gracias por compartir esta información.' },
-            ],
-          };
-        },
-      };
+        const comentarios = ref([
+          { autor: 'Ana', mensaje: '¡Me encanta este artículo!' },
+          { autor: 'Carlos', mensaje: '¡Muy interesante!' },
+          { autor: 'Luisa', mensaje: 'Gracias por compartir esta información.' },
+        ])
       </script>
     ```
 
@@ -1501,23 +1460,21 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
         </div>
       </template>
 
-      <script>
-      export default {
-        props: {
-          titulo: String,
-        },
-      };
+      <script setup>
+        defineProps({
+          titulo: String
+        })
       </script>
 
       <style scoped>
-      .tarea {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px;
-        margin-bottom: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-      }
+        .tarea {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+        }
       </style>
       ```
 
@@ -1535,24 +1492,15 @@ Supongamos que estamos construyendo un sistema de comentarios. Un **componente p
       </div>
     </template>
 
-    <script>
-    import Tarea from './Tarea.vue';
+    <script setup>
+      import { ref } from 'vue'
+      import Tarea from './Tarea.vue'
 
-    export default {
-      components: {
-        Tarea,
-      },
-      data() {
-        return {
-          tareas: ['Comprar pan', 'Hacer ejercicio', 'Estudiar Vue.js'],
-        };
-      },
-      methods: {
-        eliminarTarea(index) {
-          this.tareas.splice(index, 1);
-        },
-      },
-    };
+      const tareas = ref(['Comprar pan', 'Hacer ejercicio', 'Estudiar Vue.js'])
+
+      function eliminarTarea(index) {
+        tareas.value.splice(index, 1)
+      }
     </script>
     ```
 
@@ -1574,35 +1522,33 @@ Se pueden combinar **componentes dinámicos** y **componentes anidados** para cr
       </div>
     </template>
 
-    <script>
-    export default {
-      props: {
+    <script setup>
+      defineProps({
         tipo: {
           type: String,
-          default: 'info',
-        },
-      },
-    };
+          default: 'info'
+        }
+      })
     </script>
 
     <style scoped>
-    .notificacion {
-      padding: 10px;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
-    .notificacion.exito {
-      background-color: #d4edda;
-      color: #155724;
-    }
-    .notificacion.error {
-      background-color: #f8d7da;
-      color: #721c24;
-    }
-    .notificacion.advertencia {
-      background-color: #fff3cd;
-      color: #856404;
-    }
+      .notificacion {
+        padding: 10px;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      .notificacion.exito {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .notificacion.error {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      .notificacion.advertencia {
+        background-color: #fff3cd;
+        color: #856404;
+      }
     </style>
     ```
 
@@ -1611,29 +1557,115 @@ Se pueden combinar **componentes dinámicos** y **componentes anidados** para cr
     <template>
       <div>
         <h1>Sistema de Notificaciones</h1>
-        <component :is="componenteActual">
-          <Notificacion tipo="exito">¡Operación exitosa!</Notificacion>
-          <Notificacion tipo="error">Algo salió mal.</Notificacion>
-          <Notificacion tipo="advertencia">Cuidado con este cambio.</Notificacion>
-        </component>
+        <Notificacion tipo="exito">¡Operación exitosa!</Notificacion>
+        <Notificacion tipo="error">Algo salió mal.</Notificacion>
+        <Notificacion tipo="advertencia">Cuidado con este cambio.</Notificacion>
       </div>
     </template>
 
-    <script>
-    import Notificacion from './Notificacion.vue';
-
-    export default {
-      components: {
-        Notificacion,
-      },
-      data() {
-        return {
-          componenteActual: 'Notificacion',
-        };
-      },
-    };
+    <script setup>
+      import Notificacion from './Notificacion.vue'
     </script>
     ```
+
+---
+
+## Ciclo de vida de un componente
+
+El **ciclo de vida** de un componente Vue es la serie de etapas por las que pasa desde que se crea hasta que se destruye:
+
+1. Creación
+2. Montaje en el DOM
+3. Actualización
+4. Destrucción
+
+`Vue` nos ofrece **hooks** que nos permiten ejecutar código en cada fase.
+
+
+Perfecto 😎, vamos a hacer una **versión interactiva del ciclo de vida** donde se vean las fases dispararse **en la propia página**, no solo en la consola. Esto hace mucho más claro cuándo se ejecuta cada hook.
+
+---
+
+```vue
+<template>
+  <div>
+    <h1>Ciclo de Vida Interactivo</h1>
+    <button @click="contador++">Incrementar contador</button>
+    <button @click="mostrar = !mostrar">
+      {{ mostrar ? 'Ocultar componente' : 'Mostrar componente' }}
+    </button>
+
+    <!-- Componente que se puede desmontar -->
+    <div v-if="mostrar" class="componente">
+      <p>Contador: {{ contador }}</p>
+      <h3>Eventos de ciclo de vida:</h3>
+      <ul>
+        <li v-for="(evento, index) in eventos" :key="index">{{ evento }}</li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script setup>
+  import { ref, onBeforeMount, onMounted, onBeforeUpdate, onUpdated, onBeforeUnmount, onUnmounted } from 'vue'
+
+  // --- Reactivos ---
+  const contador = ref(0)
+  const mostrar = ref(true)
+  const eventos = ref([])
+
+  // --- Función para registrar eventos ---
+  function logEvento(nombre) {
+    eventos.value.push(nombre)
+  }
+
+  // --- Script setup → simula created() ---
+  logEvento('1️⃣ Script setup ejecutado → Simula created()')
+
+  // --- Hooks del ciclo de vida ---
+  onBeforeMount(() => logEvento('2️⃣ beforeMount → justo antes de insertar el DOM'))
+  onMounted(() => logEvento('3️⃣ mounted → componente insertado en el DOM'))
+  onBeforeUpdate(() => logEvento('4️⃣ beforeUpdate → justo antes de actualizar el DOM'))
+  onUpdated(() => logEvento('5️⃣ updated → DOM actualizado'))
+  onBeforeUnmount(() => logEvento('6️⃣ beforeUnmount → justo antes de destruir el componente'))
+  onUnmounted(() => logEvento('7️⃣ unmounted → componente destruido'))
+</script>
+
+<style scoped>
+  .componente {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    background-color: #f0f8ff;
+  }
+  button {
+    margin-right: 10px;
+    padding: 5px 10px;
+  }
+  ul {
+    margin-top: 10px;
+  }
+</style>
+```
+
+!!!note "Cómo funciona"
+    1. **Incrementar contador** → dispara `beforeUpdate` y `updated`.
+    2. **Mostrar / Ocultar componente** → dispara `beforeUnmount` y `unmounted` cuando se oculta, y `beforeMount` / `mounted` cuando se muestra de nuevo.
+    3. Todos los eventos se registran en **la lista de la página**, así ves en tiempo real **el orden del ciclo de vida**.
+
+---
+
+
+
+
+
+
+
+
+
+
+
 
 ---
 
