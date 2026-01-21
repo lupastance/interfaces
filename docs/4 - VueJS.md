@@ -1,4 +1,4 @@
-# 4️⃣ VueJS
+`# 4️⃣ VueJS
 
 ![](assets/vuejs.png){align="right"}
 
@@ -1652,24 +1652,30 @@ El **ciclo de vida** de un componente Vue es la serie de etapas por las que pasa
 ---
 
 
-
-
-
-
-
-
-
-
-
-
----
-
 ## 🛣️ Router
 ![](assets/vue-router.png){align="right"}
 
-Vue Router es una solución de enrutamiento que permite a los desarrolladores definir y gestionar las rutas (URLs) de su aplicación. Proporciona una forma declarativa de conectar rutas específicas con componentes de Vue, permitiendo que los usuarios naveguen entre diferentes vistas sin recargar la página completa.
+Vue Router es la librería oficial de Vue para crear aplicaciones SPA (Single Page Application).
+
+Es una solución de enrutamiento que permite a los desarrolladores definir y gestionar las rutas (URLs) de su aplicación. Proporciona una forma declarativa de conectar rutas específicas con componentes de Vue, permitiendo que los usuarios naveguen entre diferentes vistas sin recargar la página completa.
 
 En una SPA (Simple Page Application), todo el contenido de la aplicación se carga inicialmente, y el router se encarga de actualizar dinámicamente la vista según la URL actual, proporcionando una experiencia fluida y rápida similar a la de una aplicación nativa.
+
+!!!note "Estructura típica de un proyecto Vue con Router"
+
+```txt
+src/
+ ├─ main.js
+ ├─ App.vue
+ ├─ router/
+ │   └─ index.js
+ └─ views/
+     ├─ Home.vue
+     ├─ About.vue
+     ├─ Usuario.vue
+     └─ NotFound.vue
+
+```
 
 ### Instalación de Vue Router
 
@@ -1682,19 +1688,15 @@ npm install vue-router
 !!!warning "Ten en cuenta que..."
     ... puedes instalar el router de manera GLOBAL para usarlo en todos los proyectos de vue que tengas en tu ordenador, para ello puedes lanzar el siguiente comando:
     
-    👉🏻 **npm install -g vue-router** 👈🏻
+    👉🏻 **npm install vue-router** 👈🏻
     
-    y así no tendrás que instalar el router cada vez que crees un proyecto nuevo.
+    Con el parámetro '-g' no tendrás que instalar el router cada vez que crees un proyecto nuevo.
 
 ### Añadir el Router a un proyecto ⭕ ya existente ⭕
 
 Cuando creamos los primeros proyectos en VueJS, elegimos ciertos paquetes de base que se iban a instalar en nuestro sistema.
 
 A la hora de hacer **npm create vue@latest** la consola nos hacía una serie de preguntas relacionadas con las dependencias de nuestro proyecto de Vue, pero si os acrodáis, le dijimos a todo que no... en esa lista estaba incluído el Router de Vue.
-
-<center>
-  ![](assets/vue-install.png)
-</center>
 
 Pero no pasa nada, podemos instalar cualquier paquete después de haber creado el proyeto de Vue.
 
@@ -1716,15 +1718,15 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 /* La sección 🏠 Home:
    que será nuestra vista principal, como si de index.html se tratase */
-import Home from './components/Home.vue';
+import Home from '../views/Home.vue'
 
 /* La sección ℹ️ About
    que nos renderizará la típica sección con información del sitio */
-import About from './components/About.vue';
+import About from '../views/About.vue'
 
 /* La sección 📚 Contact
    que puede mostrar un formulario de contacto */
-import Contact from './components/Contact.vue';
+import Contact from '../views/Contact.vue'
 ```
 
 !!! tip "3. Definiendo las rutas de nuestro sitio y creando el historial"
@@ -1732,19 +1734,37 @@ import Contact from './components/Contact.vue';
 En este paso debemos decirle a nuestra aplicación dónde se encuentrar las rutas que hemos establecido más arriba y qué componente de `vue` está asignado a cada una de ellas.
 
 ```js
-const router = createRouter ({
-    // Aquí instanciamos a 🧭 createWebHistory para crear el historial navegable a través del navegador
-    history: createWebHistory(),
+// Estamos en el archivo 🔰 router/index.js
 
-    // Aquí definimos las rutas, con un array de objetos.
-    routes: [
-        // El 🛣️ path hace referencia a la url que debemos escribir en el navegador
-        // El 📦 component... bueno, no creo que necesite presentación, lo hemos declarado antes 👆🏻
-        { path: '/', component: Home },
-        { path: '/about', component: About },
-        { path: '/contact', component: Contact }
-    ]
+import { createRouter, createWebHistory } from 'vue-router'
+import Home from '../views/Home.vue'
+import About from '../views/About.vue'
+import Contact from '../views/Contact.vue'
+
+const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: Home
+  },
+  {
+    path: '/about',
+    name: 'about',
+    component: About
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: Contact
+  }
+]
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes
 })
+
+export default router
 ```
 
 !!! tip "4. Instanciando todo"
@@ -1752,44 +1772,16 @@ const router = createRouter ({
 Ahora solo queda modificar la instancia de createApp que teníamos y lo sustituimos por estas líneas:
 
 ```js
-// 1. Crea la instancia de la aplicación a partir del componente raíz (App).
-// 2. Registra el plugin Vue Router para gestionar las rutas de la aplicación.
-// 3. Monta la aplicación en el elemento del DOM con el id "app".
+// Estamos en el archivo 🔰 main.js
 
-createApp(App)
-    .use(router)
-    .mount('#app');
-```
-
-🧰 *main.js* >> Ejemplo completo
-
-```js
-import './assets/main.css'
-import { createRouter, createWebHistory } from 'vue-router'
 import { createApp } from 'vue'
 import App from './App.vue'
-
-import Home from './components/Home.vue';
-import About from './components/About.vue';
-import Contact from './components/Contact.vue';
-
-const router = createRouter ({
-    history: createWebHistory(),
-    routes: [
-        { path: '/', component: Home },
-        { path: '/about', component: About },
-        { path: '/contact', component: Contact }
-    ]
-})
+import router from './router'
 
 createApp(App)
-    .use(router)
-    .mount('#app');
+  .use(router)
+  .mount('#app')
 
-// Otra forma de instanciarlo todo 👇🏻
-    // const app = createApp(App);
-    // app.use(router);
-    // app.mount('#app');
 ```
 
 ### Utilizando el Router
@@ -1804,106 +1796,64 @@ A continuación, haremos uso del componente 🟪router-view🟪 (también conoci
 Cambiaremos las líneas de nuestro archivo `App.vue` para que quede lo más limpio posible.
 
 ```html
-<!-- No necesitamos nada más -->
+<script setup>
+  import Home from '@/Components/Home.vue'
+  import About from '@/Components/About.vue'
+  import Contact from '@/Components/Contact.vue'
+</script>
 <template>
-    <RouterView />
-    <!-- <router-view></router-view> -->
-    <!-- <router-view /> -->
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+    <router-link to="/contact">Contact</router-link>
+  </nav>
+
+  <!-- 🟡 Muy importante colocar el Router-View -->
+  <router-view />
+
 </template>
 <!-- ⛔ FIN del archivo -->
 ```
 
 Ya tenemos listo nuestro enrutamiento, ahora solo falta crear los enlaces en nuestra app. Podemos hacer uso de los enlaces en cualquier componente.
 
-Vamos a crear un archivo de vue llamado `Header.vue` donde pongamos una navegación por todos los enlaces del router que hemos creado y los distintos componentes que carguen el contenido correspondiente.
-
-=== "🏘️ Home.vue"
-    ```html
-    <script>
-        import Header from './Header.vue';
-
-        export default {
-            components: {
-                Header
-            }
-        }
-    </script>
-
-    <template>
-        <div>
-            <Header />
-            <h1>
-                🏘️ Estás en Home
-            </h1>
-        </div>
-    </template>
-
-    <style></style>
-    ```
-
-=== "🔰 Header.vue"
-    ```html
-    <template>
-        <nav>
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/contact">Contact</router-link>
-        </nav>
-    </template>
-    ```
-=== "ℹ️ About.vue"
-    ```html
-    <template>
-        <h1>
-            ℹ️ Estás en About
-        </h1>
-    </template>
-
-    <script></script>
-
-    <style></style>
-    ```
-=== "📚 Contact.vue"
-    ```html
-    <template>
-        <h1>
-            📚 Estás en Contacto
-        </h1>
-    </template>
-
-    <script></script>
-
-    <style></style>
-    ```
 
 ### Rutas dinámicas
 
 En Vue Router, las rutas dinámicas son aquellas que incluyen parámetros variables en su URL, lo que permite manejar datos específicos en las vistas. Estas rutas son útiles para aplicaciones donde necesitas mostrar contenido basado en un identificador único, como un blog, una tienda en línea o un sistema de usuarios.
 
-Ejemplo básico ➡️ Una ruta dinámica puede definirse con un parámetro en la URL, precedido por dos puntos (:). Por ejemplo, para mostrar un post específico:
+Ejemplo básico ➡️ Una ruta dinámica puede definirse con un parámetro en la URL, precedido por dos puntos (:). Por ejemplo, para mostrar un usuario específico:
 
 
 === "🟡 main.js"
 ```js
 const routes = [
-  { path: '/post/:id', component: PostComponent },
+  { 
+    path: '/usuario/:id', // id es un parámetro dinámico que nosotros nos inventamos
+    name: 'usuario',
+    component: () => import('../views/Usuario.vue')
+  },
 ];
 ```
 
 !!!info
-    En este caso, ***:id*** es un parámetro dinámico que puede cambiar según el post que quieras mostrar (por ejemplo, /post/123 o /post/456).
+    En este caso, ***:id*** es un parámetro dinámico que puede cambiar según el usuario que quieras mostrar (por ejemplo, /usuario/123 o /usuario/456).
 
 🤹🏻‍♂️ Acceso al parámetro dinámico ~ Dentro del componente asociado a la ruta, puedes acceder al valor del parámetro dinámico usando $route.params
 
-=== "🔰 Post.vue"
+=== "🔰 Usuario.vue"
 ```js
-export default {
-  computed: {
-    postId() {
-      return this.$route.params.id; // Obtiene el valor de 'id' desde la URL
-    },
-  },
-};
+<template>
+  <h1>Usuario {{ id }}</h1>
+</template>
+
+<script setup>
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const id = route.params.id
+</script>
+
 ```
 
 !!!tip "Ventajas de las rutas dinámicas"
@@ -1911,9 +1861,75 @@ export default {
     ⚡ Reactividad: Los parámetros cambian automáticamente cuando la URL cambia.<br>
     🗃️ Organización: Facilitan estructurar aplicaciones complejas con rutas reutilizables.<br>
 
-Si defines una ruta como /post/:id y navegas a /post/123, el componente asociado podrá mostrar información basada en el id proporcionado, como "Post 123".
+Si defines una ruta como /usuario/:id y navegas a /usuario/123, el componente asociado podrá mostrar información basada en el id proporcionado, como "Usuario 123".
 
 Las rutas dinámicas son una pieza clave para construir aplicaciones web modernas y escalables en Vue.
+
+### Navegación programática
+
+Se usa cuando navegamos desde el propio código, en vez de un menú de enlaces
+
+```js
+<script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+function irAHome() {
+  router.push('/')
+}
+</script>
+
+<template>
+  <button @click="irAHome">Ir a Home</button>
+</template>
+```
+
+### Parametros de la URL o Query Parameters
+
+Los query params no forman parte de la ruta, sino de la URL. Para acceder a ello necesitamos hacer uso de ***query***
+
+!!!alert "Ejemplo"
+    www.misuperurl.com/**buscar?texto=buscar+algo**
+
+```js
+<script setup>
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const texto = route.query.texto
+</script>
+```
+
+### Lazy Loading
+
+Lazy loading mejora el rendimiento cargando componentes solo cuando se visitan.
+
+```js
+{
+  path: '/about',
+  component: () => import('../views/About.vue')
+}
+```
+
+### Redirecciones
+
+```js
+{
+  path: '/inicio',
+  redirect: '/'
+}
+```
+
+### Ruta 404
+
+```js
+{
+  path: '/:pathMatch(.*)*',
+  name: 'notfound',
+  component: () => import('../views/NotFound.vue')
+}
+```
 
 ## 🎒 Propiedades computadas
 
