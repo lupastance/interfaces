@@ -1,4 +1,4 @@
-`# 4️⃣ VueJS
+# 4️⃣ VueJS
 
 ![](assets/vuejs.png){align="right"}
 
