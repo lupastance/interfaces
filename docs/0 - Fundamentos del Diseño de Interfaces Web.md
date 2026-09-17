@@ -362,7 +362,7 @@ Esto se puede hacer a través de pruebas de usuario, análisis de accesibilidad 
 Las pruebas con usuarios reales son fundamentales para verificar que los colores elegidos cumplen con las expectativas y necesidades del público objetivo. Estas pruebas pueden revelar si ciertos colores están generando confusión, si hay suficiente contraste en las áreas clave, o si los usuarios están ignorando elementos importantes debido a su falta de prominencia.
 
 `Pruebas de accesibilidad`<br>
-Herramientas como *[WAVE](https://wave.webaim.org/)* o *ss* permiten verificar si el sitio web cumple con las pautas de accesibilidad en términos de contraste de color, uso adecuado de textos alternativos y elementos visuales. Esto es esencial para asegurar que el sitio sea inclusivo para todos los usuarios.
+Herramientas como *[WAVE](https://wave.webaim.org/)* permiten verificar si el sitio web cumple con las pautas de accesibilidad en términos de contraste de color, uso adecuado de textos alternativos y elementos visuales. Esto es esencial para asegurar que el sitio sea inclusivo para todos los usuarios.
 
 `Monitoreo del rendimiento`<br>
 Además del rendimiento técnico del sitio (velocidad de carga, interactividad), el color también puede influir en las métricas de comportamiento del usuario, como el tiempo de permanencia en el sitio, las tasas de clic en botones de acción, y la conversión en formularios o páginas de venta. Un análisis de estos datos puede ofrecer información valiosa sobre si los colores están ayudando o perjudicando la experiencia del usuario.
@@ -462,7 +462,7 @@ body {
 
 La jerarquía tipográfica se refiere a la organización y diferenciación del texto en función de su importancia.
 
-ssEste concepto es clave en el diseño de interfaces web porque permite a los usuarios navegar visualmente por el contenido de manera intuitiva.
+Este concepto es clave en el diseño de interfaces web porque permite a los usuarios navegar visualmente por el contenido de manera intuitiva.
 
 Para crear una jerarquía efectiva, los diseñadores pueden jugar con varios aspectos de la tipografía:
 
