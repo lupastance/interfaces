@@ -1,0 +1,46 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+hr{
+    width: 50%;
+    margin: 20px auto;
+}
+
+input{
+    padding: 8px;
+    border: none;
+}
+
+input[type="text"]{
+    display: block;
+    margin-bottom: 20px;
+    border-bottom: solid 1px rgb(70, 70, 70);
+}
+
+input[type="submit"],
+input[type="reset"]{
+    cursor: pointer;
+    background-color: rgb(62, 62, 62);
+    color: white;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: inherit;
+    color: inherit;
+}
+
+#contenedor{
+    display: grid;
+    justify-content: center;
+    width: 55%;
+    border:  2px red;
+    padding: 80px 0;
+    margin: 0 auto;
+}
+
+.fondo-rojo{
+    background-color: rgb(142, 53, 53);
+    color: antiquewhite;
+}

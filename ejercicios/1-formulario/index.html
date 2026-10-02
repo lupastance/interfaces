@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html id="mi-html" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📚 El Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <div id="contenedor">
+        <h1>
+            Formulario de datos
+        </h1>
+        <form id="formulario" action="">
+            <input
+                type="text"
+                id="nombre"
+                placeholder="Introduce tu nombre"
+            >
+            <input
+                type="text"
+                name=""
+                id="apellidos"
+                placeholder="Introduce tus apellidos"
+            >
+            <span>Sexo 👉</span>
+            <label for="hombre">Hombre</label>
+            <input
+                type="radio"
+                name="sexo"
+                value="♂️"
+            >
+            <label for="mujer">Mujer</label>
+            <input
+                type="radio"
+                name="sexo" 
+                value="♀️"
+            >
+            
+            <hr>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" id="reset" value="Reset">
+        </form>
+    </div>
+
+    <div id="datos"></div>
+
+    <script src="script/miscript.js"></script>
+</body>
+</html>
